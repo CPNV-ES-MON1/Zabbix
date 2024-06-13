@@ -12,8 +12,12 @@
 
 [Installation des agents](https://github.com/CPNV-ES-MON1/Zabbix/wiki/3-%E2%80%90-Installation-des-agents)
 
-[Ajout des alertes Discord](https://github.com/CPNV-ES-MON1/Zabbix/wiki/4-%E2%80%90-Ajout-des-alertes-Discord)
+[Obtenir des données métriques](https://github.com/CPNV-ES-MON1/Zabbix/wiki/4-%E2%80%90-Obtenir-des-donn%C3%A9es-m%C3%A9triques)
 
-[Redémarrer un service arrêté](https://github.com/CPNV-ES-MON1/Zabbix/wiki/5-%E2%80%90-Red%C3%A9marrer-un-service-arr%C3%AAt%C3%A9)
+[Configurations des Alertes](https://github.com/CPNV-ES-MON1/Zabbix/wiki/5-%E2%80%90-Configurations-des-Alertes)
+
+[Ajout des alertes Discord](https://github.com/CPNV-ES-MON1/Zabbix/wiki/6-%E2%80%90-Ajout-des-alertes-Discord)
+
+[Redémarrer un service arrêté](https://github.com/CPNV-ES-MON1/Zabbix/wiki/7-%E2%80%90-Red%C3%A9marrer-un-service-arr%C3%AAt%C3%A9)
 
 Cette table des matières répertorie les pages principales du wiki pour une navigation facile.
