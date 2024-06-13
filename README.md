@@ -1,4 +1,5 @@
 # Bienvenue sur le répertoire GitHub Zabbix
+![image](https://github.com/CPNV-ES-MON1/Zabbix/assets/61788042/31c9dabb-97de-41d7-acd8-db0a12df8e2f)
 
 [Vous trouverez le Wiki ici](https://github.com/CPNV-ES-MON1/Zabbix/wiki) Ce guide est conçu pour vous aider à utiliser et administrer Zabbix, un logiciel de surveillance réseau.
 
