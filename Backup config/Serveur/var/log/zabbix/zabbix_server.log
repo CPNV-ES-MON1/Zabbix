@@ -1,0 +1,1526 @@
+ 21147:20240604:101029.672 Starting Zabbix Server. Zabbix 6.0.30 (revision 680df722d6b).
+ 21147:20240604:101029.672 ****** Enabled features ******
+ 21147:20240604:101029.672 SNMP monitoring:           YES
+ 21147:20240604:101029.672 IPMI monitoring:           YES
+ 21147:20240604:101029.672 Web monitoring:            YES
+ 21147:20240604:101029.672 VMware monitoring:         YES
+ 21147:20240604:101029.672 SMTP authentication:       YES
+ 21147:20240604:101029.674 ODBC:                      YES
+ 21147:20240604:101029.674 SSH support:               YES
+ 21147:20240604:101029.674 IPv6 support:              YES
+ 21147:20240604:101029.674 TLS support:               YES
+ 21147:20240604:101029.674 ******************************
+ 21147:20240604:101029.674 using configuration file: /etc/zabbix/zabbix_server.conf
+ 21147:20240604:101029.696 current database version (mandatory/optional): 06000000/06000044
+ 21147:20240604:101029.697 required mandatory version: 06000000
+ 21158:20240604:101029.702 starting HA manager
+ 21158:20240604:101029.725 HA manager started in active mode
+ 21147:20240604:101029.726 server #0 started [main process]
+ 21160:20240604:101029.727 server #1 started [service manager #1]
+ 21161:20240604:101029.727 server #2 started [configuration syncer #1]
+ 21181:20240604:101029.964 server #3 started [alert manager #1]
+ 21182:20240604:101029.964 server #4 started [alerter #1]
+ 21183:20240604:101029.965 server #5 started [alerter #2]
+ 21184:20240604:101029.965 server #6 started [alerter #3]
+ 21185:20240604:101029.966 server #7 started [preprocessing manager #1]
+ 21186:20240604:101029.967 server #8 started [preprocessing worker #1]
+ 21187:20240604:101029.967 server #9 started [preprocessing worker #2]
+ 21188:20240604:101029.968 server #10 started [preprocessing worker #3]
+ 21189:20240604:101029.968 server #11 started [lld manager #1]
+ 21190:20240604:101029.969 server #12 started [lld worker #1]
+ 21191:20240604:101029.970 server #13 started [lld worker #2]
+ 21193:20240604:101029.971 server #14 started [housekeeper #1]
+ 21194:20240604:101029.971 server #15 started [timer #1]
+ 21196:20240604:101029.972 server #16 started [http poller #1]
+ 21197:20240604:101029.973 server #17 started [discoverer #1]
+ 21200:20240604:101029.976 server #19 started [history syncer #2]
+ 21199:20240604:101029.978 server #18 started [history syncer #1]
+ 21201:20240604:101029.979 server #20 started [history syncer #3]
+ 21202:20240604:101029.979 server #21 started [history syncer #4]
+ 21203:20240604:101029.980 server #22 started [escalator #1]
+ 21205:20240604:101029.981 server #23 started [proxy poller #1]
+ 21207:20240604:101029.989 server #24 started [self-monitoring #1]
+ 21208:20240604:101029.989 server #25 started [task manager #1]
+ 21214:20240604:101029.989 server #29 started [poller #4]
+ 21211:20240604:101029.990 server #26 started [poller #1]
+ 21213:20240604:101029.993 server #28 started [poller #3]
+ 21220:20240604:101029.998 server #35 started [trapper #4]
+ 21212:20240604:101030.002 server #27 started [poller #2]
+ 21215:20240604:101030.003 server #30 started [poller #5]
+ 21216:20240604:101030.005 server #31 started [unreachable poller #1]
+ 21230:20240604:101030.005 server #41 started [history poller #3]
+ 21217:20240604:101030.013 server #32 started [trapper #1]
+ 21223:20240604:101030.013 server #38 started [alert syncer #1]
+ 21231:20240604:101030.014 server #42 started [history poller #4]
+ 21218:20240604:101030.020 server #33 started [trapper #2]
+ 21219:20240604:101030.028 server #34 started [trapper #3]
+ 21234:20240604:101030.029 server #44 started [availability manager #1]
+ 21233:20240604:101030.030 server #43 started [history poller #5]
+ 21222:20240604:101030.038 server #37 started [icmp pinger #1]
+ 21221:20240604:101030.038 server #36 started [trapper #5]
+ 21224:20240604:101030.038 server #39 started [history poller #1]
+ 21228:20240604:101030.041 server #40 started [history poller #2]
+ 21212:20240604:101030.048 enabling Zabbix agent checks on host "Zabbix server": interface became available
+ 21247:20240604:101030.057 server #46 started [odbc poller #1]
+ 21244:20240604:101030.057 server #45 started [trigger housekeeper #1]
+ 21199:20240604:101041.997 item "Zabbix server:zabbix[process,ipmi poller,avg,busy]" became not supported: No "ipmi poller" processes started.
+ 21202:20240604:101042.998 item "Zabbix server:zabbix[process,java poller,avg,busy]" became not supported: No "java poller" processes started.
+ 21200:20240604:101048.002 item "Zabbix server:zabbix[process,snmp trapper,avg,busy]" became not supported: No "snmp trapper" processes started.
+ 21200:20240604:101048.002 item "Zabbix server:zabbix[process,ipmi manager,avg,busy]" became not supported: No "ipmi manager" processes started.
+ 21199:20240604:101049.002 item "Zabbix server:zabbix[process,vmware collector,avg,busy]" became not supported: No "vmware collector" processes started.
+ 21200:20240604:101056.008 item "Zabbix server:zabbix[vmware,buffer,pused]" became not supported: No "vmware collector" processes started.
+ 21199:20240604:101059.010 item "Zabbix server:zabbix[process,report writer,avg,busy]" became not supported: No "report writer" processes started.
+ 21199:20240604:101100.013 item "Zabbix server:zabbix[process,report manager,avg,busy]" became not supported: No "report manager" processes started.
+ 21147:20240604:102956.129 Got signal [signal:15(SIGTERM),sender_pid:21483,sender_uid:0,reason:0]. Exiting ...
+ 21211:20240604:102956.261 Zabbix agent item "system.swap.size[,pfree]" on host "Zabbix server" failed: first network error, wait for 15 seconds
+ 21158:20240604:102956.723 HA manager has been paused
+ 21199:20240604:102956.723 syncing history data in progress... 
+ 21199:20240604:102956.724 syncing history data done
+ 21158:20240604:102958.188 HA manager has been stopped
+ 21147:20240604:102958.191 syncing trend data...
+ 21147:20240604:102958.201 syncing trend data done
+ 21147:20240604:102958.202 Zabbix Server stopped. Zabbix 6.0.30 (revision 680df722d6b).
+   621:20240604:130019.007 Starting Zabbix Server. Zabbix 6.0.30 (revision 680df722d6b).
+   621:20240604:130019.007 ****** Enabled features ******
+   621:20240604:130019.007 SNMP monitoring:           YES
+   621:20240604:130019.007 IPMI monitoring:           YES
+   621:20240604:130019.007 Web monitoring:            YES
+   621:20240604:130019.007 VMware monitoring:         YES
+   621:20240604:130019.007 SMTP authentication:       YES
+   621:20240604:130019.007 ODBC:                      YES
+   621:20240604:130019.007 SSH support:               YES
+   621:20240604:130019.007 IPv6 support:              YES
+   621:20240604:130019.007 TLS support:               YES
+   621:20240604:130019.007 ******************************
+   621:20240604:130019.007 using configuration file: /etc/zabbix/zabbix_server.conf
+   621:20240604:130019.144 current database version (mandatory/optional): 06000000/06000044
+   621:20240604:130019.144 required mandatory version: 06000000
+   637:20240604:130019.160 starting HA manager
+   637:20240604:130019.170 HA manager started in active mode
+   621:20240604:130019.171 server #0 started [main process]
+   639:20240604:130019.173 server #2 started [configuration syncer #1]
+   638:20240604:130019.173 server #1 started [service manager #1]
+   668:20240604:130019.747 server #3 started [alert manager #1]
+   672:20240604:130019.755 server #7 started [preprocessing manager #1]
+   673:20240604:130019.755 server #8 started [preprocessing worker #1]
+   674:20240604:130019.758 server #9 started [preprocessing worker #2]
+   677:20240604:130019.758 server #12 started [lld worker #1]
+   670:20240604:130019.758 server #5 started [alerter #2]
+   678:20240604:130019.759 server #13 started [lld worker #2]
+   671:20240604:130019.759 server #6 started [alerter #3]
+   676:20240604:130019.759 server #11 started [lld manager #1]
+   669:20240604:130019.759 server #4 started [alerter #1]
+   679:20240604:130019.762 server #14 started [housekeeper #1]
+   680:20240604:130019.762 server #15 started [timer #1]
+   684:20240604:130019.765 server #19 started [history syncer #2]
+   681:20240604:130019.770 server #16 started [http poller #1]
+   685:20240604:130019.770 server #20 started [history syncer #3]
+   683:20240604:130019.771 server #18 started [history syncer #1]
+   682:20240604:130019.771 server #17 started [discoverer #1]
+   690:20240604:130019.778 server #22 started [escalator #1]
+   689:20240604:130019.779 server #21 started [history syncer #4]
+   692:20240604:130019.780 server #24 started [self-monitoring #1]
+   691:20240604:130019.783 server #23 started [proxy poller #1]
+   699:20240604:130019.790 server #28 started [poller #3]
+   700:20240604:130019.794 server #29 started [poller #4]
+   701:20240604:130019.798 server #30 started [poller #5]
+   702:20240604:130019.802 server #31 started [unreachable poller #1]
+   704:20240604:130019.802 server #33 started [trapper #2]
+   693:20240604:130019.806 server #25 started [task manager #1]
+   705:20240604:130019.807 server #34 started [trapper #3]
+   694:20240604:130019.807 server #26 started [poller #1]
+   703:20240604:130019.810 server #32 started [trapper #1]
+   706:20240604:130019.811 server #35 started [trapper #4]
+   707:20240604:130019.814 server #36 started [trapper #5]
+   695:20240604:130019.815 server #27 started [poller #2]
+   713:20240604:130019.825 server #39 started [history poller #1]
+   711:20240604:130019.830 server #37 started [icmp pinger #1]
+   712:20240604:130019.831 server #38 started [alert syncer #1]
+   719:20240604:130019.837 server #40 started [history poller #2]
+   720:20240604:130019.838 server #41 started [history poller #3]
+   724:20240604:130019.841 server #43 started [history poller #5]
+   726:20240604:130019.842 server #45 started [trigger housekeeper #1]
+   725:20240604:130019.844 server #44 started [availability manager #1]
+   728:20240604:130019.845 server #46 started [odbc poller #1]
+   723:20240604:130019.845 server #42 started [history poller #4]
+   675:20240604:130019.852 server #10 started [preprocessing worker #3]
+   702:20240604:130024.831 resuming Zabbix agent checks on host "Zabbix server": connection restored
+   679:20240604:133019.811 executing housekeeper
+   679:20240604:133019.846 housekeeper [deleted 0 hist/trends, 0 items/triggers, 0 events, 0 problems, 0 sessions, 0 alarms, 0 audit, 0 autoreg_host, 0 records in 0.033755 sec, idle for 1 hour(s)]
+   621:20240604:133136.950 Got signal [signal:15(SIGTERM),sender_pid:1390,sender_uid:0,reason:0]. Exiting ...
+   637:20240604:133137.162 HA manager has been paused
+   689:20240604:133137.163 syncing history data in progress... 
+   689:20240604:133137.163 syncing history data done
+   637:20240604:133138.193 HA manager has been stopped
+   621:20240604:133138.196 syncing trend data...
+   621:20240604:133138.201 syncing trend data done
+   621:20240604:133138.202 Zabbix Server stopped. Zabbix 6.0.30 (revision 680df722d6b).
+   621:20240606:113714.321 Starting Zabbix Server. Zabbix 6.0.30 (revision 680df722d6b).
+   621:20240606:113714.321 ****** Enabled features ******
+   621:20240606:113714.321 SNMP monitoring:           YES
+   621:20240606:113714.321 IPMI monitoring:           YES
+   621:20240606:113714.321 Web monitoring:            YES
+   621:20240606:113714.321 VMware monitoring:         YES
+   621:20240606:113714.321 SMTP authentication:       YES
+   621:20240606:113714.321 ODBC:                      YES
+   621:20240606:113714.321 SSH support:               YES
+   621:20240606:113714.321 IPv6 support:              YES
+   621:20240606:113714.321 TLS support:               YES
+   621:20240606:113714.321 ******************************
+   621:20240606:113714.321 using configuration file: /etc/zabbix/zabbix_server.conf
+   621:20240606:113714.510 current database version (mandatory/optional): 06000000/06000044
+   621:20240606:113714.510 required mandatory version: 06000000
+   636:20240606:113714.516 starting HA manager
+   636:20240606:113714.528 HA manager started in active mode
+   621:20240606:113714.530 server #0 started [main process]
+   637:20240606:113714.532 server #1 started [service manager #1]
+   638:20240606:113714.537 server #2 started [configuration syncer #1]
+   657:20240606:113714.937 server #3 started [alert manager #1]
+   660:20240606:113714.941 server #6 started [alerter #3]
+   659:20240606:113714.941 server #5 started [alerter #2]
+   661:20240606:113714.941 server #7 started [preprocessing manager #1]
+   662:20240606:113714.942 server #8 started [preprocessing worker #1]
+   658:20240606:113714.942 server #4 started [alerter #1]
+   666:20240606:113714.942 server #12 started [lld worker #1]
+   668:20240606:113714.942 server #14 started [housekeeper #1]
+   665:20240606:113714.942 server #11 started [lld manager #1]
+   663:20240606:113714.943 server #9 started [preprocessing worker #2]
+   664:20240606:113714.945 server #10 started [preprocessing worker #3]
+   667:20240606:113714.945 server #13 started [lld worker #2]
+   672:20240606:113714.945 server #18 started [history syncer #1]
+   669:20240606:113714.945 server #15 started [timer #1]
+   677:20240606:113714.949 server #21 started [history syncer #4]
+   675:20240606:113714.949 server #19 started [history syncer #2]
+   670:20240606:113714.950 server #16 started [http poller #1]
+   671:20240606:113714.953 server #17 started [discoverer #1]
+   679:20240606:113714.953 server #23 started [proxy poller #1]
+   683:20240606:113714.957 server #24 started [self-monitoring #1]
+   688:20240606:113714.957 server #29 started [poller #4]
+   678:20240606:113714.961 server #22 started [escalator #1]
+   684:20240606:113714.961 server #25 started [task manager #1]
+   687:20240606:113714.961 server #28 started [poller #3]
+   676:20240606:113714.964 server #20 started [history syncer #3]
+   686:20240606:113714.965 server #27 started [poller #2]
+   685:20240606:113714.968 server #26 started [poller #1]
+   690:20240606:113714.969 server #31 started [unreachable poller #1]
+   689:20240606:113714.972 server #30 started [poller #5]
+   698:20240606:113714.977 server #33 started [trapper #2]
+   699:20240606:113714.981 server #34 started [trapper #3]
+   691:20240606:113714.982 server #32 started [trapper #1]
+   700:20240606:113714.985 server #35 started [trapper #4]
+   701:20240606:113714.989 server #36 started [trapper #5]
+   705:20240606:113714.994 server #38 started [alert syncer #1]
+   702:20240606:113714.995 server #37 started [icmp pinger #1]
+   707:20240606:113714.995 server #40 started [history poller #2]
+   709:20240606:113714.998 server #41 started [history poller #3]
+   717:20240606:113715.005 server #43 started [history poller #5]
+   706:20240606:113715.007 server #39 started [history poller #1]
+   716:20240606:113715.009 server #42 started [history poller #4]
+   718:20240606:113715.014 server #44 started [availability manager #1]
+   723:20240606:113715.018 server #45 started [trigger housekeeper #1]
+   725:20240606:113715.020 server #46 started [odbc poller #1]
+   675:20240606:114552.227 item "Zabbix server:vfs.dev.read.await[xvda]" became not supported: Cannot evaluate function: not enough data at "last(//vfs.dev.read.time.rate[xvda])/(last(//vfs.dev.read.rate[xvda])+(last(//vfs.dev.read.rate[xvda])=0)))*1000*(last(//vfs.dev.read.rate[xvda]) > 0)".
+   677:20240606:114553.228 item "Zabbix server:vfs.dev.read.await[nvme0n1]" became not supported: Cannot evaluate function: not enough data at "last(//vfs.dev.read.time.rate[nvme0n1])/(last(//vfs.dev.read.rate[nvme0n1])+(last(//vfs.dev.read.rate[nvme0n1])=0)))*1000*(last(//vfs.dev.read.rate[nvme0n1]) > 0)".
+   672:20240606:114554.229 item "Zabbix server:vfs.dev.write.await[xvda]" became not supported: Cannot evaluate function: not enough data at "last(//vfs.dev.write.time.rate[xvda])/(last(//vfs.dev.write.rate[xvda])+(last(//vfs.dev.write.rate[xvda])=0)))*1000*(last(//vfs.dev.write.rate[xvda]) > 0)".
+   672:20240606:114555.231 item "Zabbix server:vfs.dev.write.await[nvme0n1]" became not supported: Cannot evaluate function: not enough data at "last(//vfs.dev.write.time.rate[nvme0n1])/(last(//vfs.dev.write.rate[nvme0n1])+(last(//vfs.dev.write.rate[nvme0n1])=0)))*1000*(last(//vfs.dev.write.rate[nvme0n1]) > 0)".
+   677:20240606:114556.232 item "Zabbix server:vfs.file.contents[/sys/block/xvda/stat]" became not supported: Cannot open file: [2] No such file or directory
+   672:20240606:114753.298 item "Zabbix server:vfs.dev.read.await[nvme0n1]" became supported
+   677:20240606:114755.299 item "Zabbix server:vfs.dev.write.await[nvme0n1]" became supported
+   677:20240606:114951.359 item "Zabbix server:vfs.file.contents["/sys/class/net/ens5/speed"]" became not supported: Cannot read from file.
+   668:20240606:120715.042 executing housekeeper
+   668:20240606:120715.053 housekeeper [deleted 0 hist/trends, 0 items/triggers, 0 events, 1 problems, 0 sessions, 0 alarms, 0 audit, 0 autoreg_host, 0 records in 0.010071 sec, idle for 1 hour(s)]
+   621:20240606:122125.887 Got signal [signal:15(SIGTERM),sender_pid:1953,sender_uid:0,reason:0]. Exiting ...
+   636:20240606:122126.521 HA manager has been paused
+   677:20240606:122126.522 syncing history data in progress... 
+   677:20240606:122126.530 syncing history data... 100.000000%
+   677:20240606:122126.531 syncing history data done
+   658:20240606:122127.531 cannot read alert manager service request
+   664:20240606:122127.532 cannot read preprocessing service request
+   666:20240606:122127.534 cannot read LLD manager service request
+   636:20240606:122127.568 HA manager has been stopped
+   621:20240606:122127.571 syncing trend data...
+   621:20240606:122127.585 syncing trend data done
+   621:20240606:122127.586 Zabbix Server stopped. Zabbix 6.0.30 (revision 680df722d6b).
+  1956:20240606:122127.626 Starting Zabbix Server. Zabbix 6.0.30 (revision 680df722d6b).
+  1956:20240606:122127.626 ****** Enabled features ******
+  1956:20240606:122127.626 SNMP monitoring:           YES
+  1956:20240606:122127.626 IPMI monitoring:           YES
+  1956:20240606:122127.626 Web monitoring:            YES
+  1956:20240606:122127.626 VMware monitoring:         YES
+  1956:20240606:122127.626 SMTP authentication:       YES
+  1956:20240606:122127.626 ODBC:                      YES
+  1956:20240606:122127.626 SSH support:               YES
+  1956:20240606:122127.626 IPv6 support:              YES
+  1956:20240606:122127.626 TLS support:               YES
+  1956:20240606:122127.626 ******************************
+  1956:20240606:122127.626 using configuration file: /etc/zabbix/zabbix_server.conf
+  1956:20240606:122127.633 current database version (mandatory/optional): 06000000/06000044
+  1956:20240606:122127.633 required mandatory version: 06000000
+  1957:20240606:122127.636 starting HA manager
+  1957:20240606:122127.638 HA manager started in active mode
+  1956:20240606:122127.639 server #0 started [main process]
+  1958:20240606:122127.640 server #1 started [service manager #1]
+  1959:20240606:122127.641 server #2 started [configuration syncer #1]
+  1960:20240606:122127.770 server #3 started [alert manager #1]
+  1961:20240606:122127.771 server #4 started [alerter #1]
+  1962:20240606:122127.771 server #5 started [alerter #2]
+  1963:20240606:122127.771 server #6 started [alerter #3]
+  1964:20240606:122127.772 server #7 started [preprocessing manager #1]
+  1965:20240606:122127.773 server #8 started [preprocessing worker #1]
+  1966:20240606:122127.773 server #9 started [preprocessing worker #2]
+  1967:20240606:122127.774 server #10 started [preprocessing worker #3]
+  1968:20240606:122127.774 server #11 started [lld manager #1]
+  1969:20240606:122127.775 server #12 started [lld worker #1]
+  1970:20240606:122127.775 server #13 started [lld worker #2]
+  1971:20240606:122127.776 server #14 started [housekeeper #1]
+  1972:20240606:122127.777 server #15 started [timer #1]
+  1973:20240606:122127.778 server #16 started [http poller #1]
+  1974:20240606:122127.778 server #17 started [discoverer #1]
+  1977:20240606:122127.784 server #20 started [history syncer #3]
+  1978:20240606:122127.784 server #21 started [history syncer #4]
+  1979:20240606:122127.785 server #22 started [escalator #1]
+  1980:20240606:122127.788 server #23 started [proxy poller #1]
+  1976:20240606:122127.788 server #19 started [history syncer #2]
+  1981:20240606:122127.792 server #24 started [self-monitoring #1]
+  1982:20240606:122127.792 server #25 started [task manager #1]
+  1975:20240606:122127.793 server #18 started [history syncer #1]
+  1996:20240606:122127.793 server #39 started [history poller #1]
+  1993:20240606:122127.797 server #36 started [trapper #5]
+  1983:20240606:122127.797 server #26 started [poller #1]
+  1994:20240606:122127.800 server #37 started [icmp pinger #1]
+  1998:20240606:122127.801 server #41 started [history poller #3]
+  1992:20240606:122127.801 server #35 started [trapper #4]
+  1999:20240606:122127.804 server #42 started [history poller #4]
+  1997:20240606:122127.804 server #40 started [history poller #2]
+  2000:20240606:122127.808 server #43 started [history poller #5]
+  2001:20240606:122127.808 server #44 started [availability manager #1]
+  1995:20240606:122127.808 server #38 started [alert syncer #1]
+  1984:20240606:122127.809 server #27 started [poller #2]
+  1991:20240606:122127.809 server #34 started [trapper #3]
+  1985:20240606:122127.812 server #28 started [poller #3]
+  2002:20240606:122127.813 server #45 started [trigger housekeeper #1]
+  2003:20240606:122127.815 server #46 started [odbc poller #1]
+  1986:20240606:122127.816 server #29 started [poller #4]
+  1987:20240606:122127.817 server #30 started [poller #5]
+  1988:20240606:122127.820 server #31 started [unreachable poller #1]
+  1989:20240606:122127.821 server #32 started [trapper #1]
+  1990:20240606:122127.825 server #33 started [trapper #2]
+  1956:20240606:122212.591 Got signal [signal:15(SIGTERM),sender_pid:2019,sender_uid:0,reason:0]. Exiting ...
+  1957:20240606:122212.643 HA manager has been paused
+  1978:20240606:122212.643 syncing history data in progress... 
+  1978:20240606:122212.643 syncing history data done
+  1957:20240606:122213.725 HA manager has been stopped
+  1956:20240606:122213.728 syncing trend data...
+  1956:20240606:122213.735 syncing trend data done
+  1956:20240606:122213.737 Zabbix Server stopped. Zabbix 6.0.30 (revision 680df722d6b).
+  2022:20240606:122213.772 Starting Zabbix Server. Zabbix 6.0.30 (revision 680df722d6b).
+  2022:20240606:122213.772 ****** Enabled features ******
+  2022:20240606:122213.772 SNMP monitoring:           YES
+  2022:20240606:122213.772 IPMI monitoring:           YES
+  2022:20240606:122213.772 Web monitoring:            YES
+  2022:20240606:122213.772 VMware monitoring:         YES
+  2022:20240606:122213.772 SMTP authentication:       YES
+  2022:20240606:122213.772 ODBC:                      YES
+  2022:20240606:122213.772 SSH support:               YES
+  2022:20240606:122213.772 IPv6 support:              YES
+  2022:20240606:122213.772 TLS support:               YES
+  2022:20240606:122213.772 ******************************
+  2022:20240606:122213.772 using configuration file: /etc/zabbix/zabbix_server.conf
+  2022:20240606:122213.780 current database version (mandatory/optional): 06000000/06000044
+  2022:20240606:122213.780 required mandatory version: 06000000
+  2023:20240606:122213.783 starting HA manager
+  2023:20240606:122213.786 HA manager started in active mode
+  2022:20240606:122213.787 server #0 started [main process]
+  2024:20240606:122213.788 server #1 started [service manager #1]
+  2025:20240606:122213.789 server #2 started [configuration syncer #1]
+  2026:20240606:122213.938 server #3 started [alert manager #1]
+  2027:20240606:122213.939 server #4 started [alerter #1]
+  2028:20240606:122213.939 server #5 started [alerter #2]
+  2029:20240606:122213.940 server #6 started [alerter #3]
+  2030:20240606:122213.940 server #7 started [preprocessing manager #1]
+  2031:20240606:122213.941 server #8 started [preprocessing worker #1]
+  2032:20240606:122213.941 server #9 started [preprocessing worker #2]
+  2033:20240606:122213.942 server #10 started [preprocessing worker #3]
+  2034:20240606:122213.942 server #11 started [lld manager #1]
+  2035:20240606:122213.943 server #12 started [lld worker #1]
+  2036:20240606:122213.944 server #13 started [lld worker #2]
+  2037:20240606:122213.945 server #14 started [housekeeper #1]
+  2038:20240606:122213.945 server #15 started [timer #1]
+  2040:20240606:122213.947 server #17 started [discoverer #1]
+  2041:20240606:122213.952 server #18 started [history syncer #1]
+  2039:20240606:122213.953 server #16 started [http poller #1]
+  2043:20240606:122213.953 server #20 started [history syncer #3]
+  2042:20240606:122213.953 server #19 started [history syncer #2]
+  2044:20240606:122213.954 server #21 started [history syncer #4]
+  2045:20240606:122213.956 server #22 started [escalator #1]
+  2049:20240606:122213.961 server #26 started [poller #1]
+  2047:20240606:122213.962 server #24 started [self-monitoring #1]
+  2050:20240606:122213.962 server #27 started [poller #2]
+  2048:20240606:122213.965 server #25 started [task manager #1]
+  2046:20240606:122213.965 server #23 started [proxy poller #1]
+  2051:20240606:122213.966 server #28 started [poller #3]
+  2053:20240606:122213.970 server #30 started [poller #5]
+  2055:20240606:122213.973 server #32 started [trapper #1]
+  2054:20240606:122213.974 server #31 started [unreachable poller #1]
+  2056:20240606:122213.977 server #33 started [trapper #2]
+  2052:20240606:122213.980 server #29 started [poller #4]
+  2058:20240606:122213.984 server #35 started [trapper #4]
+  2057:20240606:122213.985 server #34 started [trapper #3]
+  2059:20240606:122213.988 server #36 started [trapper #5]
+  2060:20240606:122213.992 server #37 started [icmp pinger #1]
+  2061:20240606:122213.993 server #38 started [alert syncer #1]
+  2065:20240606:122213.993 server #42 started [history poller #4]
+  2062:20240606:122213.993 server #39 started [history poller #1]
+  2063:20240606:122213.997 server #40 started [history poller #2]
+  2064:20240606:122213.999 server #41 started [history poller #3]
+  2066:20240606:122214.001 server #43 started [history poller #5]
+  2067:20240606:122214.003 server #44 started [availability manager #1]
+  2069:20240606:122214.003 server #46 started [odbc poller #1]
+  2068:20240606:122214.004 server #45 started [trigger housekeeper #1]
+  2022:20240606:122338.911 Got signal [signal:15(SIGTERM),sender_pid:2089,sender_uid:0,reason:0]. Exiting ...
+  2023:20240606:122339.790 HA manager has been paused
+  2044:20240606:122339.790 syncing history data in progress... 
+  2044:20240606:122339.797 syncing history data... 100.000000%
+  2044:20240606:122339.797 syncing history data done
+  2023:20240606:122340.931 HA manager has been stopped
+  2022:20240606:122340.934 syncing trend data...
+  2022:20240606:122340.946 syncing trend data done
+  2022:20240606:122340.948 Zabbix Server stopped. Zabbix 6.0.30 (revision 680df722d6b).
+  2093:20240606:122341.010 Starting Zabbix Server. Zabbix 6.0.30 (revision 680df722d6b).
+  2093:20240606:122341.010 ****** Enabled features ******
+  2093:20240606:122341.010 SNMP monitoring:           YES
+  2093:20240606:122341.010 IPMI monitoring:           YES
+  2093:20240606:122341.010 Web monitoring:            YES
+  2093:20240606:122341.010 VMware monitoring:         YES
+  2093:20240606:122341.010 SMTP authentication:       YES
+  2093:20240606:122341.010 ODBC:                      YES
+  2093:20240606:122341.010 SSH support:               YES
+  2093:20240606:122341.010 IPv6 support:              YES
+  2093:20240606:122341.010 TLS support:               YES
+  2093:20240606:122341.010 ******************************
+  2093:20240606:122341.010 using configuration file: /etc/zabbix/zabbix_server.conf
+  2093:20240606:122341.026 current database version (mandatory/optional): 06000000/06000044
+  2093:20240606:122341.026 required mandatory version: 06000000
+  2094:20240606:122341.030 starting HA manager
+  2094:20240606:122341.035 HA manager started in active mode
+  2093:20240606:122341.036 server #0 started [main process]
+  2095:20240606:122341.037 server #1 started [service manager #1]
+  2096:20240606:122341.038 server #2 started [configuration syncer #1]
+  2097:20240606:122341.180 server #3 started [alert manager #1]
+  2098:20240606:122341.181 server #4 started [alerter #1]
+  2099:20240606:122341.182 server #5 started [alerter #2]
+  2100:20240606:122341.182 server #6 started [alerter #3]
+  2101:20240606:122341.183 server #7 started [preprocessing manager #1]
+  2102:20240606:122341.183 server #8 started [preprocessing worker #1]
+  2103:20240606:122341.184 server #9 started [preprocessing worker #2]
+  2104:20240606:122341.184 server #10 started [preprocessing worker #3]
+  2105:20240606:122341.185 server #11 started [lld manager #1]
+  2106:20240606:122341.185 server #12 started [lld worker #1]
+  2107:20240606:122341.188 server #13 started [lld worker #2]
+  2108:20240606:122341.189 server #14 started [housekeeper #1]
+  2109:20240606:122341.191 server #15 started [timer #1]
+  2110:20240606:122341.193 server #16 started [http poller #1]
+  2112:20240606:122341.193 server #18 started [history syncer #1]
+  2111:20240606:122341.195 server #17 started [discoverer #1]
+  2114:20240606:122341.199 server #20 started [history syncer #3]
+  2113:20240606:122341.201 server #19 started [history syncer #2]
+  2120:20240606:122341.201 server #26 started [poller #1]
+  2116:20240606:122341.205 server #22 started [escalator #1]
+  2115:20240606:122341.207 server #21 started [history syncer #4]
+  2117:20240606:122341.208 server #23 started [proxy poller #1]
+  2119:20240606:122341.208 server #25 started [task manager #1]
+  2118:20240606:122341.208 server #24 started [self-monitoring #1]
+  2122:20240606:122341.209 server #28 started [poller #3]
+  2121:20240606:122341.211 server #27 started [poller #2]
+  2123:20240606:122341.213 server #29 started [poller #4]
+  2124:20240606:122341.225 server #30 started [poller #5]
+  2136:20240606:122341.226 server #42 started [history poller #4]
+  2125:20240606:122341.228 server #31 started [unreachable poller #1]
+  2137:20240606:122341.229 server #43 started [history poller #5]
+  2135:20240606:122341.233 server #41 started [history poller #3]
+  2127:20240606:122341.233 server #33 started [trapper #2]
+  2128:20240606:122341.237 server #34 started [trapper #3]
+  2140:20240606:122341.237 server #46 started [odbc poller #1]
+  2138:20240606:122341.242 server #44 started [availability manager #1]
+  2130:20240606:122341.242 server #36 started [trapper #5]
+  2139:20240606:122341.243 server #45 started [trigger housekeeper #1]
+  2129:20240606:122341.243 server #35 started [trapper #4]
+  2131:20240606:122341.245 server #37 started [icmp pinger #1]
+  2134:20240606:122341.246 server #40 started [history poller #2]
+  2132:20240606:122341.246 server #38 started [alert syncer #1]
+  2126:20240606:122341.246 server #32 started [trapper #1]
+  2133:20240606:122341.250 server #39 started [history poller #1]
+  2093:20240606:122413.975 Got signal [signal:15(SIGTERM),sender_pid:2157,sender_uid:0,reason:0]. Exiting ...
+  2094:20240606:122414.033 HA manager has been paused
+  2115:20240606:122414.034 syncing history data in progress... 
+  2115:20240606:122414.034 syncing history data done
+  2094:20240606:122415.107 HA manager has been stopped
+  2093:20240606:122415.110 syncing trend data...
+  2093:20240606:122415.116 syncing trend data done
+  2093:20240606:122415.117 Zabbix Server stopped. Zabbix 6.0.30 (revision 680df722d6b).
+  2160:20240606:122415.154 Starting Zabbix Server. Zabbix 6.0.30 (revision 680df722d6b).
+  2160:20240606:122415.154 ****** Enabled features ******
+  2160:20240606:122415.155 SNMP monitoring:           YES
+  2160:20240606:122415.155 IPMI monitoring:           YES
+  2160:20240606:122415.155 Web monitoring:            YES
+  2160:20240606:122415.155 VMware monitoring:         YES
+  2160:20240606:122415.155 SMTP authentication:       YES
+  2160:20240606:122415.155 ODBC:                      YES
+  2160:20240606:122415.155 SSH support:               YES
+  2160:20240606:122415.155 IPv6 support:              YES
+  2160:20240606:122415.155 TLS support:               YES
+  2160:20240606:122415.155 ******************************
+  2160:20240606:122415.155 using configuration file: /etc/zabbix/zabbix_server.conf
+  2160:20240606:122415.163 current database version (mandatory/optional): 06000000/06000044
+  2160:20240606:122415.163 required mandatory version: 06000000
+  2161:20240606:122415.166 starting HA manager
+  2161:20240606:122415.168 HA manager started in active mode
+  2160:20240606:122415.169 server #0 started [main process]
+  2162:20240606:122415.170 server #1 started [service manager #1]
+  2163:20240606:122415.171 server #2 started [configuration syncer #1]
+  2164:20240606:122415.307 server #3 started [alert manager #1]
+  2165:20240606:122415.308 server #4 started [alerter #1]
+  2166:20240606:122415.308 server #5 started [alerter #2]
+  2167:20240606:122415.309 server #6 started [alerter #3]
+  2168:20240606:122415.309 server #7 started [preprocessing manager #1]
+  2169:20240606:122415.310 server #8 started [preprocessing worker #1]
+  2170:20240606:122415.311 server #9 started [preprocessing worker #2]
+  2171:20240606:122415.311 server #10 started [preprocessing worker #3]
+  2172:20240606:122415.312 server #11 started [lld manager #1]
+  2173:20240606:122415.312 server #12 started [lld worker #1]
+  2174:20240606:122415.313 server #13 started [lld worker #2]
+  2175:20240606:122415.313 server #14 started [housekeeper #1]
+  2176:20240606:122415.314 server #15 started [timer #1]
+  2177:20240606:122415.315 server #16 started [http poller #1]
+  2178:20240606:122415.317 server #17 started [discoverer #1]
+  2182:20240606:122415.320 server #21 started [history syncer #4]
+  2181:20240606:122415.321 server #20 started [history syncer #3]
+  2180:20240606:122415.321 server #19 started [history syncer #2]
+  2183:20240606:122415.321 server #22 started [escalator #1]
+  2179:20240606:122415.324 server #18 started [history syncer #1]
+  2184:20240606:122415.325 server #23 started [proxy poller #1]
+  2186:20240606:122415.329 server #25 started [task manager #1]
+  2187:20240606:122415.335 server #26 started [poller #1]
+  2188:20240606:122415.335 server #27 started [poller #2]
+  2185:20240606:122415.343 server #24 started [self-monitoring #1]
+  2197:20240606:122415.343 server #36 started [trapper #5]
+  2200:20240606:122415.354 server #39 started [history poller #1]
+  2199:20240606:122415.358 server #38 started [alert syncer #1]
+  2202:20240606:122415.359 server #41 started [history poller #3]
+  2203:20240606:122415.360 server #42 started [history poller #4]
+  2201:20240606:122415.366 server #40 started [history poller #2]
+  2205:20240606:122415.368 server #44 started [availability manager #1]
+  2204:20240606:122415.368 server #43 started [history poller #5]
+  2189:20240606:122415.369 server #28 started [poller #3]
+  2206:20240606:122415.372 server #45 started [trigger housekeeper #1]
+  2192:20240606:122415.373 server #31 started [unreachable poller #1]
+  2193:20240606:122415.377 server #32 started [trapper #1]
+  2207:20240606:122415.378 server #46 started [odbc poller #1]
+  2194:20240606:122415.380 server #33 started [trapper #2]
+  2195:20240606:122415.383 server #34 started [trapper #3]
+  2196:20240606:122415.383 server #35 started [trapper #4]
+  2190:20240606:122415.387 server #29 started [poller #4]
+  2198:20240606:122415.387 server #37 started [icmp pinger #1]
+  2191:20240606:122415.391 server #30 started [poller #5]
+  2160:20240606:122450.015 Got signal [signal:15(SIGTERM),sender_pid:2218,sender_uid:0,reason:0]. Exiting ...
+  2161:20240606:122450.171 HA manager has been paused
+  2182:20240606:122450.171 syncing history data in progress... 
+  2182:20240606:122450.171 syncing history data done
+  2161:20240606:122451.271 HA manager has been stopped
+  2160:20240606:122451.279 syncing trend data...
+  2160:20240606:122451.297 syncing trend data done
+  2160:20240606:122451.301 Zabbix Server stopped. Zabbix 6.0.30 (revision 680df722d6b).
+  2222:20240606:122451.356 Starting Zabbix Server. Zabbix 6.0.30 (revision 680df722d6b).
+  2222:20240606:122451.356 ****** Enabled features ******
+  2222:20240606:122451.356 SNMP monitoring:           YES
+  2222:20240606:122451.356 IPMI monitoring:           YES
+  2222:20240606:122451.356 Web monitoring:            YES
+  2222:20240606:122451.356 VMware monitoring:         YES
+  2222:20240606:122451.356 SMTP authentication:       YES
+  2222:20240606:122451.356 ODBC:                      YES
+  2222:20240606:122451.356 SSH support:               YES
+  2222:20240606:122451.356 IPv6 support:              YES
+  2222:20240606:122451.356 TLS support:               YES
+  2222:20240606:122451.356 ******************************
+  2222:20240606:122451.356 using configuration file: /etc/zabbix/zabbix_server.conf
+  2222:20240606:122451.390 current database version (mandatory/optional): 06000000/06000044
+  2222:20240606:122451.390 required mandatory version: 06000000
+  2223:20240606:122451.395 starting HA manager
+  2223:20240606:122451.397 HA manager started in active mode
+  2222:20240606:122451.398 server #0 started [main process]
+  2224:20240606:122451.399 server #1 started [service manager #1]
+  2225:20240606:122451.400 server #2 started [configuration syncer #1]
+  2226:20240606:122451.576 server #3 started [alert manager #1]
+  2227:20240606:122451.577 server #4 started [alerter #1]
+  2228:20240606:122451.578 server #5 started [alerter #2]
+  2229:20240606:122451.579 server #6 started [alerter #3]
+  2230:20240606:122451.580 server #7 started [preprocessing manager #1]
+  2231:20240606:122451.581 server #8 started [preprocessing worker #1]
+  2232:20240606:122451.581 server #9 started [preprocessing worker #2]
+  2233:20240606:122451.582 server #10 started [preprocessing worker #3]
+  2234:20240606:122451.582 server #11 started [lld manager #1]
+  2235:20240606:122451.583 server #12 started [lld worker #1]
+  2236:20240606:122451.583 server #13 started [lld worker #2]
+  2237:20240606:122451.584 server #14 started [housekeeper #1]
+  2238:20240606:122451.584 server #15 started [timer #1]
+  2240:20240606:122451.586 server #17 started [discoverer #1]
+  2241:20240606:122451.590 server #18 started [history syncer #1]
+  2242:20240606:122451.592 server #19 started [history syncer #2]
+  2243:20240606:122451.593 server #20 started [history syncer #3]
+  2239:20240606:122451.593 server #16 started [http poller #1]
+  2246:20240606:122451.593 server #23 started [proxy poller #1]
+  2247:20240606:122451.594 server #24 started [self-monitoring #1]
+  2248:20240606:122451.594 server #25 started [task manager #1]
+  2245:20240606:122451.594 server #22 started [escalator #1]
+  2244:20240606:122451.595 server #21 started [history syncer #4]
+  2251:20240606:122451.595 server #28 started [poller #3]
+  2255:20240606:122451.599 server #32 started [trapper #1]
+  2250:20240606:122451.600 server #27 started [poller #2]
+  2249:20240606:122451.605 server #26 started [poller #1]
+  2253:20240606:122451.609 server #30 started [poller #5]
+  2254:20240606:122451.612 server #31 started [unreachable poller #1]
+  2252:20240606:122451.616 server #29 started [poller #4]
+  2256:20240606:122451.617 server #33 started [trapper #2]
+  2267:20240606:122451.621 server #44 started [availability manager #1]
+  2264:20240606:122451.622 server #41 started [history poller #3]
+  2263:20240606:122451.623 server #40 started [history poller #2]
+  2262:20240606:122451.625 server #39 started [history poller #1]
+  2266:20240606:122451.626 server #43 started [history poller #5]
+  2265:20240606:122451.629 server #42 started [history poller #4]
+  2257:20240606:122451.631 server #34 started [trapper #3]
+  2269:20240606:122451.633 server #46 started [odbc poller #1]
+  2259:20240606:122451.633 server #36 started [trapper #5]
+  2268:20240606:122451.638 server #45 started [trigger housekeeper #1]
+  2258:20240606:122451.638 server #35 started [trapper #4]
+  2260:20240606:122451.640 server #37 started [icmp pinger #1]
+  2261:20240606:122451.641 server #38 started [alert syncer #1]
+  2222:20240606:122635.211 Got signal [signal:15(SIGTERM),sender_pid:2856,sender_uid:0,reason:0]. Exiting ...
+  2223:20240606:122635.400 HA manager has been paused
+  2241:20240606:122635.400 syncing history data in progress... 
+  2241:20240606:122635.400 syncing history data done
+  2223:20240606:122636.554 HA manager has been stopped
+  2222:20240606:122636.558 syncing trend data...
+  2222:20240606:122636.568 syncing trend data done
+  2222:20240606:122636.569 Zabbix Server stopped. Zabbix 6.0.30 (revision 680df722d6b).
+  2860:20240606:122636.620 Starting Zabbix Server. Zabbix 6.0.30 (revision 680df722d6b).
+  2860:20240606:122636.620 ****** Enabled features ******
+  2860:20240606:122636.620 SNMP monitoring:           YES
+  2860:20240606:122636.620 IPMI monitoring:           YES
+  2860:20240606:122636.620 Web monitoring:            YES
+  2860:20240606:122636.620 VMware monitoring:         YES
+  2860:20240606:122636.620 SMTP authentication:       YES
+  2860:20240606:122636.620 ODBC:                      YES
+  2860:20240606:122636.620 SSH support:               YES
+  2860:20240606:122636.620 IPv6 support:              YES
+  2860:20240606:122636.620 TLS support:               YES
+  2860:20240606:122636.620 ******************************
+  2860:20240606:122636.620 using configuration file: /etc/zabbix/zabbix_server.conf
+  2860:20240606:122636.628 current database version (mandatory/optional): 06000000/06000044
+  2860:20240606:122636.628 required mandatory version: 06000000
+  2861:20240606:122636.631 starting HA manager
+  2861:20240606:122636.634 HA manager started in active mode
+  2860:20240606:122636.634 server #0 started [main process]
+  2862:20240606:122636.635 server #1 started [service manager #1]
+  2863:20240606:122636.636 server #2 started [configuration syncer #1]
+  2864:20240606:122636.777 server #3 started [alert manager #1]
+  2865:20240606:122636.777 server #4 started [alerter #1]
+  2866:20240606:122636.778 server #5 started [alerter #2]
+  2867:20240606:122636.778 server #6 started [alerter #3]
+  2868:20240606:122636.779 server #7 started [preprocessing manager #1]
+  2869:20240606:122636.780 server #8 started [preprocessing worker #1]
+  2870:20240606:122636.780 server #9 started [preprocessing worker #2]
+  2872:20240606:122636.781 server #11 started [lld manager #1]
+  2873:20240606:122636.782 server #12 started [lld worker #1]
+  2874:20240606:122636.783 server #13 started [lld worker #2]
+  2876:20240606:122636.784 server #15 started [timer #1]
+  2879:20240606:122636.786 server #18 started [history syncer #1]
+  2880:20240606:122636.787 server #19 started [history syncer #2]
+  2881:20240606:122636.788 server #20 started [history syncer #3]
+  2878:20240606:122636.789 server #17 started [discoverer #1]
+  2877:20240606:122636.789 server #16 started [http poller #1]
+  2871:20240606:122636.790 server #10 started [preprocessing worker #3]
+  2875:20240606:122636.795 server #14 started [housekeeper #1]
+  2883:20240606:122636.795 server #22 started [escalator #1]
+  2882:20240606:122636.804 server #21 started [history syncer #4]
+  2884:20240606:122636.808 server #23 started [proxy poller #1]
+  2885:20240606:122636.809 server #24 started [self-monitoring #1]
+  2886:20240606:122636.813 server #25 started [task manager #1]
+  2887:20240606:122636.815 server #26 started [poller #1]
+  2888:20240606:122636.817 server #27 started [poller #2]
+  2889:20240606:122636.821 server #28 started [poller #3]
+  2890:20240606:122636.825 server #29 started [poller #4]
+  2893:20240606:122636.825 server #32 started [trapper #1]
+  2901:20240606:122636.825 server #40 started [history poller #2]
+  2904:20240606:122636.829 server #43 started [history poller #5]
+  2902:20240606:122636.832 server #41 started [history poller #3]
+  2903:20240606:122636.832 server #42 started [history poller #4]
+  2891:20240606:122636.836 server #30 started [poller #5]
+  2900:20240606:122636.839 server #39 started [history poller #1]
+  2906:20240606:122636.843 server #45 started [trigger housekeeper #1]
+  2907:20240606:122636.844 server #46 started [odbc poller #1]
+  2892:20240606:122636.845 server #31 started [unreachable poller #1]
+  2894:20240606:122636.849 server #33 started [trapper #2]
+  2905:20240606:122636.849 server #44 started [availability manager #1]
+  2895:20240606:122636.858 server #34 started [trapper #3]
+  2896:20240606:122636.859 server #35 started [trapper #4]
+  2897:20240606:122636.864 server #36 started [trapper #5]
+  2898:20240606:122636.865 server #37 started [icmp pinger #1]
+  2899:20240606:122636.865 server #38 started [alert syncer #1]
+  2860:20240606:122704.266 Got signal [signal:15(SIGTERM),sender_pid:2930,sender_uid:0,reason:0]. Exiting ...
+  2861:20240606:122704.635 HA manager has been paused
+  2879:20240606:122704.636 syncing history data in progress... 
+  2879:20240606:122704.636 syncing history data done
+  2861:20240606:122705.693 HA manager has been stopped
+  2860:20240606:122705.697 syncing trend data...
+  2860:20240606:122705.704 syncing trend data done
+  2860:20240606:122705.705 Zabbix Server stopped. Zabbix 6.0.30 (revision 680df722d6b).
+  2957:20240606:122705.768 Starting Zabbix Server. Zabbix 6.0.30 (revision 680df722d6b).
+  2957:20240606:122705.768 ****** Enabled features ******
+  2957:20240606:122705.768 SNMP monitoring:           YES
+  2957:20240606:122705.768 IPMI monitoring:           YES
+  2957:20240606:122705.768 Web monitoring:            YES
+  2957:20240606:122705.768 VMware monitoring:         YES
+  2957:20240606:122705.768 SMTP authentication:       YES
+  2957:20240606:122705.768 ODBC:                      YES
+  2957:20240606:122705.768 SSH support:               YES
+  2957:20240606:122705.768 IPv6 support:              YES
+  2957:20240606:122705.768 TLS support:               YES
+  2957:20240606:122705.768 ******************************
+  2957:20240606:122705.768 using configuration file: /etc/zabbix/zabbix_server.conf
+  2957:20240606:122705.783 current database version (mandatory/optional): 06000000/06000044
+  2957:20240606:122705.783 required mandatory version: 06000000
+  2958:20240606:122705.787 starting HA manager
+  2958:20240606:122705.790 HA manager started in active mode
+  2957:20240606:122705.791 server #0 started [main process]
+  2959:20240606:122705.792 server #1 started [service manager #1]
+  2960:20240606:122705.792 server #2 started [configuration syncer #1]
+  2961:20240606:122705.956 server #3 started [alert manager #1]
+  2962:20240606:122705.957 server #4 started [alerter #1]
+  2964:20240606:122705.957 server #6 started [alerter #3]
+  2965:20240606:122705.958 server #7 started [preprocessing manager #1]
+  2966:20240606:122705.958 server #8 started [preprocessing worker #1]
+  2967:20240606:122705.959 server #9 started [preprocessing worker #2]
+  2968:20240606:122705.959 server #10 started [preprocessing worker #3]
+  2969:20240606:122705.960 server #11 started [lld manager #1]
+  2970:20240606:122705.960 server #12 started [lld worker #1]
+  2971:20240606:122705.961 server #13 started [lld worker #2]
+  2973:20240606:122705.962 server #15 started [timer #1]
+  2976:20240606:122705.964 server #18 started [history syncer #1]
+  2978:20240606:122705.965 server #20 started [history syncer #3]
+  2979:20240606:122705.966 server #21 started [history syncer #4]
+  2972:20240606:122705.966 server #14 started [housekeeper #1]
+  2974:20240606:122705.966 server #16 started [http poller #1]
+  2975:20240606:122705.967 server #17 started [discoverer #1]
+  2980:20240606:122705.970 server #22 started [escalator #1]
+  2981:20240606:122705.973 server #23 started [proxy poller #1]
+  2977:20240606:122705.973 server #19 started [history syncer #2]
+  2963:20240606:122705.974 server #5 started [alerter #2]
+  2982:20240606:122705.975 server #24 started [self-monitoring #1]
+  2983:20240606:122705.975 server #25 started [task manager #1]
+  2984:20240606:122705.976 server #26 started [poller #1]
+  2985:20240606:122705.980 server #27 started [poller #2]
+  2987:20240606:122705.983 server #29 started [poller #4]
+  2991:20240606:122705.986 server #33 started [trapper #2]
+  2990:20240606:122705.989 server #32 started [trapper #1]
+  2995:20240606:122705.990 server #37 started [icmp pinger #1]
+  2996:20240606:122705.990 server #38 started [alert syncer #1]
+  2989:20240606:122705.991 server #31 started [unreachable poller #1]
+  2988:20240606:122705.991 server #30 started [poller #5]
+  2997:20240606:122705.992 server #39 started [history poller #1]
+  2992:20240606:122705.995 server #34 started [trapper #3]
+  2986:20240606:122705.996 server #28 started [poller #3]
+  2993:20240606:122706.000 server #35 started [trapper #4]
+  2994:20240606:122706.001 server #36 started [trapper #5]
+  2999:20240606:122706.003 server #41 started [history poller #3]
+  2998:20240606:122706.007 server #40 started [history poller #2]
+  3000:20240606:122706.011 server #42 started [history poller #4]
+  3001:20240606:122706.011 server #43 started [history poller #5]
+  3002:20240606:122706.015 server #44 started [availability manager #1]
+  3003:20240606:122706.015 server #45 started [trigger housekeeper #1]
+  3004:20240606:122706.016 server #46 started [odbc poller #1]
+  2992:20240606:123759.091 cannot send list of active checks to "10.0.2.12": host [Zabbix-Win] not found
+  2990:20240606:123826.841 cannot send list of active checks to "10.0.2.12": host [Zabbix-Win] not found
+  2992:20240606:124028.841 cannot send list of active checks to "10.0.2.12": host [Zabbix-Win] not found
+  2986:20240606:124114.144 enabling Zabbix agent checks on host "Zabbix-Win": interface became available
+  2978:20240606:124122.418 item "Zabbix-Win:system.swap.free" became not supported: Cannot evaluate function: not enough data at "last(//system.swap.size[,total]) - last(//system.swap.size[,total]) / 100 * last(//perf_counter_en["\Paging file(_Total)\% Usage"])".
+  2977:20240606:124123.420 item "Zabbix-Win:system.cpu.util" became not supported: No data available.
+  2978:20240606:124128.424 item "Zabbix-Win:vm.memory.util" became not supported: Cannot evaluate function: not enough data at "last(//vm.memory.size[used]) / last(//vm.memory.size[total]) * 100".
+  2977:20240606:124220.458 item "Zabbix-Win:system.cpu.util" became supported
+  2976:20240606:124222.460 item "Zabbix-Win:system.swap.free" became supported
+  2976:20240606:124228.465 item "Zabbix-Win:vm.memory.util" became supported
+  2972:20240606:125706.066 executing housekeeper
+  2972:20240606:125706.076 housekeeper [deleted 0 hist/trends, 0 items/triggers, 0 events, 0 problems, 0 sessions, 0 alarms, 0 audit, 0 autoreg_host, 0 records in 0.008735 sec, idle for 1 hour(s)]
+  2986:20240606:131118.678 enabling Zabbix agent checks on host "Zabbix-Lin": interface became available
+  2987:20240606:131536.979 Zabbix agent item "system.cpu.load[all,avg15]" on host "Zabbix-Lin" failed: first network error, wait for 15 seconds
+  2989:20240606:131551.537 Zabbix agent item "system.cpu.load[all,avg1]" on host "Zabbix-Lin" failed: another network error, wait for 15 seconds
+  2989:20240606:131606.558 resuming Zabbix agent checks on host "Zabbix-Lin": connection restored
+  2972:20240606:135706.172 executing housekeeper
+  2972:20240606:135706.177 housekeeper [deleted 0 hist/trends, 0 items/triggers, 0 events, 0 problems, 0 sessions, 0 alarms, 0 audit, 0 autoreg_host, 0 records in 0.004513 sec, idle for 1 hour(s)]
+  2976:20240606:135825.728 item "Zabbix-Lin:vfs.dev.read.await[nvme0n1]" became not supported: Cannot evaluate function: not enough data at "last(//vfs.dev.read.time.rate[nvme0n1])/(last(//vfs.dev.read.rate[nvme0n1])+(last(//vfs.dev.read.rate[nvme0n1])=0)))*1000*(last(//vfs.dev.read.rate[nvme0n1]) > 0)".
+  2978:20240606:135826.728 item "Zabbix-Lin:vfs.dev.write.await[nvme0n1]" became not supported: Cannot evaluate function: not enough data at "last(//vfs.dev.write.time.rate[nvme0n1])/(last(//vfs.dev.write.rate[nvme0n1])+(last(//vfs.dev.write.rate[nvme0n1])=0)))*1000*(last(//vfs.dev.write.rate[nvme0n1]) > 0)".
+  2978:20240606:135846.749 item "Zabbix-Lin:vfs.file.contents["/sys/class/net/ens5/speed"]" became not supported: Cannot read from file: read /sys/class/net/ens5/speed: invalid argument
+  2977:20240606:140025.852 item "Zabbix-Lin:vfs.dev.read.await[nvme0n1]" became supported
+  2978:20240606:140026.852 item "Zabbix-Lin:vfs.dev.write.await[nvme0n1]" became supported
+  2972:20240606:145706.197 executing housekeeper
+  2972:20240606:145706.209 housekeeper [deleted 0 hist/trends, 0 items/triggers, 0 events, 0 problems, 0 sessions, 0 alarms, 0 audit, 0 autoreg_host, 0 records in 0.011893 sec, idle for 1 hour(s)]
+  2985:20240606:154650.042 Zabbix agent item "system.localtime" on host "Zabbix-Lin" failed: first network error, wait for 15 seconds
+  2989:20240606:154705.023 resuming Zabbix agent checks on host "Zabbix-Lin": connection restored
+  2962:20240606:154805.516 [ Discord Webhook ] ERROR: Incorrect "event_source" parameter given: "{EVENT.SOURCE}".
+Must be 0-4.
+  2964:20240606:154824.071 [ Discord Webhook ] ERROR: Error: cannot get URL: URL using bad/illegal format or missing URL.
+  2963:20240606:155333.221 [ Discord Webhook ] ERROR: Error: cannot get URL: URL using bad/illegal format or missing URL.
+  2957:20240606:155438.359 Got signal [signal:15(SIGTERM),sender_pid:5564,sender_uid:0,reason:0]. Exiting ...
+  2958:20240606:155438.792 HA manager has been paused
+  2976:20240606:155438.792 syncing history data in progress... 
+  2976:20240606:155438.794 syncing history data done
+  2958:20240606:155439.827 HA manager has been stopped
+  2957:20240606:155439.837 syncing trend data...
+  2957:20240606:155439.847 syncing trend data done
+  2957:20240606:155439.848 Zabbix Server stopped. Zabbix 6.0.30 (revision 680df722d6b).
+  5594:20240606:155439.903 Starting Zabbix Server. Zabbix 6.0.30 (revision 680df722d6b).
+  5594:20240606:155439.903 ****** Enabled features ******
+  5594:20240606:155439.903 SNMP monitoring:           YES
+  5594:20240606:155439.903 IPMI monitoring:           YES
+  5594:20240606:155439.903 Web monitoring:            YES
+  5594:20240606:155439.903 VMware monitoring:         YES
+  5594:20240606:155439.903 SMTP authentication:       YES
+  5594:20240606:155439.903 ODBC:                      YES
+  5594:20240606:155439.903 SSH support:               YES
+  5594:20240606:155439.903 IPv6 support:              YES
+  5594:20240606:155439.903 TLS support:               YES
+  5594:20240606:155439.903 ******************************
+  5594:20240606:155439.903 using configuration file: /etc/zabbix/zabbix_server.conf
+  5594:20240606:155439.912 current database version (mandatory/optional): 06000000/06000044
+  5594:20240606:155439.912 required mandatory version: 06000000
+  5595:20240606:155439.915 starting HA manager
+  5595:20240606:155439.920 HA manager started in active mode
+  5594:20240606:155439.920 server #0 started [main process]
+  5596:20240606:155439.921 server #1 started [service manager #1]
+  5597:20240606:155439.922 server #2 started [configuration syncer #1]
+  5598:20240606:155440.073 server #3 started [alert manager #1]
+  5599:20240606:155440.075 server #4 started [alerter #1]
+  5600:20240606:155440.075 server #5 started [alerter #2]
+  5601:20240606:155440.076 server #6 started [alerter #3]
+  5602:20240606:155440.076 server #7 started [preprocessing manager #1]
+  5603:20240606:155440.077 server #8 started [preprocessing worker #1]
+  5604:20240606:155440.077 server #9 started [preprocessing worker #2]
+  5605:20240606:155440.078 server #10 started [preprocessing worker #3]
+  5606:20240606:155440.079 server #11 started [lld manager #1]
+  5607:20240606:155440.082 server #12 started [lld worker #1]
+  5608:20240606:155440.084 server #13 started [lld worker #2]
+  5609:20240606:155440.085 server #14 started [housekeeper #1]
+  5610:20240606:155440.087 server #15 started [timer #1]
+  5611:20240606:155440.088 server #16 started [http poller #1]
+  5612:20240606:155440.090 server #17 started [discoverer #1]
+  5616:20240606:155440.094 server #21 started [history syncer #4]
+  5613:20240606:155440.095 server #18 started [history syncer #1]
+  5615:20240606:155440.097 server #20 started [history syncer #3]
+  5614:20240606:155440.097 server #19 started [history syncer #2]
+  5617:20240606:155440.098 server #22 started [escalator #1]
+  5621:20240606:155440.098 server #26 started [poller #1]
+  5618:20240606:155440.100 server #23 started [proxy poller #1]
+  5620:20240606:155440.105 server #25 started [task manager #1]
+  5619:20240606:155440.105 server #24 started [self-monitoring #1]
+  5622:20240606:155440.105 server #27 started [poller #2]
+  5623:20240606:155440.109 server #28 started [poller #3]
+  5625:20240606:155440.118 server #30 started [poller #5]
+  5624:20240606:155440.118 server #29 started [poller #4]
+  5626:20240606:155440.123 server #31 started [unreachable poller #1]
+  5631:20240606:155440.123 server #36 started [trapper #5]
+  5627:20240606:155440.124 server #32 started [trapper #1]
+  5632:20240606:155440.127 server #37 started [icmp pinger #1]
+  5628:20240606:155440.128 server #33 started [trapper #2]
+  5635:20240606:155440.129 server #40 started [history poller #2]
+  5633:20240606:155440.129 server #38 started [alert syncer #1]
+  5634:20240606:155440.129 server #39 started [history poller #1]
+  5629:20240606:155440.134 server #34 started [trapper #3]
+  5639:20240606:155440.134 server #44 started [availability manager #1]
+  5641:20240606:155440.134 server #46 started [odbc poller #1]
+  5630:20240606:155440.138 server #35 started [trapper #4]
+  5636:20240606:155440.139 server #41 started [history poller #3]
+  5637:20240606:155440.143 server #42 started [history poller #4]
+  5640:20240606:155440.145 server #45 started [trigger housekeeper #1]
+  5638:20240606:155440.145 server #43 started [history poller #5]
+  5622:20240606:155723.574 Zabbix agent item "system.cpu.util[,guest]" on host "Zabbix-Lin" failed: first network error, wait for 15 seconds
+  5626:20240606:155740.357 resuming Zabbix agent checks on host "Zabbix-Lin": connection restored
+  5625:20240606:160519.689 Zabbix agent item "vm.memory.size[pavailable]" on host "Zabbix-Lin" failed: first network error, wait for 15 seconds
+  5626:20240606:160534.828 resuming Zabbix agent checks on host "Zabbix-Lin": connection restored
+  5623:20240606:160842.144 Zabbix agent item "service.info["LanmanServer",state]" on host "Zabbix-Win" failed: first network error, wait for 15 seconds
+  5626:20240606:160859.135 resuming Zabbix agent checks on host "Zabbix-Win": connection restored
+  5599:20240606:160901.992 [ Discord Webhook ] FAILED with response: {"message": "Invalid Form Body", "code": 50035, "errors": {"embeds": {"0": {"url": {"_errors": [{"code": "URL_TYPE_INVALID_SCHEME", "message": "Scheme \"{$zabbix.url}\" is not supported. Scheme must be one of ('http', 'https')."}, {"code": "URL_TYPE_INVALID_URL", "message": "Not a well formed URL."}]}}}}}
+  5599:20240606:160901.992 [ Discord Webhook ] ERROR: Invalid Form Body. For more details check zabbix server log.
+  5600:20240606:160912.087 [ Discord Webhook ] FAILED with response: {"message": "Invalid Form Body", "code": 50035, "errors": {"embeds": {"0": {"url": {"_errors": [{"code": "URL_TYPE_INVALID_SCHEME", "message": "Scheme \"{$zabbix.url}\" is not supported. Scheme must be one of ('http', 'https')."}, {"code": "URL_TYPE_INVALID_URL", "message": "Not a well formed URL."}]}}}}}
+  5600:20240606:160912.087 [ Discord Webhook ] ERROR: Invalid Form Body. For more details check zabbix server log.
+  5601:20240606:160923.015 [ Discord Webhook ] FAILED with response: {"message": "Invalid Form Body", "code": 50035, "errors": {"embeds": {"0": {"url": {"_errors": [{"code": "URL_TYPE_INVALID_SCHEME", "message": "Scheme \"{$zabbix.url}\" is not supported. Scheme must be one of ('http', 'https')."}, {"code": "URL_TYPE_INVALID_URL", "message": "Not a well formed URL."}]}}}}}
+  5601:20240606:160923.015 [ Discord Webhook ] ERROR: Invalid Form Body. For more details check zabbix server log.
+  5613:20240606:160923.186 item "Zabbix-Win:system.cpu.util" became not supported: No data available.
+  5613:20240606:161020.341 item "Zabbix-Win:system.cpu.util" became supported
+  5599:20240606:161102.090 [ Discord Webhook ] FAILED with response: {"message": "Invalid Form Body", "code": 50035, "errors": {"embeds": {"0": {"url": {"_errors": [{"code": "URL_TYPE_INVALID_SCHEME", "message": "Scheme \"{$zabbix.url}\" is not supported. Scheme must be one of ('http', 'https')."}, {"code": "URL_TYPE_INVALID_URL", "message": "Not a well formed URL."}]}}}}}
+  5599:20240606:161102.090 [ Discord Webhook ] ERROR: Invalid Form Body. For more details check zabbix server log.
+  5600:20240606:161105.117 [ Discord Webhook ] FAILED with response: {"message": "Invalid Form Body", "code": 50035, "errors": {"embeds": {"0": {"url": {"_errors": [{"code": "URL_TYPE_INVALID_SCHEME", "message": "Scheme \"{$zabbix.url}\" is not supported. Scheme must be one of ('http', 'https')."}, {"code": "URL_TYPE_INVALID_URL", "message": "Not a well formed URL."}]}}}}}
+  5600:20240606:161105.117 [ Discord Webhook ] ERROR: Invalid Form Body. For more details check zabbix server log.
+  5601:20240606:161113.119 [ Discord Webhook ] FAILED with response: {"message": "Invalid Form Body", "code": 50035, "errors": {"embeds": {"0": {"url": {"_errors": [{"code": "URL_TYPE_INVALID_SCHEME", "message": "Scheme \"{$zabbix.url}\" is not supported. Scheme must be one of ('http', 'https')."}, {"code": "URL_TYPE_INVALID_URL", "message": "Not a well formed URL."}]}}}}}
+  5601:20240606:161113.119 [ Discord Webhook ] ERROR: Invalid Form Body. For more details check zabbix server log.
+  5599:20240606:161116.115 [ Discord Webhook ] FAILED with response: {"message": "Invalid Form Body", "code": 50035, "errors": {"embeds": {"0": {"url": {"_errors": [{"code": "URL_TYPE_INVALID_SCHEME", "message": "Scheme \"{$zabbix.url}\" is not supported. Scheme must be one of ('http', 'https')."}, {"code": "URL_TYPE_INVALID_URL", "message": "Not a well formed URL."}]}}}}}
+  5599:20240606:161116.116 [ Discord Webhook ] ERROR: Invalid Form Body. For more details check zabbix server log.
+  5600:20240606:161124.112 [ Discord Webhook ] FAILED with response: {"message": "Invalid Form Body", "code": 50035, "errors": {"embeds": {"0": {"url": {"_errors": [{"code": "URL_TYPE_INVALID_SCHEME", "message": "Scheme \"{$zabbix.url}\" is not supported. Scheme must be one of ('http', 'https')."}, {"code": "URL_TYPE_INVALID_URL", "message": "Not a well formed URL."}]}}}}}
+  5600:20240606:161124.112 [ Discord Webhook ] ERROR: Invalid Form Body. For more details check zabbix server log.
+  5601:20240606:161127.133 [ Discord Webhook ] FAILED with response: {"message": "Invalid Form Body", "code": 50035, "errors": {"embeds": {"0": {"url": {"_errors": [{"code": "URL_TYPE_INVALID_SCHEME", "message": "Scheme \"{$zabbix.url}\" is not supported. Scheme must be one of ('http', 'https')."}, {"code": "URL_TYPE_INVALID_URL", "message": "Not a well formed URL."}]}}}}}
+  5601:20240606:161127.133 [ Discord Webhook ] ERROR: Invalid Form Body. For more details check zabbix server log.
+  5599:20240606:161202.149 [ Discord Webhook ] FAILED with response: {"message": "Invalid Form Body", "code": 50035, "errors": {"embeds": {"0": {"url": {"_errors": [{"code": "URL_TYPE_INVALID_SCHEME", "message": "Scheme \"{$zabbix.url}\" is not supported. Scheme must be one of ('http', 'https')."}, {"code": "URL_TYPE_INVALID_URL", "message": "Not a well formed URL."}]}}}}}
+  5599:20240606:161202.149 [ Discord Webhook ] ERROR: Invalid Form Body. For more details check zabbix server log.
+  5600:20240606:161205.196 [ Discord Webhook ] FAILED with response: {"message": "Invalid Form Body", "code": 50035, "errors": {"embeds": {"0": {"url": {"_errors": [{"code": "URL_TYPE_INVALID_SCHEME", "message": "Scheme \"{$zabbix.url}\" is not supported. Scheme must be one of ('http', 'https')."}, {"code": "URL_TYPE_INVALID_URL", "message": "Not a well formed URL."}]}}}}}
+  5600:20240606:161205.196 [ Discord Webhook ] ERROR: Invalid Form Body. For more details check zabbix server log.
+  5601:20240606:161212.184 [ Discord Webhook ] FAILED with response: {"message": "Invalid Form Body", "code": 50035, "errors": {"embeds": {"0": {"url": {"_errors": [{"code": "URL_TYPE_INVALID_SCHEME", "message": "Scheme \"{$zabbix.url}\" is not supported. Scheme must be one of ('http', 'https')."}, {"code": "URL_TYPE_INVALID_URL", "message": "Not a well formed URL."}]}}}}}
+  5601:20240606:161212.184 [ Discord Webhook ] ERROR: Invalid Form Body. For more details check zabbix server log.
+  5599:20240606:161215.190 [ Discord Webhook ] FAILED with response: {"message": "Invalid Form Body", "code": 50035, "errors": {"embeds": {"0": {"url": {"_errors": [{"code": "URL_TYPE_INVALID_SCHEME", "message": "Scheme \"{$zabbix.url}\" is not supported. Scheme must be one of ('http', 'https')."}, {"code": "URL_TYPE_INVALID_URL", "message": "Not a well formed URL."}]}}}}}
+  5599:20240606:161215.190 [ Discord Webhook ] ERROR: Invalid Form Body. For more details check zabbix server log.
+  5600:20240606:161222.195 [ Discord Webhook ] FAILED with response: {"message": "Invalid Form Body", "code": 50035, "errors": {"embeds": {"0": {"url": {"_errors": [{"code": "URL_TYPE_INVALID_SCHEME", "message": "Scheme \"{$zabbix.url}\" is not supported. Scheme must be one of ('http', 'https')."}, {"code": "URL_TYPE_INVALID_URL", "message": "Not a well formed URL."}]}}}}}
+  5600:20240606:161222.195 [ Discord Webhook ] ERROR: Invalid Form Body. For more details check zabbix server log.
+  5601:20240606:161225.173 [ Discord Webhook ] FAILED with response: {"message": "Invalid Form Body", "code": 50035, "errors": {"embeds": {"0": {"url": {"_errors": [{"code": "URL_TYPE_INVALID_SCHEME", "message": "Scheme \"{$zabbix.url}\" is not supported. Scheme must be one of ('http', 'https')."}, {"code": "URL_TYPE_INVALID_URL", "message": "Not a well formed URL."}]}}}}}
+  5601:20240606:161225.173 [ Discord Webhook ] ERROR: Invalid Form Body. For more details check zabbix server log.
+  5599:20240606:161226.188 [ Discord Webhook ] FAILED with response: {"message": "Invalid Form Body", "code": 50035, "errors": {"embeds": {"0": {"url": {"_errors": [{"code": "URL_TYPE_INVALID_SCHEME", "message": "Scheme \"{$zabbix.url}\" is not supported. Scheme must be one of ('http', 'https')."}, {"code": "URL_TYPE_INVALID_URL", "message": "Not a well formed URL."}]}}}}}
+  5599:20240606:161226.188 [ Discord Webhook ] ERROR: Invalid Form Body. For more details check zabbix server log.
+  5600:20240606:161236.216 [ Discord Webhook ] FAILED with response: {"message": "Invalid Form Body", "code": 50035, "errors": {"embeds": {"0": {"url": {"_errors": [{"code": "URL_TYPE_INVALID_SCHEME", "message": "Scheme \"{$zabbix.url}\" is not supported. Scheme must be one of ('http', 'https')."}, {"code": "URL_TYPE_INVALID_URL", "message": "Not a well formed URL."}]}}}}}
+  5600:20240606:161236.216 [ Discord Webhook ] ERROR: Invalid Form Body. For more details check zabbix server log.
+  5601:20240606:161246.219 [ Discord Webhook ] FAILED with response: {"message": "Invalid Form Body", "code": 50035, "errors": {"embeds": {"0": {"url": {"_errors": [{"code": "URL_TYPE_INVALID_SCHEME", "message": "Scheme \"{$zabbix.url}\" is not supported. Scheme must be one of ('http', 'https')."}, {"code": "URL_TYPE_INVALID_URL", "message": "Not a well formed URL."}]}}}}}
+  5601:20240606:161246.219 [ Discord Webhook ] ERROR: Invalid Form Body. For more details check zabbix server log.
+  5594:20240606:161356.239 Got signal [signal:15(SIGTERM),sender_pid:5855,sender_uid:0,reason:0]. Exiting ...
+  5595:20240606:161356.921 HA manager has been paused
+  5613:20240606:161356.921 syncing history data in progress... 
+  5613:20240606:161356.928 syncing history data... 100.000000%
+  5613:20240606:161356.928 syncing history data done
+  5595:20240606:161358.022 HA manager has been stopped
+  5594:20240606:161358.025 syncing trend data...
+  5594:20240606:161358.040 syncing trend data done
+  5594:20240606:161358.041 Zabbix Server stopped. Zabbix 6.0.30 (revision 680df722d6b).
+  5883:20240606:161358.080 Starting Zabbix Server. Zabbix 6.0.30 (revision 680df722d6b).
+  5883:20240606:161358.080 ****** Enabled features ******
+  5883:20240606:161358.080 SNMP monitoring:           YES
+  5883:20240606:161358.080 IPMI monitoring:           YES
+  5883:20240606:161358.080 Web monitoring:            YES
+  5883:20240606:161358.080 VMware monitoring:         YES
+  5883:20240606:161358.080 SMTP authentication:       YES
+  5883:20240606:161358.080 ODBC:                      YES
+  5883:20240606:161358.080 SSH support:               YES
+  5883:20240606:161358.080 IPv6 support:              YES
+  5883:20240606:161358.080 TLS support:               YES
+  5883:20240606:161358.080 ******************************
+  5883:20240606:161358.080 using configuration file: /etc/zabbix/zabbix_server.conf
+  5883:20240606:161358.090 current database version (mandatory/optional): 06000000/06000044
+  5883:20240606:161358.090 required mandatory version: 06000000
+  5884:20240606:161358.094 starting HA manager
+  5884:20240606:161358.097 HA manager started in active mode
+  5883:20240606:161358.097 server #0 started [main process]
+  5885:20240606:161358.098 server #1 started [service manager #1]
+  5886:20240606:161358.099 server #2 started [configuration syncer #1]
+  5887:20240606:161358.344 server #3 started [alert manager #1]
+  5888:20240606:161358.345 server #4 started [alerter #1]
+  5889:20240606:161358.345 server #5 started [alerter #2]
+  5890:20240606:161358.347 server #6 started [alerter #3]
+  5891:20240606:161358.354 server #7 started [preprocessing manager #1]
+  5892:20240606:161358.357 server #8 started [preprocessing worker #1]
+  5893:20240606:161358.358 server #9 started [preprocessing worker #2]
+  5894:20240606:161358.360 server #10 started [preprocessing worker #3]
+  5895:20240606:161358.362 server #11 started [lld manager #1]
+  5896:20240606:161358.363 server #12 started [lld worker #1]
+  5897:20240606:161358.365 server #13 started [lld worker #2]
+  5898:20240606:161358.366 server #14 started [housekeeper #1]
+  5899:20240606:161358.367 server #15 started [timer #1]
+  5900:20240606:161358.371 server #16 started [http poller #1]
+  5902:20240606:161358.371 server #18 started [history syncer #1]
+  5901:20240606:161358.372 server #17 started [discoverer #1]
+  5904:20240606:161358.377 server #20 started [history syncer #3]
+  5907:20240606:161358.378 server #23 started [proxy poller #1]
+  5909:20240606:161358.383 server #25 started [task manager #1]
+  5903:20240606:161358.383 server #19 started [history syncer #2]
+  5905:20240606:161358.384 server #21 started [history syncer #4]
+  5913:20240606:161358.384 server #29 started [poller #4]
+  5908:20240606:161358.384 server #24 started [self-monitoring #1]
+  5910:20240606:161358.386 server #26 started [poller #1]
+  5911:20240606:161358.389 server #27 started [poller #2]
+  5912:20240606:161358.393 server #28 started [poller #3]
+  5906:20240606:161358.393 server #22 started [escalator #1]
+  5916:20240606:161358.400 server #32 started [trapper #1]
+  5918:20240606:161358.405 server #34 started [trapper #3]
+  5917:20240606:161358.405 server #33 started [trapper #2]
+  5914:20240606:161358.409 server #30 started [poller #5]
+  5921:20240606:161358.409 server #37 started [icmp pinger #1]
+  5915:20240606:161358.409 server #31 started [unreachable poller #1]
+  5922:20240606:161358.410 server #38 started [alert syncer #1]
+  5923:20240606:161358.411 server #39 started [history poller #1]
+  5920:20240606:161358.416 server #36 started [trapper #5]
+  5919:20240606:161358.420 server #35 started [trapper #4]
+  5924:20240606:161358.422 server #40 started [history poller #2]
+  5925:20240606:161358.426 server #41 started [history poller #3]
+  5926:20240606:161358.426 server #42 started [history poller #4]
+  5927:20240606:161358.429 server #43 started [history poller #5]
+  5928:20240606:161358.431 server #44 started [availability manager #1]
+  5930:20240606:161358.432 server #46 started [odbc poller #1]
+  5929:20240606:161358.432 server #45 started [trigger housekeeper #1]
+  5912:20240606:161633.803 Zabbix agent item "wmi.get[root/cimv2,"Select NumberOfLogicalProcessors from Win32_ComputerSystem"]" on host "Zabbix-Win" failed: first network error, wait for 15 seconds
+  5915:20240606:161651.687 resuming Zabbix agent checks on host "Zabbix-Win": connection restored
+  5903:20240606:161724.526 item "Zabbix-Win:system.cpu.util" became not supported: No data available.
+  5905:20240606:161820.570 item "Zabbix-Win:system.cpu.util" became supported
+  5889:20240606:162212.870 [ Discord Webhook ] ERROR: Error: cannot get URL: URL using bad/illegal format or missing URL.
+  5889:20240606:164011.371 [ Discord Webhook ] ERROR: Error: cannot get URL: URL using bad/illegal format or missing URL.
+  5898:20240606:164358.416 executing housekeeper
+  5898:20240606:164358.437 housekeeper [deleted 0 hist/trends, 0 items/triggers, 0 events, 0 problems, 0 sessions, 0 alarms, 0 audit, 0 autoreg_host, 0 records in 0.020067 sec, idle for 1 hour(s)]
+  5914:20240606:165653.560 Zabbix agent item "service.info["RpcSs",state]" on host "Zabbix-Win" failed: first network error, wait for 15 seconds
+  5915:20240606:165712.177 Zabbix agent item "service.info["Spooler",state]" on host "Zabbix-Win" failed: another network error, wait for 15 seconds
+  5915:20240606:165731.189 Zabbix agent item "perf_counter_en["\PhysicalDisk(0 C:)\Avg. Disk Read Queue Length",60]" on host "Zabbix-Win" failed: another network error, wait for 15 seconds
+  5915:20240606:165749.269 temporarily disabling Zabbix agent checks on host "Zabbix-Win": interface unavailable
+  5911:20240606:165922.814 Zabbix agent item "vm.memory.size[available]" on host "Zabbix-Lin" failed: first network error, wait for 15 seconds
+  5915:20240606:165941.419 Zabbix agent item "system.cpu.util[,guest_nice]" on host "Zabbix-Lin" failed: another network error, wait for 15 seconds
+  5915:20240606:170000.510 Zabbix agent item "system.localtime" on host "Zabbix-Lin" failed: another network error, wait for 15 seconds
+  5915:20240606:170018.581 temporarily disabling Zabbix agent checks on host "Zabbix-Lin": interface unavailable
+  5883:20240606:170624.004 Got signal [signal:15(SIGTERM),sender_pid:6399,sender_uid:0,reason:0]. Exiting ...
+  5884:20240606:170624.114 HA manager has been paused
+  5902:20240606:170624.115 syncing history data in progress... 
+  5902:20240606:170624.115 syncing history data done
+  5884:20240606:170625.155 HA manager has been stopped
+  5883:20240606:170625.158 syncing trend data...
+  5883:20240606:170625.175 syncing trend data done
+  5883:20240606:170625.176 Zabbix Server stopped. Zabbix 6.0.30 (revision 680df722d6b).
+   621:20240610:070441.990 Starting Zabbix Server. Zabbix 6.0.30 (revision 680df722d6b).
+   621:20240610:070441.993 ****** Enabled features ******
+   621:20240610:070441.993 SNMP monitoring:           YES
+   621:20240610:070441.993 IPMI monitoring:           YES
+   621:20240610:070441.993 Web monitoring:            YES
+   621:20240610:070441.993 VMware monitoring:         YES
+   621:20240610:070441.993 SMTP authentication:       YES
+   621:20240610:070441.993 ODBC:                      YES
+   621:20240610:070441.993 SSH support:               YES
+   621:20240610:070441.993 IPv6 support:              YES
+   621:20240610:070441.993 TLS support:               YES
+   621:20240610:070441.993 ******************************
+   621:20240610:070441.993 using configuration file: /etc/zabbix/zabbix_server.conf
+   621:20240610:070442.154 current database version (mandatory/optional): 06000000/06000044
+   621:20240610:070442.154 required mandatory version: 06000000
+   636:20240610:070442.164 starting HA manager
+   636:20240610:070442.176 HA manager started in active mode
+   621:20240610:070442.177 server #0 started [main process]
+   637:20240610:070442.180 server #1 started [service manager #1]
+   638:20240610:070442.188 server #2 started [configuration syncer #1]
+   658:20240610:070442.688 server #4 started [alerter #1]
+   660:20240610:070442.688 server #6 started [alerter #3]
+   661:20240610:070442.693 server #7 started [preprocessing manager #1]
+   665:20240610:070442.693 server #11 started [lld manager #1]
+   668:20240610:070442.693 server #13 started [lld worker #2]
+   659:20240610:070442.694 server #5 started [alerter #2]
+   670:20240610:070442.696 server #15 started [timer #1]
+   657:20240610:070442.696 server #3 started [alert manager #1]
+   666:20240610:070442.700 server #12 started [lld worker #1]
+   669:20240610:070442.700 server #14 started [housekeeper #1]
+   673:20240610:070442.701 server #18 started [history syncer #1]
+   671:20240610:070442.702 server #16 started [http poller #1]
+   677:20240610:070442.702 server #21 started [history syncer #4]
+   675:20240610:070442.703 server #19 started [history syncer #2]
+   676:20240610:070442.704 server #20 started [history syncer #3]
+   672:20240610:070442.704 server #17 started [discoverer #1]
+   682:20240610:070442.708 server #24 started [self-monitoring #1]
+   680:20240610:070442.709 server #23 started [proxy poller #1]
+   685:20240610:070442.712 server #25 started [task manager #1]
+   690:20240610:070442.715 server #28 started [poller #3]
+   686:20240610:070442.716 server #26 started [poller #1]
+   679:20240610:070442.720 server #22 started [escalator #1]
+   691:20240610:070442.720 server #29 started [poller #4]
+   689:20240610:070442.724 server #27 started [poller #2]
+   698:20240610:070442.734 server #32 started [trapper #1]
+   697:20240610:070442.737 server #31 started [unreachable poller #1]
+   696:20240610:070442.739 server #30 started [poller #5]
+   701:20240610:070442.751 server #34 started [trapper #3]
+   702:20240610:070442.752 server #35 started [trapper #4]
+   700:20240610:070442.754 server #33 started [trapper #2]
+   703:20240610:070442.758 server #36 started [trapper #5]
+   712:20240610:070442.764 server #40 started [history poller #2]
+   713:20240610:070442.768 server #41 started [history poller #3]
+   709:20240610:070442.768 server #38 started [alert syncer #1]
+   708:20240610:070442.769 server #37 started [icmp pinger #1]
+   711:20240610:070442.769 server #39 started [history poller #1]
+   718:20240610:070442.781 server #42 started [history poller #4]
+   719:20240610:070442.788 server #43 started [history poller #5]
+   720:20240610:070442.789 server #44 started [availability manager #1]
+   662:20240610:070442.790 server #8 started [preprocessing worker #1]
+   664:20240610:070442.790 server #10 started [preprocessing worker #3]
+   723:20240610:070442.790 server #46 started [odbc poller #1]
+   663:20240610:070442.792 server #9 started [preprocessing worker #2]
+   721:20240610:070442.792 server #45 started [trigger housekeeper #1]
+   697:20240610:070447.750 enabling Zabbix agent checks on host "Zabbix-Lin": interface became available
+   697:20240610:070447.753 enabling Zabbix agent checks on host "Zabbix-Win": interface became available
+   675:20240610:070524.759 item "Zabbix-Win:system.cpu.util" became not supported: No data available.
+   677:20240610:070620.817 item "Zabbix-Win:system.cpu.util" became supported
+   691:20240610:072003.027 Zabbix agent item "service.info["TrkWks",state]" on host "Zabbix-Win" failed: first network error, wait for 15 seconds
+   697:20240610:072018.609 resuming Zabbix agent checks on host "Zabbix-Win": connection restored
+   673:20240610:072348.480 item "Zabbix-Lin:system.run[systemctl status ntpsec.service | grep -oP 'Active:\s+\K(\w+)']" became not supported: Unknown metric system.run
+   675:20240610:072647.599 item "Zabbix-Lin:system.run[systemctl status ntpsec.service | grep -oP 'Active:\s+\K(\w+)']" became supported
+   669:20240610:073442.801 executing housekeeper
+   669:20240610:073442.820 housekeeper [deleted 0 hist/trends, 0 items/triggers, 0 events, 13 problems, 0 sessions, 0 alarms, 0 audit, 0 autoreg_host, 0 records in 0.018457 sec, idle for 1 hour(s)]
+   621:20240610:081936.422 Got signal [signal:15(SIGTERM),sender_pid:1645,sender_uid:0,reason:0]. Exiting ...
+   696:20240610:081936.716 Zabbix agent item "vfs.fs.size[/,total]" on host "Zabbix-Lin" failed: first network error, wait for 15 seconds
+   636:20240610:081937.169 HA manager has been paused
+   673:20240610:081937.169 syncing history data in progress... 
+   673:20240610:081937.169 syncing history data done
+   689:20240610:081937.170 Zabbix agent item "service.info["FontCache",state]" on host "Zabbix-Win" failed: first network error, wait for 15 seconds
+   636:20240610:081938.205 HA manager has been stopped
+   621:20240610:081938.210 syncing trend data...
+   621:20240610:081938.221 syncing trend data done
+   621:20240610:081938.222 Zabbix Server stopped. Zabbix 6.0.30 (revision 680df722d6b).
+   618:20240611:081518.104 Starting Zabbix Server. Zabbix 6.0.30 (revision 680df722d6b).
+   618:20240611:081518.110 ****** Enabled features ******
+   618:20240611:081518.111 SNMP monitoring:           YES
+   618:20240611:081518.111 IPMI monitoring:           YES
+   618:20240611:081518.111 Web monitoring:            YES
+   618:20240611:081518.111 VMware monitoring:         YES
+   618:20240611:081518.111 SMTP authentication:       YES
+   618:20240611:081518.111 ODBC:                      YES
+   618:20240611:081518.111 SSH support:               YES
+   618:20240611:081518.111 IPv6 support:              YES
+   618:20240611:081518.111 TLS support:               YES
+   618:20240611:081518.111 ******************************
+   618:20240611:081518.111 using configuration file: /etc/zabbix/zabbix_server.conf
+   618:20240611:081518.283 current database version (mandatory/optional): 06000000/06000044
+   618:20240611:081518.283 required mandatory version: 06000000
+   634:20240611:081518.288 starting HA manager
+   634:20240611:081518.297 HA manager started in active mode
+   618:20240611:081518.298 server #0 started [main process]
+   636:20240611:081518.300 server #2 started [configuration syncer #1]
+   635:20240611:081518.309 server #1 started [service manager #1]
+   666:20240611:081518.819 server #6 started [alerter #3]
+   664:20240611:081518.823 server #4 started [alerter #1]
+   672:20240611:081518.826 server #12 started [lld worker #1]
+   663:20240611:081518.827 server #3 started [alert manager #1]
+   674:20240611:081518.828 server #13 started [lld worker #2]
+   675:20240611:081518.829 server #14 started [housekeeper #1]
+   676:20240611:081518.830 server #15 started [timer #1]
+   665:20240611:081518.831 server #5 started [alerter #2]
+   679:20240611:081518.832 server #17 started [discoverer #1]
+   671:20240611:081518.832 server #11 started [lld manager #1]
+   667:20240611:081518.832 server #7 started [preprocessing manager #1]
+   677:20240611:081518.835 server #16 started [http poller #1]
+   680:20240611:081518.836 server #18 started [history syncer #1]
+   683:20240611:081518.838 server #19 started [history syncer #2]
+   685:20240611:081518.838 server #20 started [history syncer #3]
+   687:20240611:081518.839 server #21 started [history syncer #4]
+   689:20240611:081518.844 server #22 started [escalator #1]
+   690:20240611:081518.847 server #23 started [proxy poller #1]
+   693:20240611:081518.855 server #26 started [poller #1]
+   692:20240611:081518.856 server #25 started [task manager #1]
+   691:20240611:081518.859 server #24 started [self-monitoring #1]
+   697:20240611:081518.863 server #27 started [poller #2]
+   698:20240611:081518.868 server #28 started [poller #3]
+   699:20240611:081518.871 server #29 started [poller #4]
+   705:20240611:081518.876 server #35 started [trapper #4]
+   709:20240611:081518.876 server #39 started [history poller #1]
+   704:20240611:081518.879 server #34 started [trapper #3]
+   711:20240611:081518.879 server #41 started [history poller #3]
+   700:20240611:081518.883 server #30 started [poller #5]
+   708:20240611:081518.884 server #38 started [alert syncer #1]
+   710:20240611:081518.884 server #40 started [history poller #2]
+   706:20240611:081518.887 server #36 started [trapper #5]
+   712:20240611:081518.888 server #42 started [history poller #4]
+   703:20240611:081518.891 server #33 started [trapper #2]
+   707:20240611:081518.891 server #37 started [icmp pinger #1]
+   701:20240611:081518.895 server #31 started [unreachable poller #1]
+   702:20240611:081518.900 server #32 started [trapper #1]
+   721:20240611:081518.911 server #43 started [history poller #5]
+   722:20240611:081518.915 server #44 started [availability manager #1]
+   724:20240611:081518.916 server #46 started [odbc poller #1]
+   723:20240611:081518.919 server #45 started [trigger housekeeper #1]
+   670:20240611:081518.924 server #10 started [preprocessing worker #3]
+   668:20240611:081518.926 server #8 started [preprocessing worker #1]
+   669:20240611:081518.932 server #9 started [preprocessing worker #2]
+   701:20240611:081523.905 resuming Zabbix agent checks on host "Zabbix-Lin": connection restored
+   675:20240611:084518.872 executing housekeeper
+   675:20240611:084518.891 housekeeper [deleted 0 hist/trends, 0 items/triggers, 0 events, 9 problems, 0 sessions, 0 alarms, 0 audit, 0 autoreg_host, 0 records in 0.016462 sec, idle for 1 hour(s)]
+   675:20240611:094518.892 executing housekeeper
+   675:20240611:094518.916 housekeeper [deleted 0 hist/trends, 0 items/triggers, 0 events, 0 problems, 0 sessions, 0 alarms, 0 audit, 0 autoreg_host, 0 records in 0.022966 sec, idle for 1 hour(s)]
+   675:20240611:104519.003 executing housekeeper
+   675:20240611:104519.209 housekeeper [deleted 1517 hist/trends, 0 items/triggers, 0 events, 0 problems, 0 sessions, 0 alarms, 0 audit, 0 autoreg_host, 0 records in 0.205706 sec, idle for 1 hour(s)]
+   675:20240611:114519.307 executing housekeeper
+   675:20240611:114519.338 housekeeper [deleted 0 hist/trends, 0 items/triggers, 0 events, 0 problems, 0 sessions, 0 alarms, 0 audit, 0 autoreg_host, 0 records in 0.030579 sec, idle for 1 hour(s)]
+   699:20240611:121044.149 Zabbix agent item "proc.num[,,run]" on host "Zabbix-Lin" failed: first network error, wait for 15 seconds
+   618:20240611:121044.614 Got signal [signal:15(SIGTERM),sender_pid:3004,sender_uid:0,reason:0]. Exiting ...
+   693:20240611:121044.737 Zabbix agent item "service.info["nsi",state]" on host "Zabbix-Win" failed: first network error, wait for 15 seconds
+   634:20240611:121045.292 HA manager has been paused
+   680:20240611:121045.293 syncing history data in progress... 
+   680:20240611:121045.294 syncing history data... 100.000000%
+   680:20240611:121045.294 syncing history data done
+   634:20240611:121046.329 HA manager has been stopped
+   618:20240611:121046.350 syncing trend data...
+   618:20240611:121046.362 syncing trend data done
+   618:20240611:121046.363 Zabbix Server stopped. Zabbix 6.0.30 (revision 680df722d6b).
+   619:20240613:055317.113 Starting Zabbix Server. Zabbix 6.0.30 (revision 680df722d6b).
+   619:20240613:055317.113 ****** Enabled features ******
+   619:20240613:055317.114 SNMP monitoring:           YES
+   619:20240613:055317.114 IPMI monitoring:           YES
+   619:20240613:055317.114 Web monitoring:            YES
+   619:20240613:055317.114 VMware monitoring:         YES
+   619:20240613:055317.114 SMTP authentication:       YES
+   619:20240613:055317.114 ODBC:                      YES
+   619:20240613:055317.114 SSH support:               YES
+   619:20240613:055317.114 IPv6 support:              YES
+   619:20240613:055317.114 TLS support:               YES
+   619:20240613:055317.114 ******************************
+   619:20240613:055317.114 using configuration file: /etc/zabbix/zabbix_server.conf
+   619:20240613:055317.245 current database version (mandatory/optional): 06000000/06000044
+   619:20240613:055317.245 required mandatory version: 06000000
+   635:20240613:055317.259 starting HA manager
+   635:20240613:055317.267 HA manager started in active mode
+   619:20240613:055317.269 server #0 started [main process]
+   636:20240613:055317.278 server #1 started [service manager #1]
+   637:20240613:055317.288 server #2 started [configuration syncer #1]
+   654:20240613:055317.727 server #7 started [preprocessing manager #1]
+   652:20240613:055317.727 server #5 started [alerter #2]
+   657:20240613:055317.728 server #10 started [preprocessing worker #3]
+   660:20240613:055317.728 server #13 started [lld worker #2]
+   651:20240613:055317.728 server #4 started [alerter #1]
+   658:20240613:055317.728 server #11 started [lld manager #1]
+   655:20240613:055317.728 server #8 started [preprocessing worker #1]
+   659:20240613:055317.728 server #12 started [lld worker #1]
+   666:20240613:055317.728 server #19 started [history syncer #2]
+   662:20240613:055317.729 server #15 started [timer #1]
+   661:20240613:055317.729 server #14 started [housekeeper #1]
+   664:20240613:055317.729 server #17 started [discoverer #1]
+   653:20240613:055317.729 server #6 started [alerter #3]
+   665:20240613:055317.730 server #18 started [history syncer #1]
+   663:20240613:055317.730 server #16 started [http poller #1]
+   650:20240613:055317.733 server #3 started [alert manager #1]
+   675:20240613:055317.739 server #22 started [escalator #1]
+   673:20240613:055317.739 server #20 started [history syncer #3]
+   674:20240613:055317.740 server #21 started [history syncer #4]
+   677:20240613:055317.740 server #24 started [self-monitoring #1]
+   676:20240613:055317.743 server #23 started [proxy poller #1]
+   678:20240613:055317.747 server #25 started [task manager #1]
+   686:20240613:055317.756 server #28 started [poller #3]
+   687:20240613:055317.757 server #29 started [poller #4]
+   688:20240613:055317.759 server #30 started [poller #5]
+   685:20240613:055317.759 server #27 started [poller #2]
+   684:20240613:055317.761 server #26 started [poller #1]
+   689:20240613:055317.763 server #31 started [unreachable poller #1]
+   691:20240613:055317.766 server #33 started [trapper #2]
+   690:20240613:055317.766 server #32 started [trapper #1]
+   692:20240613:055317.774 server #34 started [trapper #3]
+   697:20240613:055317.782 server #37 started [icmp pinger #1]
+   696:20240613:055317.782 server #36 started [trapper #5]
+   698:20240613:055317.783 server #38 started [alert syncer #1]
+   695:20240613:055317.783 server #35 started [trapper #4]
+   699:20240613:055317.783 server #39 started [history poller #1]
+   705:20240613:055317.796 server #42 started [history poller #4]
+   703:20240613:055317.796 server #40 started [history poller #2]
+   704:20240613:055317.799 server #41 started [history poller #3]
+   707:20240613:055317.802 server #43 started [history poller #5]
+   716:20240613:055317.811 server #46 started [odbc poller #1]
+   712:20240613:055317.811 server #44 started [availability manager #1]
+   715:20240613:055317.815 server #45 started [trigger housekeeper #1]
+   656:20240613:055317.827 server #9 started [preprocessing worker #2]
+   689:20240613:055322.788 resuming Zabbix agent checks on host "Zabbix-Lin": connection restored
+   689:20240613:055322.791 resuming Zabbix agent checks on host "Zabbix-Win": connection restored
+   673:20240613:055423.822 item "Zabbix-Win:system.cpu.util" became not supported: No data available.
+   673:20240613:055520.857 item "Zabbix-Win:system.cpu.util" became supported
+   653:20240613:062142.660 [ Discord Webhook ] ERROR: Error: cannot get URL: URL using bad/illegal format or missing URL.
+   661:20240613:062317.811 executing housekeeper
+   661:20240613:062317.918 housekeeper [deleted 2429 hist/trends, 0 items/triggers, 0 events, 9 problems, 0 sessions, 0 alarms, 0 audit, 0 autoreg_host, 0 records in 0.106990 sec, idle for 1 hour(s)]
+   652:20240613:062805.720 [ Discord Webhook ] ERROR: Error: cannot get URL: URL using bad/illegal format or missing URL.
+   661:20240613:072317.954 executing housekeeper
+   661:20240613:072317.969 housekeeper [deleted 0 hist/trends, 0 items/triggers, 0 events, 0 problems, 0 sessions, 0 alarms, 0 audit, 0 autoreg_host, 0 records in 0.014353 sec, idle for 1 hour(s)]
+   661:20240613:082318.047 executing housekeeper
+   661:20240613:082318.064 housekeeper [deleted 0 hist/trends, 0 items/triggers, 0 events, 0 problems, 0 sessions, 0 alarms, 0 audit, 0 autoreg_host, 0 records in 0.017407 sec, idle for 1 hour(s)]
+   661:20240613:092318.079 executing housekeeper
+   661:20240613:092318.103 housekeeper [deleted 0 hist/trends, 0 items/triggers, 0 events, 0 problems, 0 sessions, 0 alarms, 0 audit, 0 autoreg_host, 0 records in 0.023918 sec, idle for 1 hour(s)]
+   661:20240613:102318.201 executing housekeeper
+   661:20240613:102318.216 housekeeper [deleted 0 hist/trends, 0 items/triggers, 0 events, 0 problems, 0 sessions, 0 alarms, 0 audit, 0 autoreg_host, 0 records in 0.014565 sec, idle for 1 hour(s)]
+   661:20240613:112318.261 executing housekeeper
+   661:20240613:112318.274 housekeeper [deleted 0 hist/trends, 0 items/triggers, 0 events, 0 problems, 0 sessions, 0 alarms, 0 audit, 0 autoreg_host, 0 records in 0.012880 sec, idle for 1 hour(s)]
+   661:20240613:122318.351 executing housekeeper
+   661:20240613:122318.389 housekeeper [deleted 546 hist/trends, 0 items/triggers, 0 events, 0 problems, 0 sessions, 0 alarms, 0 audit, 0 autoreg_host, 0 records in 0.037260 sec, idle for 1 hour(s)]
+   684:20240613:123418.642 Zabbix agent item "vm.memory.size[available]" on host "Zabbix-Lin" failed: first network error, wait for 15 seconds
+   689:20240613:123433.036 Zabbix agent item "vm.memory.size[pavailable]" on host "Zabbix-Lin" failed: another network error, wait for 15 seconds
+   689:20240613:123448.050 Zabbix agent item "system.cpu.util[,user]" on host "Zabbix-Lin" failed: another network error, wait for 15 seconds
+   689:20240613:123503.063 temporarily disabling Zabbix agent checks on host "Zabbix-Lin": interface unavailable
+   689:20240613:123703.171 enabling Zabbix agent checks on host "Zabbix-Lin": interface became available
+   685:20240613:123818.163 Zabbix agent item "vm.memory.size[available]" on host "Zabbix-Lin" failed: first network error, wait for 15 seconds
+   689:20240613:123833.092 Zabbix agent item "vm.memory.size[pavailable]" on host "Zabbix-Lin" failed: another network error, wait for 15 seconds
+   689:20240613:123848.108 Zabbix agent item "system.cpu.util[,user]" on host "Zabbix-Lin" failed: another network error, wait for 15 seconds
+   689:20240613:123903.119 temporarily disabling Zabbix agent checks on host "Zabbix-Lin": interface unavailable
+   686:20240613:124035.466 Zabbix agent item "perf_counter_en["\System\Threads"]" on host "Zabbix-Win" failed: first network error, wait for 15 seconds
+   689:20240613:124054.214 Zabbix agent item "service.info["EventLog",state]" on host "Zabbix-Win" failed: another network error, wait for 15 seconds
+   689:20240613:124113.230 Zabbix agent item "service.info["UsoSvc",state]" on host "Zabbix-Win" failed: another network error, wait for 15 seconds
+   689:20240613:124132.245 temporarily disabling Zabbix agent checks on host "Zabbix-Win": interface unavailable
+   689:20240613:124547.017 enabling Zabbix agent checks on host "Zabbix-Win": interface became available
+   689:20240613:125603.623 enabling Zabbix agent checks on host "Zabbix-Lin": interface became available
+   661:20240613:132318.415 executing housekeeper
+   661:20240613:132318.601 housekeeper [deleted 4055 hist/trends, 0 items/triggers, 0 events, 0 problems, 0 sessions, 0 alarms, 0 audit, 0 autoreg_host, 0 records in 0.185578 sec, idle for 1 hour(s)]
+   661:20240613:142318.623 executing housekeeper
+   661:20240613:142318.852 housekeeper [deleted 8417 hist/trends, 0 items/triggers, 0 events, 0 problems, 0 sessions, 0 alarms, 0 audit, 0 autoreg_host, 0 records in 0.229006 sec, idle for 1 hour(s)]
+   661:20240613:152318.877 executing housekeeper
+   661:20240613:152319.088 housekeeper [deleted 8943 hist/trends, 0 items/triggers, 0 events, 0 problems, 0 sessions, 0 alarms, 0 audit, 0 autoreg_host, 0 records in 0.211130 sec, idle for 1 hour(s)]
+   661:20240613:162319.190 executing housekeeper
+   661:20240613:162319.437 housekeeper [deleted 8750 hist/trends, 0 items/triggers, 0 events, 0 problems, 0 sessions, 0 alarms, 0 audit, 0 autoreg_host, 0 records in 0.246041 sec, idle for 1 hour(s)]
+   661:20240613:172319.474 executing housekeeper
+   661:20240613:172319.779 housekeeper [deleted 11745 hist/trends, 0 items/triggers, 0 events, 0 problems, 0 sessions, 0 alarms, 0 audit, 0 autoreg_host, 0 records in 0.305073 sec, idle for 1 hour(s)]
+   661:20240613:182319.858 executing housekeeper
+   661:20240613:182320.011 housekeeper [deleted 18698 hist/trends, 0 items/triggers, 0 events, 0 problems, 0 sessions, 0 alarms, 0 audit, 0 autoreg_host, 0 records in 0.152319 sec, idle for 1 hour(s)]
+   661:20240613:192320.114 executing housekeeper
+   661:20240613:192320.227 housekeeper [deleted 458 hist/trends, 0 items/triggers, 0 events, 0 problems, 0 sessions, 0 alarms, 0 audit, 0 autoreg_host, 0 records in 0.111587 sec, idle for 1 hour(s)]
+   619:20240613:195242.219 Got signal [signal:15(SIGTERM),sender_pid:9182,sender_uid:0,reason:0]. Exiting ...
+   635:20240613:195242.264 HA manager has been paused
+   666:20240613:195242.265 syncing history data in progress... 
+   666:20240613:195242.268 syncing history data... 100.000000%
+   666:20240613:195242.268 syncing history data done
+   635:20240613:195243.304 HA manager has been stopped
+   619:20240613:195243.308 syncing trend data...
+   619:20240613:195243.315 syncing trend data done
+   619:20240613:195243.317 Zabbix Server stopped. Zabbix 6.0.30 (revision 680df722d6b).
+   616:20240614:065153.899 Starting Zabbix Server. Zabbix 6.0.30 (revision 680df722d6b).
+   616:20240614:065153.900 ****** Enabled features ******
+   616:20240614:065153.900 SNMP monitoring:           YES
+   616:20240614:065153.900 IPMI monitoring:           YES
+   616:20240614:065153.900 Web monitoring:            YES
+   616:20240614:065153.900 VMware monitoring:         YES
+   616:20240614:065153.900 SMTP authentication:       YES
+   616:20240614:065153.900 ODBC:                      YES
+   616:20240614:065153.900 SSH support:               YES
+   616:20240614:065153.900 IPv6 support:              YES
+   616:20240614:065153.900 TLS support:               YES
+   616:20240614:065153.900 ******************************
+   616:20240614:065153.900 using configuration file: /etc/zabbix/zabbix_server.conf
+   616:20240614:065154.129 current database version (mandatory/optional): 06000000/06000044
+   616:20240614:065154.129 required mandatory version: 06000000
+   631:20240614:065154.138 starting HA manager
+   631:20240614:065154.142 HA manager started in active mode
+   616:20240614:065154.143 server #0 started [main process]
+   633:20240614:065154.145 server #2 started [configuration syncer #1]
+   632:20240614:065154.146 server #1 started [service manager #1]
+   652:20240614:065154.632 server #4 started [alerter #1]
+   654:20240614:065154.632 server #6 started [alerter #3]
+   656:20240614:065154.638 server #7 started [preprocessing manager #1]
+   657:20240614:065154.639 server #8 started [preprocessing worker #1]
+   653:20240614:065154.639 server #5 started [alerter #2]
+   661:20240614:065154.643 server #12 started [lld worker #1]
+   663:20240614:065154.643 server #14 started [housekeeper #1]
+   659:20240614:065154.644 server #10 started [preprocessing worker #3]
+   660:20240614:065154.646 server #11 started [lld manager #1]
+   662:20240614:065154.647 server #13 started [lld worker #2]
+   651:20240614:065154.647 server #3 started [alert manager #1]
+   666:20240614:065154.648 server #17 started [discoverer #1]
+   664:20240614:065154.654 server #15 started [timer #1]
+   665:20240614:065154.658 server #16 started [http poller #1]
+   671:20240614:065154.660 server #20 started [history syncer #3]
+   669:20240614:065154.660 server #18 started [history syncer #1]
+   670:20240614:065154.667 server #19 started [history syncer #2]
+   675:20240614:065154.667 server #22 started [escalator #1]
+   674:20240614:065154.671 server #21 started [history syncer #4]
+   676:20240614:065154.672 server #23 started [proxy poller #1]
+   678:20240614:065154.674 server #24 started [self-monitoring #1]
+   679:20240614:065154.678 server #25 started [task manager #1]
+   684:20240614:065154.686 server #27 started [poller #2]
+   683:20240614:065154.691 server #26 started [poller #1]
+   689:20240614:065154.696 server #29 started [poller #4]
+   688:20240614:065154.699 server #28 started [poller #3]
+   691:20240614:065154.709 server #30 started [poller #5]
+   693:20240614:065154.712 server #32 started [trapper #1]
+   692:20240614:065154.721 server #31 started [unreachable poller #1]
+   695:20240614:065154.729 server #33 started [trapper #2]
+   696:20240614:065154.735 server #34 started [trapper #3]
+   697:20240614:065154.737 server #35 started [trapper #4]
+   658:20240614:065154.739 server #9 started [preprocessing worker #2]
+   702:20240614:065154.746 server #37 started [icmp pinger #1]
+   705:20240614:065154.754 server #38 started [alert syncer #1]
+   701:20240614:065154.754 server #36 started [trapper #5]
+   707:20240614:065154.758 server #40 started [history poller #2]
+   706:20240614:065154.762 server #39 started [history poller #1]
+   708:20240614:065154.768 server #41 started [history poller #3]
+   715:20240614:065154.769 server #45 started [trigger housekeeper #1]
+   713:20240614:065154.776 server #43 started [history poller #5]
+   714:20240614:065154.779 server #44 started [availability manager #1]
+   712:20240614:065154.781 server #42 started [history poller #4]
+   718:20240614:065154.781 server #46 started [odbc poller #1]
+   670:20240614:065224.700 item "Zabbix-Win:system.cpu.util" became not supported: No data available.
+   670:20240614:065320.746 item "Zabbix-Win:system.cpu.util" became supported
+   663:20240614:072154.743 executing housekeeper
+   663:20240614:072154.761 housekeeper [deleted 0 hist/trends, 0 items/triggers, 0 events, 7 problems, 0 sessions, 0 alarms, 0 audit, 0 autoreg_host, 0 records in 0.016726 sec, idle for 1 hour(s)]
+   663:20240614:082154.860 executing housekeeper
+   663:20240614:082154.866 housekeeper [deleted 0 hist/trends, 0 items/triggers, 0 events, 0 problems, 0 sessions, 0 alarms, 0 audit, 0 autoreg_host, 0 records in 0.005315 sec, idle for 1 hour(s)]
+   663:20240614:092154.968 executing housekeeper
+   663:20240614:092154.974 housekeeper [deleted 0 hist/trends, 0 items/triggers, 0 events, 0 problems, 0 sessions, 0 alarms, 0 audit, 0 autoreg_host, 0 records in 0.005176 sec, idle for 1 hour(s)]
+   663:20240614:102154.986 executing housekeeper
+   663:20240614:102154.993 housekeeper [deleted 0 hist/trends, 0 items/triggers, 0 events, 0 problems, 0 sessions, 0 alarms, 0 audit, 0 autoreg_host, 0 records in 0.005926 sec, idle for 1 hour(s)]
+   663:20240614:112155.092 executing housekeeper
+   663:20240614:112155.109 housekeeper [deleted 0 hist/trends, 0 items/triggers, 0 events, 0 problems, 0 sessions, 0 alarms, 0 audit, 0 autoreg_host, 0 records in 0.016610 sec, idle for 1 hour(s)]
+   683:20240614:113459.237 Zabbix agent item "service.info["StorSvc",state]" on host "Zabbix-Win" failed: first network error, wait for 15 seconds
+   692:20240614:113518.395 Zabbix agent item "service.info["TrkWks",state]" on host "Zabbix-Win" failed: another network error, wait for 15 seconds
+   692:20240614:113537.409 Zabbix agent item "net.if.out["{697A843F-7DFC-4F09-86E3-8603661AEDC9}",dropped]" on host "Zabbix-Win" failed: another network error, wait for 15 seconds
+   692:20240614:113556.425 temporarily disabling Zabbix agent checks on host "Zabbix-Win": interface unavailable
+   689:20240614:113622.074 Zabbix agent item "vm.memory.size[available]" on host "Zabbix-Lin" failed: first network error, wait for 15 seconds
+   692:20240614:113641.459 Zabbix agent item "system.cpu.util[,guest_nice]" on host "Zabbix-Lin" failed: another network error, wait for 15 seconds
+   692:20240614:113659.554 Zabbix agent item "system.cpu.load[all,avg5]" on host "Zabbix-Lin" failed: another network error, wait for 15 seconds
+   692:20240614:113717.634 temporarily disabling Zabbix agent checks on host "Zabbix-Lin": interface unavailable
+   616:20240614:113721.085 Got signal [signal:15(SIGTERM),sender_pid:4006,sender_uid:0,reason:0]. Exiting ...
+   689:20240614:113721.136 Zabbix agent item "system.cpu.switches" on host "Zabbix server" failed: first network error, wait for 15 seconds
+   631:20240614:113721.140 HA manager has been paused
+   669:20240614:113721.141 syncing history data in progress... 
+   669:20240614:113721.152 syncing history data... 100.000000%
+   669:20240614:113721.152 syncing history data done
+   631:20240614:113722.191 HA manager has been stopped
+   616:20240614:113722.194 syncing trend data...
+   616:20240614:113722.201 syncing trend data done
+   616:20240614:113722.203 Zabbix Server stopped. Zabbix 6.0.30 (revision 680df722d6b).
+   613:20240617:070502.359 Starting Zabbix Server. Zabbix 6.0.30 (revision 680df722d6b).
+   613:20240617:070502.360 ****** Enabled features ******
+   613:20240617:070502.360 SNMP monitoring:           YES
+   613:20240617:070502.360 IPMI monitoring:           YES
+   613:20240617:070502.360 Web monitoring:            YES
+   613:20240617:070502.360 VMware monitoring:         YES
+   613:20240617:070502.360 SMTP authentication:       YES
+   613:20240617:070502.360 ODBC:                      YES
+   613:20240617:070502.360 SSH support:               YES
+   613:20240617:070502.360 IPv6 support:              YES
+   613:20240617:070502.360 TLS support:               YES
+   613:20240617:070502.360 ******************************
+   613:20240617:070502.360 using configuration file: /etc/zabbix/zabbix_server.conf
+   613:20240617:070502.551 current database version (mandatory/optional): 06000000/06000044
+   613:20240617:070502.551 required mandatory version: 06000000
+   628:20240617:070502.562 starting HA manager
+   628:20240617:070502.570 HA manager started in active mode
+   613:20240617:070502.572 server #0 started [main process]
+   630:20240617:070502.576 server #2 started [configuration syncer #1]
+   629:20240617:070502.577 server #1 started [service manager #1]
+   645:20240617:070503.100 server #4 started [alerter #1]
+   646:20240617:070503.100 server #5 started [alerter #2]
+   648:20240617:070503.101 server #7 started [preprocessing manager #1]
+   652:20240617:070503.104 server #11 started [lld manager #1]
+   654:20240617:070503.108 server #13 started [lld worker #2]
+   651:20240617:070503.108 server #10 started [preprocessing worker #3]
+   647:20240617:070503.108 server #6 started [alerter #3]
+   653:20240617:070503.108 server #12 started [lld worker #1]
+   649:20240617:070503.109 server #8 started [preprocessing worker #1]
+   644:20240617:070503.109 server #3 started [alert manager #1]
+   655:20240617:070503.110 server #14 started [housekeeper #1]
+   656:20240617:070503.111 server #15 started [timer #1]
+   658:20240617:070503.111 server #17 started [discoverer #1]
+   659:20240617:070503.115 server #18 started [history syncer #1]
+   657:20240617:070503.115 server #16 started [http poller #1]
+   667:20240617:070503.121 server #19 started [history syncer #2]
+   668:20240617:070503.122 server #20 started [history syncer #3]
+   669:20240617:070503.122 server #21 started [history syncer #4]
+   670:20240617:070503.127 server #22 started [escalator #1]
+   678:20240617:070503.135 server #29 started [poller #4]
+   676:20240617:070503.137 server #27 started [poller #2]
+   673:20240617:070503.139 server #24 started [self-monitoring #1]
+   672:20240617:070503.139 server #23 started [proxy poller #1]
+   674:20240617:070503.140 server #25 started [task manager #1]
+   679:20240617:070503.144 server #30 started [poller #5]
+   677:20240617:070503.151 server #28 started [poller #3]
+   675:20240617:070503.156 server #26 started [poller #1]
+   686:20240617:070503.173 server #31 started [unreachable poller #1]
+   689:20240617:070503.173 server #34 started [trapper #3]
+   688:20240617:070503.179 server #33 started [trapper #2]
+   687:20240617:070503.182 server #32 started [trapper #1]
+   690:20240617:070503.185 server #35 started [trapper #4]
+   693:20240617:070503.191 server #37 started [icmp pinger #1]
+   692:20240617:070503.192 server #36 started [trapper #5]
+   696:20240617:070503.192 server #39 started [history poller #1]
+   695:20240617:070503.196 server #38 started [alert syncer #1]
+   697:20240617:070503.197 server #40 started [history poller #2]
+   686:20240617:070503.200 resuming Zabbix agent checks on host "Zabbix server": connection restored
+   650:20240617:070503.201 server #9 started [preprocessing worker #2]
+   704:20240617:070503.206 server #43 started [history poller #5]
+   702:20240617:070503.208 server #41 started [history poller #3]
+   703:20240617:070503.209 server #42 started [history poller #4]
+   709:20240617:070503.212 server #45 started [trigger housekeeper #1]
+   706:20240617:070503.213 server #44 started [availability manager #1]
+   710:20240617:070503.216 server #46 started [odbc poller #1]
+   686:20240617:070503.303 enabling Zabbix agent checks on host "Zabbix-Win": interface became available
+   686:20240617:070523.327 enabling Zabbix agent checks on host "Zabbix-Lin": interface became available
+   668:20240617:070524.164 item "Zabbix-Win:system.cpu.util" became not supported: No data available.
+   659:20240617:070620.243 item "Zabbix-Win:system.cpu.util" became supported
+   646:20240617:071106.509 [ Discord Webhook ] ERROR: Error: cannot get URL: URL using bad/illegal format or missing URL.
+   655:20240617:073503.128 executing housekeeper
+   655:20240617:073503.449 housekeeper [deleted 6829 hist/trends, 0 items/triggers, 0 events, 13 problems, 0 sessions, 0 alarms, 0 audit, 0 autoreg_host, 0 records in 0.320561 sec, idle for 1 hour(s)]
+   679:20240617:073543.070 Zabbix agent item "vfs.file.contents["/sys/class/net/ens5/operstate"]" on host "Zabbix-Lin" failed: first network error, wait for 15 seconds
+   686:20240617:073558.715 resuming Zabbix agent checks on host "Zabbix-Lin": connection restored
+   669:20240617:073625.354 item "Zabbix-Lin:system.cpu.util[,guest_nice]" became not supported: No data available.
+   667:20240617:073722.391 item "Zabbix-Lin:system.cpu.util[,guest_nice]" became supported
+   655:20240617:083503.548 executing housekeeper
+   655:20240617:083503.866 housekeeper [deleted 10134 hist/trends, 0 items/triggers, 0 events, 0 problems, 0 sessions, 0 alarms, 0 audit, 0 autoreg_host, 0 records in 0.317437 sec, idle for 1 hour(s)]
+   655:20240617:093503.927 executing housekeeper
+   655:20240617:093503.968 housekeeper [deleted 0 hist/trends, 0 items/triggers, 0 events, 0 problems, 0 sessions, 0 alarms, 0 audit, 0 autoreg_host, 0 records in 0.040249 sec, idle for 1 hour(s)]
+   613:20240617:100343.067 Got signal [signal:15(SIGTERM),sender_pid:2516,sender_uid:0,reason:0]. Exiting ...
+   628:20240617:100343.564 HA manager has been paused
+   668:20240617:100343.564 syncing history data in progress... 
+   668:20240617:100343.569 syncing history data... 100.000000%
+   668:20240617:100343.569 syncing history data done
+   628:20240617:100344.592 HA manager has been stopped
+   613:20240617:100344.598 syncing trend data...
+   613:20240617:100344.611 syncing trend data done
+   613:20240617:100344.613 Zabbix Server stopped. Zabbix 6.0.30 (revision 680df722d6b).
+   611:20240618:065259.366 Starting Zabbix Server. Zabbix 6.0.30 (revision 680df722d6b).
+   611:20240618:065259.367 ****** Enabled features ******
+   611:20240618:065259.367 SNMP monitoring:           YES
+   611:20240618:065259.367 IPMI monitoring:           YES
+   611:20240618:065259.367 Web monitoring:            YES
+   611:20240618:065259.367 VMware monitoring:         YES
+   611:20240618:065259.367 SMTP authentication:       YES
+   611:20240618:065259.367 ODBC:                      YES
+   611:20240618:065259.367 SSH support:               YES
+   611:20240618:065259.367 IPv6 support:              YES
+   611:20240618:065259.367 TLS support:               YES
+   611:20240618:065259.367 ******************************
+   611:20240618:065259.367 using configuration file: /etc/zabbix/zabbix_server.conf
+   611:20240618:065259.548 current database version (mandatory/optional): 06000000/06000044
+   611:20240618:065259.548 required mandatory version: 06000000
+   626:20240618:065259.557 starting HA manager
+   626:20240618:065259.562 HA manager started in active mode
+   611:20240618:065259.564 server #0 started [main process]
+   627:20240618:065259.573 server #1 started [service manager #1]
+   628:20240618:065259.582 server #2 started [configuration syncer #1]
+   651:20240618:065300.052 server #4 started [alerter #1]
+   653:20240618:065300.055 server #6 started [alerter #3]
+   654:20240618:065300.056 server #7 started [preprocessing manager #1]
+   658:20240618:065300.057 server #11 started [lld manager #1]
+   660:20240618:065300.057 server #13 started [lld worker #2]
+   652:20240618:065300.058 server #5 started [alerter #2]
+   656:20240618:065300.058 server #9 started [preprocessing worker #2]
+   650:20240618:065300.058 server #3 started [alert manager #1]
+   659:20240618:065300.060 server #12 started [lld worker #1]
+   661:20240618:065300.060 server #14 started [housekeeper #1]
+   665:20240618:065300.062 server #16 started [http poller #1]
+   669:20240618:065300.064 server #19 started [history syncer #2]
+   667:20240618:065300.066 server #17 started [discoverer #1]
+   668:20240618:065300.068 server #18 started [history syncer #1]
+   664:20240618:065300.069 server #15 started [timer #1]
+   671:20240618:065300.069 server #20 started [history syncer #3]
+   673:20240618:065300.072 server #22 started [escalator #1]
+   672:20240618:065300.081 server #21 started [history syncer #4]
+   681:20240618:065300.083 server #25 started [task manager #1]
+   682:20240618:065300.083 server #26 started [poller #1]
+   674:20240618:065300.084 server #23 started [proxy poller #1]
+   680:20240618:065300.087 server #24 started [self-monitoring #1]
+   685:20240618:065300.097 server #27 started [poller #2]
+   686:20240618:065300.100 server #28 started [poller #3]
+   693:20240618:065300.101 server #34 started [trapper #3]
+   687:20240618:065300.104 server #29 started [poller #4]
+   690:20240618:065300.108 server #31 started [unreachable poller #1]
+   689:20240618:065300.111 server #30 started [poller #5]
+   691:20240618:065300.115 server #32 started [trapper #1]
+   692:20240618:065300.119 server #33 started [trapper #2]
+   694:20240618:065300.123 server #35 started [trapper #4]
+   701:20240618:065300.132 server #37 started [icmp pinger #1]
+   700:20240618:065300.133 server #36 started [trapper #5]
+   703:20240618:065300.135 server #39 started [history poller #1]
+   702:20240618:065300.137 server #38 started [alert syncer #1]
+   704:20240618:065300.137 server #40 started [history poller #2]
+   705:20240618:065300.141 server #41 started [history poller #3]
+   708:20240618:065300.145 server #43 started [history poller #5]
+   707:20240618:065300.148 server #42 started [history poller #4]
+   709:20240618:065300.151 server #44 started [availability manager #1]
+   711:20240618:065300.152 server #45 started [trigger housekeeper #1]
+   712:20240618:065300.152 server #46 started [odbc poller #1]
+   655:20240618:065300.156 server #8 started [preprocessing worker #1]
+   657:20240618:065300.156 server #10 started [preprocessing worker #3]
+   672:20240618:065324.099 item "Zabbix-Win:system.cpu.util" became not supported: No data available.
+   668:20240618:065421.151 item "Zabbix-Win:system.cpu.util" became supported
+   661:20240618:072300.140 executing housekeeper
+   661:20240618:072300.176 housekeeper [deleted 0 hist/trends, 0 items/triggers, 0 events, 8 problems, 0 sessions, 0 alarms, 0 audit, 0 autoreg_host, 0 records in 0.034480 sec, idle for 1 hour(s)]
+   653:20240618:072643.934 [ Discord Webhook ] ERROR: Error: cannot get URL: URL using bad/illegal format or missing URL.

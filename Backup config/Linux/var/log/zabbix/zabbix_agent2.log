@@ -1,0 +1,36 @@
+2024/06/20 07:28:03.347433 using plugin 'Memcached' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/20 07:28:03.347442 using plugin 'Memory' (built-in) providing following interfaces: exporter
+2024/06/20 07:28:03.347451 using plugin 'Modbus' (built-in) providing following interfaces: exporter, configurator
+2024/06/20 07:28:03.347462 using plugin 'MongoDB' (/usr/sbin/zabbix-agent2-plugin/zabbix-agent2-plugin-mongodb) providing following interfaces: exporter, runner, configurator
+2024/06/20 07:28:03.347472 using plugin 'Mysql' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/20 07:28:03.347481 using plugin 'NetIf' (built-in) providing following interfaces: exporter
+2024/06/20 07:28:03.347490 using plugin 'Oracle' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/20 07:28:03.347511 using plugin 'PostgreSQL' (/usr/sbin/zabbix-agent2-plugin/zabbix-agent2-plugin-postgresql) providing following interfaces: exporter, runner, configurator
+2024/06/20 07:28:03.347527 using plugin 'Proc' (built-in) providing following interfaces: exporter, collector
+2024/06/20 07:28:03.347534 using plugin 'ProcExporter' (built-in) providing following interfaces: exporter
+2024/06/20 07:28:03.347543 using plugin 'Redis' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/20 07:28:03.347552 using plugin 'Smart' (built-in) providing following interfaces: exporter, configurator
+2024/06/20 07:28:03.347561 using plugin 'Sw' (built-in) providing following interfaces: exporter, configurator
+2024/06/20 07:28:03.347569 using plugin 'Swap' (built-in) providing following interfaces: exporter
+2024/06/20 07:28:03.347578 using plugin 'SystemRun' (built-in) providing following interfaces: exporter, configurator
+2024/06/20 07:28:03.347678 using plugin 'Systemd' (built-in) providing following interfaces: exporter
+2024/06/20 07:28:03.347688 using plugin 'TCP' (built-in) providing following interfaces: exporter, configurator
+2024/06/20 07:28:03.347698 using plugin 'UDP' (built-in) providing following interfaces: exporter, configurator
+2024/06/20 07:28:03.347707 using plugin 'Uname' (built-in) providing following interfaces: exporter
+2024/06/20 07:28:03.347716 using plugin 'Uptime' (built-in) providing following interfaces: exporter
+2024/06/20 07:28:03.347724 using plugin 'Users' (built-in) providing following interfaces: exporter, configurator
+2024/06/20 07:28:03.347739 using plugin 'VFSDev' (built-in) providing following interfaces: exporter, collector
+2024/06/20 07:28:03.347747 using plugin 'VFSDir' (built-in) providing following interfaces: exporter
+2024/06/20 07:28:03.347755 using plugin 'VfsFs' (built-in) providing following interfaces: exporter
+2024/06/20 07:28:03.347764 using plugin 'WebCertificate' (built-in) providing following interfaces: exporter, configurator
+2024/06/20 07:28:03.347783 using plugin 'WebPage' (built-in) providing following interfaces: exporter, configurator
+2024/06/20 07:28:03.347791 using plugin 'ZabbixAsync' (built-in) providing following interfaces: exporter
+2024/06/20 07:28:03.347809 using plugin 'ZabbixStats' (built-in) providing following interfaces: exporter, configurator
+2024/06/20 07:28:03.347815 lowering the plugin ZabbixSync capacity to 1 as the configured capacity 100 exceeds limits
+2024/06/20 07:28:03.347826 using plugin 'ZabbixSync' (built-in) providing following interfaces: exporter
+2024/06/20 07:28:03.347933 Plugin communication protocol version is 6.0.13
+2024/06/20 07:28:03.347956 Zabbix Agent2 hostname: [Zabbix-Lin]
+2024/06/20 07:28:04.350307 [101] cannot connect to [10.0.2.10:10051]: dial tcp :0->10.0.2.10:10051: connect: connection refused
+2024/06/20 07:28:04.350338 [101] active check configuration update from host [Zabbix-Lin] started to fail
+2024/06/20 07:30:06.091211 [101] active check configuration update from [10.0.2.10:10051] is working again
+

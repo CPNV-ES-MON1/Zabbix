@@ -1,0 +1,586 @@
+2024/06/06 12:37:55.270197 Starting Zabbix Agent 2 (6.0.30)
+2024/06/06 12:37:55.293085 OpenSSL library (OpenSSL 3.0.11 19 Sep 2023) initialized
+2024/06/06 12:37:55.293085 using configuration file: C:\Program Files\Zabbix Agent 2\zabbix_agent2.conf
+2024/06/06 12:37:55.293085 using plugin 'Agent' (built-in) providing following interfaces: exporter
+2024/06/06 12:37:55.293085 using plugin 'Ceph' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/06 12:37:55.293085 using plugin 'Cpu' (built-in) providing following interfaces: exporter, collector, runner
+2024/06/06 12:37:55.293085 using plugin 'DNS' (built-in) providing following interfaces: exporter
+2024/06/06 12:37:55.304782 using plugin 'File' (built-in) providing following interfaces: exporter, configurator
+2024/06/06 12:37:55.304782 using plugin 'Log' (built-in) providing following interfaces: exporter, configurator
+2024/06/06 12:37:55.304782 using plugin 'MQTT' (built-in) providing following interfaces: watcher, configurator
+2024/06/06 12:37:55.304782 using plugin 'Memcached' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/06 12:37:55.305420 using plugin 'Memory' (built-in) providing following interfaces: exporter
+2024/06/06 12:37:55.305420 using plugin 'Modbus' (built-in) providing following interfaces: exporter, configurator
+2024/06/06 12:37:55.305420 using plugin 'Mysql' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/06 12:37:55.305420 using plugin 'NetIf' (built-in) providing following interfaces: exporter
+2024/06/06 12:37:55.305420 using plugin 'Oracle' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/06 12:37:55.305420 using plugin 'Proc' (built-in) providing following interfaces: exporter
+2024/06/06 12:37:55.305420 using plugin 'Redis' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/06 12:37:55.305420 using plugin 'Smart' (built-in) providing following interfaces: exporter, configurator
+2024/06/06 12:37:55.305420 using plugin 'Swap' (built-in) providing following interfaces: exporter
+2024/06/06 12:37:55.305420 using plugin 'SystemRun' (built-in) providing following interfaces: exporter, configurator
+2024/06/06 12:37:55.305420 using plugin 'TCP' (built-in) providing following interfaces: exporter, configurator
+2024/06/06 12:37:55.305420 using plugin 'UDP' (built-in) providing following interfaces: exporter, configurator
+2024/06/06 12:37:55.305420 using plugin 'Uname' (built-in) providing following interfaces: exporter
+2024/06/06 12:37:55.305420 using plugin 'Uptime' (built-in) providing following interfaces: exporter
+2024/06/06 12:37:55.305420 using plugin 'Users' (built-in) providing following interfaces: exporter, configurator
+2024/06/06 12:37:55.305420 using plugin 'VFSDir' (built-in) providing following interfaces: exporter
+2024/06/06 12:37:55.305420 using plugin 'VMemory' (built-in) providing following interfaces: exporter
+2024/06/06 12:37:55.305420 using plugin 'VfsFs' (built-in) providing following interfaces: exporter
+2024/06/06 12:37:55.305420 using plugin 'WebCertificate' (built-in) providing following interfaces: exporter, configurator
+2024/06/06 12:37:55.305420 using plugin 'WebPage' (built-in) providing following interfaces: exporter, configurator
+2024/06/06 12:37:55.305420 using plugin 'WindowsEventlog' (built-in) providing following interfaces: exporter, configurator
+2024/06/06 12:37:55.305420 lowering the plugin WindowsPerfInstance capacity to 1 as the configured capacity 100 exceeds limits
+2024/06/06 12:37:55.305420 using plugin 'WindowsPerfInstance' (built-in) providing following interfaces: exporter
+2024/06/06 12:37:55.305420 using plugin 'WindowsPerfMon' (built-in) providing following interfaces: exporter, collector, runner
+2024/06/06 12:37:55.305420 using plugin 'WindowsServices' (built-in) providing following interfaces: exporter
+2024/06/06 12:37:55.305420 using plugin 'Wmi' (built-in) providing following interfaces: exporter
+2024/06/06 12:37:55.305420 using plugin 'ZabbixAsync' (built-in) providing following interfaces: exporter
+2024/06/06 12:37:55.305420 using plugin 'ZabbixStats' (built-in) providing following interfaces: exporter, configurator
+2024/06/06 12:37:55.305420 lowering the plugin ZabbixSync capacity to 1 as the configured capacity 100 exceeds limits
+2024/06/06 12:37:55.305420 using plugin 'ZabbixSync' (built-in) providing following interfaces: exporter
+2024/06/06 12:37:56.843164 Plugin communication protocol version is 6.0.13
+2024/06/06 12:37:56.843164 Zabbix Agent2 hostname: [Zabbix-Win]
+2024/06/06 12:37:59.088493 [101] no active checks on server [10.0.2.10:10051]: host [Zabbix-Win] not found
+2024/06/06 12:38:03.860298 Zabbix Agent 2 stopped. (6.0.30)
+2024/06/06 12:38:22.300716 Starting Zabbix Agent 2 (6.0.30)
+2024/06/06 12:38:22.348024 OpenSSL library (OpenSSL 3.0.11 19 Sep 2023) initialized
+2024/06/06 12:38:22.348024 using configuration file: C:\Program Files\Zabbix Agent 2\zabbix_agent2.conf
+2024/06/06 12:38:22.351197 using plugin 'Agent' (built-in) providing following interfaces: exporter
+2024/06/06 12:38:22.351197 using plugin 'Ceph' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/06 12:38:22.351197 using plugin 'Cpu' (built-in) providing following interfaces: exporter, collector, runner
+2024/06/06 12:38:22.351197 using plugin 'DNS' (built-in) providing following interfaces: exporter
+2024/06/06 12:38:22.351197 using plugin 'File' (built-in) providing following interfaces: exporter, configurator
+2024/06/06 12:38:22.351726 using plugin 'Log' (built-in) providing following interfaces: exporter, configurator
+2024/06/06 12:38:22.351726 using plugin 'MQTT' (built-in) providing following interfaces: watcher, configurator
+2024/06/06 12:38:22.351814 using plugin 'Memcached' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/06 12:38:22.351814 using plugin 'Memory' (built-in) providing following interfaces: exporter
+2024/06/06 12:38:22.351814 using plugin 'Modbus' (built-in) providing following interfaces: exporter, configurator
+2024/06/06 12:38:22.352430 using plugin 'Mysql' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/06 12:38:22.352430 using plugin 'NetIf' (built-in) providing following interfaces: exporter
+2024/06/06 12:38:22.352430 using plugin 'Oracle' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/06 12:38:22.352430 using plugin 'Proc' (built-in) providing following interfaces: exporter
+2024/06/06 12:38:22.352430 using plugin 'Redis' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/06 12:38:22.352430 using plugin 'Smart' (built-in) providing following interfaces: exporter, configurator
+2024/06/06 12:38:22.352430 using plugin 'Swap' (built-in) providing following interfaces: exporter
+2024/06/06 12:38:22.352430 using plugin 'SystemRun' (built-in) providing following interfaces: exporter, configurator
+2024/06/06 12:38:22.352430 using plugin 'TCP' (built-in) providing following interfaces: exporter, configurator
+2024/06/06 12:38:22.352954 using plugin 'UDP' (built-in) providing following interfaces: exporter, configurator
+2024/06/06 12:38:22.352954 using plugin 'Uname' (built-in) providing following interfaces: exporter
+2024/06/06 12:38:22.352954 using plugin 'Uptime' (built-in) providing following interfaces: exporter
+2024/06/06 12:38:22.353111 using plugin 'Users' (built-in) providing following interfaces: exporter, configurator
+2024/06/06 12:38:22.353111 using plugin 'VFSDir' (built-in) providing following interfaces: exporter
+2024/06/06 12:38:22.353111 using plugin 'VMemory' (built-in) providing following interfaces: exporter
+2024/06/06 12:38:22.353111 using plugin 'VfsFs' (built-in) providing following interfaces: exporter
+2024/06/06 12:38:22.353111 using plugin 'WebCertificate' (built-in) providing following interfaces: exporter, configurator
+2024/06/06 12:38:22.353111 using plugin 'WebPage' (built-in) providing following interfaces: exporter, configurator
+2024/06/06 12:38:22.353111 using plugin 'WindowsEventlog' (built-in) providing following interfaces: exporter, configurator
+2024/06/06 12:38:22.353111 lowering the plugin WindowsPerfInstance capacity to 1 as the configured capacity 100 exceeds limits
+2024/06/06 12:38:22.353111 using plugin 'WindowsPerfInstance' (built-in) providing following interfaces: exporter
+2024/06/06 12:38:22.353111 using plugin 'WindowsPerfMon' (built-in) providing following interfaces: exporter, collector, runner
+2024/06/06 12:38:22.353111 using plugin 'WindowsServices' (built-in) providing following interfaces: exporter
+2024/06/06 12:38:22.353713 using plugin 'Wmi' (built-in) providing following interfaces: exporter
+2024/06/06 12:38:22.353713 using plugin 'ZabbixAsync' (built-in) providing following interfaces: exporter
+2024/06/06 12:38:22.353713 using plugin 'ZabbixStats' (built-in) providing following interfaces: exporter, configurator
+2024/06/06 12:38:22.353713 lowering the plugin ZabbixSync capacity to 1 as the configured capacity 100 exceeds limits
+2024/06/06 12:38:22.353713 using plugin 'ZabbixSync' (built-in) providing following interfaces: exporter
+2024/06/06 12:38:24.156771 Plugin communication protocol version is 6.0.13
+2024/06/06 12:38:24.156771 Zabbix Agent2 hostname: [Zabbix-Win]
+2024/06/06 12:38:26.748999 [101] no active checks on server [10.0.2.10:10051]: host [Zabbix-Win] not found
+2024/06/06 12:40:28.811684 [101] no active checks on server [10.0.2.10:10051]: host [Zabbix-Win] not found
+2024/06/06 16:08:37.737639 Zabbix Agent 2 stopped. (6.0.30)
+2024/06/06 16:08:56.183071 Starting Zabbix Agent 2 (6.0.30)
+2024/06/06 16:08:56.236849 OpenSSL library (OpenSSL 3.0.11 19 Sep 2023) initialized
+2024/06/06 16:08:56.236849 using configuration file: C:\Program Files\Zabbix Agent 2\zabbix_agent2.conf
+2024/06/06 16:08:56.244884 using plugin 'Agent' (built-in) providing following interfaces: exporter
+2024/06/06 16:08:56.244884 using plugin 'Ceph' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/06 16:08:56.244884 using plugin 'Cpu' (built-in) providing following interfaces: exporter, collector, runner
+2024/06/06 16:08:56.244884 using plugin 'DNS' (built-in) providing following interfaces: exporter
+2024/06/06 16:08:56.244884 using plugin 'File' (built-in) providing following interfaces: exporter, configurator
+2024/06/06 16:08:56.244884 using plugin 'Log' (built-in) providing following interfaces: exporter, configurator
+2024/06/06 16:08:56.244884 using plugin 'MQTT' (built-in) providing following interfaces: watcher, configurator
+2024/06/06 16:08:56.244884 using plugin 'Memcached' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/06 16:08:56.244884 using plugin 'Memory' (built-in) providing following interfaces: exporter
+2024/06/06 16:08:56.244884 using plugin 'Modbus' (built-in) providing following interfaces: exporter, configurator
+2024/06/06 16:08:56.246184 using plugin 'Mysql' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/06 16:08:56.246184 using plugin 'NetIf' (built-in) providing following interfaces: exporter
+2024/06/06 16:08:56.246184 using plugin 'Oracle' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/06 16:08:56.246184 using plugin 'Proc' (built-in) providing following interfaces: exporter
+2024/06/06 16:08:56.246184 using plugin 'Redis' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/06 16:08:56.246184 using plugin 'Smart' (built-in) providing following interfaces: exporter, configurator
+2024/06/06 16:08:56.246184 using plugin 'Swap' (built-in) providing following interfaces: exporter
+2024/06/06 16:08:56.246184 using plugin 'SystemRun' (built-in) providing following interfaces: exporter, configurator
+2024/06/06 16:08:56.246184 using plugin 'TCP' (built-in) providing following interfaces: exporter, configurator
+2024/06/06 16:08:56.246184 using plugin 'UDP' (built-in) providing following interfaces: exporter, configurator
+2024/06/06 16:08:56.246184 using plugin 'Uname' (built-in) providing following interfaces: exporter
+2024/06/06 16:08:56.246184 using plugin 'Uptime' (built-in) providing following interfaces: exporter
+2024/06/06 16:08:56.246184 using plugin 'Users' (built-in) providing following interfaces: exporter, configurator
+2024/06/06 16:08:56.246184 using plugin 'VFSDir' (built-in) providing following interfaces: exporter
+2024/06/06 16:08:56.246184 using plugin 'VMemory' (built-in) providing following interfaces: exporter
+2024/06/06 16:08:56.246184 using plugin 'VfsFs' (built-in) providing following interfaces: exporter
+2024/06/06 16:08:56.246184 using plugin 'WebCertificate' (built-in) providing following interfaces: exporter, configurator
+2024/06/06 16:08:56.246184 using plugin 'WebPage' (built-in) providing following interfaces: exporter, configurator
+2024/06/06 16:08:56.246184 using plugin 'WindowsEventlog' (built-in) providing following interfaces: exporter, configurator
+2024/06/06 16:08:56.246184 lowering the plugin WindowsPerfInstance capacity to 1 as the configured capacity 100 exceeds limits
+2024/06/06 16:08:56.246184 using plugin 'WindowsPerfInstance' (built-in) providing following interfaces: exporter
+2024/06/06 16:08:56.246184 using plugin 'WindowsPerfMon' (built-in) providing following interfaces: exporter, collector, runner
+2024/06/06 16:08:56.246184 using plugin 'WindowsServices' (built-in) providing following interfaces: exporter
+2024/06/06 16:08:56.246184 using plugin 'Wmi' (built-in) providing following interfaces: exporter
+2024/06/06 16:08:56.246184 using plugin 'ZabbixAsync' (built-in) providing following interfaces: exporter
+2024/06/06 16:08:56.246184 using plugin 'ZabbixStats' (built-in) providing following interfaces: exporter, configurator
+2024/06/06 16:08:56.246184 lowering the plugin ZabbixSync capacity to 1 as the configured capacity 100 exceeds limits
+2024/06/06 16:08:56.246184 using plugin 'ZabbixSync' (built-in) providing following interfaces: exporter
+2024/06/06 16:08:57.827447 Plugin communication protocol version is 6.0.13
+2024/06/06 16:08:57.827552 Zabbix Agent2 hostname: [Zabbix-Win]
+2024/06/06 16:16:29.688957 Zabbix Agent 2 stopped. (6.0.30)
+2024/06/06 16:16:48.187977 Starting Zabbix Agent 2 (6.0.30)
+2024/06/06 16:16:48.259231 OpenSSL library (OpenSSL 3.0.11 19 Sep 2023) initialized
+2024/06/06 16:16:48.259231 using configuration file: C:\Program Files\Zabbix Agent 2\zabbix_agent2.conf
+2024/06/06 16:16:48.265158 using plugin 'Agent' (built-in) providing following interfaces: exporter
+2024/06/06 16:16:48.265158 using plugin 'Ceph' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/06 16:16:48.265158 using plugin 'Cpu' (built-in) providing following interfaces: exporter, collector, runner
+2024/06/06 16:16:48.265158 using plugin 'DNS' (built-in) providing following interfaces: exporter
+2024/06/06 16:16:48.265158 using plugin 'File' (built-in) providing following interfaces: exporter, configurator
+2024/06/06 16:16:48.265158 using plugin 'Log' (built-in) providing following interfaces: exporter, configurator
+2024/06/06 16:16:48.265158 using plugin 'MQTT' (built-in) providing following interfaces: watcher, configurator
+2024/06/06 16:16:48.265158 using plugin 'Memcached' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/06 16:16:48.265158 using plugin 'Memory' (built-in) providing following interfaces: exporter
+2024/06/06 16:16:48.265158 using plugin 'Modbus' (built-in) providing following interfaces: exporter, configurator
+2024/06/06 16:16:48.270849 using plugin 'Mysql' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/06 16:16:48.270849 using plugin 'NetIf' (built-in) providing following interfaces: exporter
+2024/06/06 16:16:48.270849 using plugin 'Oracle' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/06 16:16:48.270849 using plugin 'Proc' (built-in) providing following interfaces: exporter
+2024/06/06 16:16:48.270849 using plugin 'Redis' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/06 16:16:48.270849 using plugin 'Smart' (built-in) providing following interfaces: exporter, configurator
+2024/06/06 16:16:48.271390 using plugin 'Swap' (built-in) providing following interfaces: exporter
+2024/06/06 16:16:48.271390 using plugin 'SystemRun' (built-in) providing following interfaces: exporter, configurator
+2024/06/06 16:16:48.271390 using plugin 'TCP' (built-in) providing following interfaces: exporter, configurator
+2024/06/06 16:16:48.271390 using plugin 'UDP' (built-in) providing following interfaces: exporter, configurator
+2024/06/06 16:16:48.271390 using plugin 'Uname' (built-in) providing following interfaces: exporter
+2024/06/06 16:16:48.271390 using plugin 'Uptime' (built-in) providing following interfaces: exporter
+2024/06/06 16:16:48.271390 using plugin 'Users' (built-in) providing following interfaces: exporter, configurator
+2024/06/06 16:16:48.271390 using plugin 'VFSDir' (built-in) providing following interfaces: exporter
+2024/06/06 16:16:48.271390 using plugin 'VMemory' (built-in) providing following interfaces: exporter
+2024/06/06 16:16:48.271390 using plugin 'VfsFs' (built-in) providing following interfaces: exporter
+2024/06/06 16:16:48.271390 using plugin 'WebCertificate' (built-in) providing following interfaces: exporter, configurator
+2024/06/06 16:16:48.271390 using plugin 'WebPage' (built-in) providing following interfaces: exporter, configurator
+2024/06/06 16:16:48.271390 using plugin 'WindowsEventlog' (built-in) providing following interfaces: exporter, configurator
+2024/06/06 16:16:48.271390 lowering the plugin WindowsPerfInstance capacity to 1 as the configured capacity 100 exceeds limits
+2024/06/06 16:16:48.271390 using plugin 'WindowsPerfInstance' (built-in) providing following interfaces: exporter
+2024/06/06 16:16:48.271390 using plugin 'WindowsPerfMon' (built-in) providing following interfaces: exporter, collector, runner
+2024/06/06 16:16:48.271390 using plugin 'WindowsServices' (built-in) providing following interfaces: exporter
+2024/06/06 16:16:48.271390 using plugin 'Wmi' (built-in) providing following interfaces: exporter
+2024/06/06 16:16:48.271390 using plugin 'ZabbixAsync' (built-in) providing following interfaces: exporter
+2024/06/06 16:16:48.271390 using plugin 'ZabbixStats' (built-in) providing following interfaces: exporter, configurator
+2024/06/06 16:16:48.271390 lowering the plugin ZabbixSync capacity to 1 as the configured capacity 100 exceeds limits
+2024/06/06 16:16:48.271390 using plugin 'ZabbixSync' (built-in) providing following interfaces: exporter
+2024/06/06 16:16:50.020167 Plugin communication protocol version is 6.0.13
+2024/06/06 16:16:50.020977 Zabbix Agent2 hostname: [Zabbix-Win]
+2024/06/06 16:56:48.670384 Zabbix Agent 2 stopped. (6.0.30)
+2024/06/10 07:04:33.730350 Starting Zabbix Agent 2 (6.0.30)
+2024/06/10 07:04:33.775028 OpenSSL library (OpenSSL 3.0.11 19 Sep 2023) initialized
+2024/06/10 07:04:33.775028 using configuration file: C:\Program Files\Zabbix Agent 2\zabbix_agent2.conf
+2024/06/10 07:04:33.784929 using plugin 'Agent' (built-in) providing following interfaces: exporter
+2024/06/10 07:04:33.784929 using plugin 'Ceph' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/10 07:04:33.784929 using plugin 'Cpu' (built-in) providing following interfaces: exporter, collector, runner
+2024/06/10 07:04:33.784929 using plugin 'DNS' (built-in) providing following interfaces: exporter
+2024/06/10 07:04:33.784929 using plugin 'File' (built-in) providing following interfaces: exporter, configurator
+2024/06/10 07:04:33.784929 using plugin 'Log' (built-in) providing following interfaces: exporter, configurator
+2024/06/10 07:04:33.784929 using plugin 'MQTT' (built-in) providing following interfaces: watcher, configurator
+2024/06/10 07:04:33.785471 using plugin 'Memcached' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/10 07:04:33.785540 using plugin 'Memory' (built-in) providing following interfaces: exporter
+2024/06/10 07:04:33.785540 using plugin 'Modbus' (built-in) providing following interfaces: exporter, configurator
+2024/06/10 07:04:33.785754 using plugin 'Mysql' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/10 07:04:33.785754 using plugin 'NetIf' (built-in) providing following interfaces: exporter
+2024/06/10 07:04:33.786283 using plugin 'Oracle' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/10 07:04:33.786347 using plugin 'Proc' (built-in) providing following interfaces: exporter
+2024/06/10 07:04:33.786347 using plugin 'Redis' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/10 07:04:33.786347 using plugin 'Smart' (built-in) providing following interfaces: exporter, configurator
+2024/06/10 07:04:33.786347 using plugin 'Swap' (built-in) providing following interfaces: exporter
+2024/06/10 07:04:33.786347 using plugin 'SystemRun' (built-in) providing following interfaces: exporter, configurator
+2024/06/10 07:04:33.786347 using plugin 'TCP' (built-in) providing following interfaces: exporter, configurator
+2024/06/10 07:04:33.786347 using plugin 'UDP' (built-in) providing following interfaces: exporter, configurator
+2024/06/10 07:04:33.786347 using plugin 'Uname' (built-in) providing following interfaces: exporter
+2024/06/10 07:04:33.786347 using plugin 'Uptime' (built-in) providing following interfaces: exporter
+2024/06/10 07:04:33.786347 using plugin 'Users' (built-in) providing following interfaces: exporter, configurator
+2024/06/10 07:04:33.786347 using plugin 'VFSDir' (built-in) providing following interfaces: exporter
+2024/06/10 07:04:33.786347 using plugin 'VMemory' (built-in) providing following interfaces: exporter
+2024/06/10 07:04:33.786347 using plugin 'VfsFs' (built-in) providing following interfaces: exporter
+2024/06/10 07:04:33.786347 using plugin 'WebCertificate' (built-in) providing following interfaces: exporter, configurator
+2024/06/10 07:04:33.786347 using plugin 'WebPage' (built-in) providing following interfaces: exporter, configurator
+2024/06/10 07:04:33.786347 using plugin 'WindowsEventlog' (built-in) providing following interfaces: exporter, configurator
+2024/06/10 07:04:33.786347 lowering the plugin WindowsPerfInstance capacity to 1 as the configured capacity 100 exceeds limits
+2024/06/10 07:04:33.786347 using plugin 'WindowsPerfInstance' (built-in) providing following interfaces: exporter
+2024/06/10 07:04:33.786347 using plugin 'WindowsPerfMon' (built-in) providing following interfaces: exporter, collector, runner
+2024/06/10 07:04:33.786347 using plugin 'WindowsServices' (built-in) providing following interfaces: exporter
+2024/06/10 07:04:33.786347 using plugin 'Wmi' (built-in) providing following interfaces: exporter
+2024/06/10 07:04:33.786347 using plugin 'ZabbixAsync' (built-in) providing following interfaces: exporter
+2024/06/10 07:04:33.786347 using plugin 'ZabbixStats' (built-in) providing following interfaces: exporter, configurator
+2024/06/10 07:04:33.786347 lowering the plugin ZabbixSync capacity to 1 as the configured capacity 100 exceeds limits
+2024/06/10 07:04:33.786347 using plugin 'ZabbixSync' (built-in) providing following interfaces: exporter
+2024/06/10 07:04:35.289669 Plugin communication protocol version is 6.0.13
+2024/06/10 07:04:35.290262 Zabbix Agent2 hostname: [Zabbix-Win]
+2024/06/10 07:04:39.389417 [101] cannot connect to [10.0.2.10:10051]: dial tcp :0->10.0.2.10:10051: i/o timeout
+2024/06/10 07:04:39.389417 [101] active check configuration update from host [Zabbix-Win] started to fail
+2024/06/10 07:06:42.216277 [101] active check configuration update from [10.0.2.10:10051] is working again
+2024/06/10 07:19:58.521119 Zabbix Agent 2 stopped. (6.0.30)
+2024/06/10 07:20:01.506160 Starting Zabbix Agent 2 (6.0.30)
+2024/06/10 07:20:01.541771 OpenSSL library (OpenSSL 3.0.11 19 Sep 2023) initialized
+2024/06/10 07:20:01.542298 using configuration file: C:\Program Files\Zabbix Agent 2\zabbix_agent2.conf
+2024/06/10 07:20:01.542298 using plugin 'Agent' (built-in) providing following interfaces: exporter
+2024/06/10 07:20:01.542298 using plugin 'Ceph' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/10 07:20:01.542298 using plugin 'Cpu' (built-in) providing following interfaces: exporter, collector, runner
+2024/06/10 07:20:01.542298 using plugin 'DNS' (built-in) providing following interfaces: exporter
+2024/06/10 07:20:01.542298 using plugin 'File' (built-in) providing following interfaces: exporter, configurator
+2024/06/10 07:20:01.542298 using plugin 'Log' (built-in) providing following interfaces: exporter, configurator
+2024/06/10 07:20:01.542298 using plugin 'MQTT' (built-in) providing following interfaces: watcher, configurator
+2024/06/10 07:20:01.542298 using plugin 'Memcached' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/10 07:20:01.542298 using plugin 'Memory' (built-in) providing following interfaces: exporter
+2024/06/10 07:20:01.542298 using plugin 'Modbus' (built-in) providing following interfaces: exporter, configurator
+2024/06/10 07:20:01.542298 using plugin 'Mysql' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/10 07:20:01.542298 using plugin 'NetIf' (built-in) providing following interfaces: exporter
+2024/06/10 07:20:01.542298 using plugin 'Oracle' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/10 07:20:01.542298 using plugin 'Proc' (built-in) providing following interfaces: exporter
+2024/06/10 07:20:01.542298 using plugin 'Redis' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/10 07:20:01.542298 using plugin 'Smart' (built-in) providing following interfaces: exporter, configurator
+2024/06/10 07:20:01.542298 using plugin 'Swap' (built-in) providing following interfaces: exporter
+2024/06/10 07:20:01.542298 using plugin 'SystemRun' (built-in) providing following interfaces: exporter, configurator
+2024/06/10 07:20:01.542298 using plugin 'TCP' (built-in) providing following interfaces: exporter, configurator
+2024/06/10 07:20:01.542298 using plugin 'UDP' (built-in) providing following interfaces: exporter, configurator
+2024/06/10 07:20:01.542298 using plugin 'Uname' (built-in) providing following interfaces: exporter
+2024/06/10 07:20:01.542298 using plugin 'Uptime' (built-in) providing following interfaces: exporter
+2024/06/10 07:20:01.542298 using plugin 'Users' (built-in) providing following interfaces: exporter, configurator
+2024/06/10 07:20:01.542298 using plugin 'VFSDir' (built-in) providing following interfaces: exporter
+2024/06/10 07:20:01.542298 using plugin 'VMemory' (built-in) providing following interfaces: exporter
+2024/06/10 07:20:01.542298 using plugin 'VfsFs' (built-in) providing following interfaces: exporter
+2024/06/10 07:20:01.542298 using plugin 'WebCertificate' (built-in) providing following interfaces: exporter, configurator
+2024/06/10 07:20:01.542298 using plugin 'WebPage' (built-in) providing following interfaces: exporter, configurator
+2024/06/10 07:20:01.542298 using plugin 'WindowsEventlog' (built-in) providing following interfaces: exporter, configurator
+2024/06/10 07:20:01.542298 lowering the plugin WindowsPerfInstance capacity to 1 as the configured capacity 100 exceeds limits
+2024/06/10 07:20:01.542298 using plugin 'WindowsPerfInstance' (built-in) providing following interfaces: exporter
+2024/06/10 07:20:01.544295 using plugin 'WindowsPerfMon' (built-in) providing following interfaces: exporter, collector, runner
+2024/06/10 07:20:01.544295 using plugin 'WindowsServices' (built-in) providing following interfaces: exporter
+2024/06/10 07:20:01.544295 using plugin 'Wmi' (built-in) providing following interfaces: exporter
+2024/06/10 07:20:01.544295 using plugin 'ZabbixAsync' (built-in) providing following interfaces: exporter
+2024/06/10 07:20:01.544295 using plugin 'ZabbixStats' (built-in) providing following interfaces: exporter, configurator
+2024/06/10 07:20:01.544295 lowering the plugin ZabbixSync capacity to 1 as the configured capacity 100 exceeds limits
+2024/06/10 07:20:01.544295 using plugin 'ZabbixSync' (built-in) providing following interfaces: exporter
+2024/06/10 07:20:03.982518 Plugin communication protocol version is 6.0.13
+2024/06/10 07:20:03.982518 Zabbix Agent2 hostname: [Zabbix-Win]
+2024/06/10 08:19:36.139103 Zabbix Agent 2 stopped. (6.0.30)
+2024/06/11 08:15:14.033581 Starting Zabbix Agent 2 (6.0.30)
+2024/06/11 08:15:14.091579 OpenSSL library (OpenSSL 3.0.11 19 Sep 2023) initialized
+2024/06/11 08:15:14.091579 using configuration file: C:\Program Files\Zabbix Agent 2\zabbix_agent2.conf
+2024/06/11 08:15:14.099785 using plugin 'Agent' (built-in) providing following interfaces: exporter
+2024/06/11 08:15:14.099785 using plugin 'Ceph' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/11 08:15:14.099785 using plugin 'Cpu' (built-in) providing following interfaces: exporter, collector, runner
+2024/06/11 08:15:14.100307 using plugin 'DNS' (built-in) providing following interfaces: exporter
+2024/06/11 08:15:14.100307 using plugin 'File' (built-in) providing following interfaces: exporter, configurator
+2024/06/11 08:15:14.100307 using plugin 'Log' (built-in) providing following interfaces: exporter, configurator
+2024/06/11 08:15:14.100307 using plugin 'MQTT' (built-in) providing following interfaces: watcher, configurator
+2024/06/11 08:15:14.100307 using plugin 'Memcached' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/11 08:15:14.100307 using plugin 'Memory' (built-in) providing following interfaces: exporter
+2024/06/11 08:15:14.100307 using plugin 'Modbus' (built-in) providing following interfaces: exporter, configurator
+2024/06/11 08:15:14.101396 using plugin 'Mysql' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/11 08:15:14.101396 using plugin 'NetIf' (built-in) providing following interfaces: exporter
+2024/06/11 08:15:14.101396 using plugin 'Oracle' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/11 08:15:14.101396 using plugin 'Proc' (built-in) providing following interfaces: exporter
+2024/06/11 08:15:14.101396 using plugin 'Redis' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/11 08:15:14.101396 using plugin 'Smart' (built-in) providing following interfaces: exporter, configurator
+2024/06/11 08:15:14.101396 using plugin 'Swap' (built-in) providing following interfaces: exporter
+2024/06/11 08:15:14.101396 using plugin 'SystemRun' (built-in) providing following interfaces: exporter, configurator
+2024/06/11 08:15:14.101396 using plugin 'TCP' (built-in) providing following interfaces: exporter, configurator
+2024/06/11 08:15:14.101396 using plugin 'UDP' (built-in) providing following interfaces: exporter, configurator
+2024/06/11 08:15:14.101396 using plugin 'Uname' (built-in) providing following interfaces: exporter
+2024/06/11 08:15:14.101396 using plugin 'Uptime' (built-in) providing following interfaces: exporter
+2024/06/11 08:15:14.101396 using plugin 'Users' (built-in) providing following interfaces: exporter, configurator
+2024/06/11 08:15:14.101396 using plugin 'VFSDir' (built-in) providing following interfaces: exporter
+2024/06/11 08:15:14.101396 using plugin 'VMemory' (built-in) providing following interfaces: exporter
+2024/06/11 08:15:14.101396 using plugin 'VfsFs' (built-in) providing following interfaces: exporter
+2024/06/11 08:15:14.101396 using plugin 'WebCertificate' (built-in) providing following interfaces: exporter, configurator
+2024/06/11 08:15:14.101396 using plugin 'WebPage' (built-in) providing following interfaces: exporter, configurator
+2024/06/11 08:15:14.101396 using plugin 'WindowsEventlog' (built-in) providing following interfaces: exporter, configurator
+2024/06/11 08:15:14.101396 lowering the plugin WindowsPerfInstance capacity to 1 as the configured capacity 100 exceeds limits
+2024/06/11 08:15:14.101396 using plugin 'WindowsPerfInstance' (built-in) providing following interfaces: exporter
+2024/06/11 08:15:14.101396 using plugin 'WindowsPerfMon' (built-in) providing following interfaces: exporter, collector, runner
+2024/06/11 08:15:14.101396 using plugin 'WindowsServices' (built-in) providing following interfaces: exporter
+2024/06/11 08:15:14.101396 using plugin 'Wmi' (built-in) providing following interfaces: exporter
+2024/06/11 08:15:14.101396 using plugin 'ZabbixAsync' (built-in) providing following interfaces: exporter
+2024/06/11 08:15:14.101396 using plugin 'ZabbixStats' (built-in) providing following interfaces: exporter, configurator
+2024/06/11 08:15:14.101396 lowering the plugin ZabbixSync capacity to 1 as the configured capacity 100 exceeds limits
+2024/06/11 08:15:14.101396 using plugin 'ZabbixSync' (built-in) providing following interfaces: exporter
+2024/06/11 08:15:15.980077 Plugin communication protocol version is 6.0.13
+2024/06/11 08:15:15.980077 Zabbix Agent2 hostname: [Zabbix-Win]
+2024/06/11 12:10:42.355201 Zabbix Agent 2 stopped. (6.0.30)
+2024/06/13 05:53:10.687358 Starting Zabbix Agent 2 (6.0.30)
+2024/06/13 05:53:10.741552 OpenSSL library (OpenSSL 3.0.11 19 Sep 2023) initialized
+2024/06/13 05:53:10.741552 using configuration file: C:\Program Files\Zabbix Agent 2\zabbix_agent2.conf
+2024/06/13 05:53:10.748169 using plugin 'Agent' (built-in) providing following interfaces: exporter
+2024/06/13 05:53:10.748169 using plugin 'Ceph' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/13 05:53:10.748169 using plugin 'Cpu' (built-in) providing following interfaces: exporter, collector, runner
+2024/06/13 05:53:10.748169 using plugin 'DNS' (built-in) providing following interfaces: exporter
+2024/06/13 05:53:10.748169 using plugin 'File' (built-in) providing following interfaces: exporter, configurator
+2024/06/13 05:53:10.748769 using plugin 'Log' (built-in) providing following interfaces: exporter, configurator
+2024/06/13 05:53:10.748769 using plugin 'MQTT' (built-in) providing following interfaces: watcher, configurator
+2024/06/13 05:53:10.748769 using plugin 'Memcached' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/13 05:53:10.748769 using plugin 'Memory' (built-in) providing following interfaces: exporter
+2024/06/13 05:53:10.748769 using plugin 'Modbus' (built-in) providing following interfaces: exporter, configurator
+2024/06/13 05:53:10.749479 using plugin 'Mysql' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/13 05:53:10.749479 using plugin 'NetIf' (built-in) providing following interfaces: exporter
+2024/06/13 05:53:10.749479 using plugin 'Oracle' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/13 05:53:10.749479 using plugin 'Proc' (built-in) providing following interfaces: exporter
+2024/06/13 05:53:10.749479 using plugin 'Redis' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/13 05:53:10.751043 using plugin 'Smart' (built-in) providing following interfaces: exporter, configurator
+2024/06/13 05:53:10.751043 using plugin 'Swap' (built-in) providing following interfaces: exporter
+2024/06/13 05:53:10.751043 using plugin 'SystemRun' (built-in) providing following interfaces: exporter, configurator
+2024/06/13 05:53:10.751043 using plugin 'TCP' (built-in) providing following interfaces: exporter, configurator
+2024/06/13 05:53:10.751043 using plugin 'UDP' (built-in) providing following interfaces: exporter, configurator
+2024/06/13 05:53:10.751043 using plugin 'Uname' (built-in) providing following interfaces: exporter
+2024/06/13 05:53:10.751043 using plugin 'Uptime' (built-in) providing following interfaces: exporter
+2024/06/13 05:53:10.751043 using plugin 'Users' (built-in) providing following interfaces: exporter, configurator
+2024/06/13 05:53:10.751043 using plugin 'VFSDir' (built-in) providing following interfaces: exporter
+2024/06/13 05:53:10.751043 using plugin 'VMemory' (built-in) providing following interfaces: exporter
+2024/06/13 05:53:10.751043 using plugin 'VfsFs' (built-in) providing following interfaces: exporter
+2024/06/13 05:53:10.751043 using plugin 'WebCertificate' (built-in) providing following interfaces: exporter, configurator
+2024/06/13 05:53:10.751043 using plugin 'WebPage' (built-in) providing following interfaces: exporter, configurator
+2024/06/13 05:53:10.751043 using plugin 'WindowsEventlog' (built-in) providing following interfaces: exporter, configurator
+2024/06/13 05:53:10.751043 lowering the plugin WindowsPerfInstance capacity to 1 as the configured capacity 100 exceeds limits
+2024/06/13 05:53:10.751043 using plugin 'WindowsPerfInstance' (built-in) providing following interfaces: exporter
+2024/06/13 05:53:10.751043 using plugin 'WindowsPerfMon' (built-in) providing following interfaces: exporter, collector, runner
+2024/06/13 05:53:10.751043 using plugin 'WindowsServices' (built-in) providing following interfaces: exporter
+2024/06/13 05:53:10.751043 using plugin 'Wmi' (built-in) providing following interfaces: exporter
+2024/06/13 05:53:10.751043 using plugin 'ZabbixAsync' (built-in) providing following interfaces: exporter
+2024/06/13 05:53:10.751043 using plugin 'ZabbixStats' (built-in) providing following interfaces: exporter, configurator
+2024/06/13 05:53:10.751043 lowering the plugin ZabbixSync capacity to 1 as the configured capacity 100 exceeds limits
+2024/06/13 05:53:10.751043 using plugin 'ZabbixSync' (built-in) providing following interfaces: exporter
+2024/06/13 05:53:12.433790 Plugin communication protocol version is 6.0.13
+2024/06/13 05:53:12.433790 Zabbix Agent2 hostname: [Zabbix-Win]
+2024/06/13 05:53:16.519983 [101] cannot connect to [10.0.2.10:10051]: dial tcp :0->10.0.2.10:10051: i/o timeout
+2024/06/13 05:53:16.519983 [101] active check configuration update from host [Zabbix-Win] started to fail
+2024/06/13 05:55:18.935928 [101] active check configuration update from [10.0.2.10:10051] is working again
+2024/06/13 12:40:30.675287 Zabbix Agent 2 stopped. (6.0.30)
+2024/06/13 12:44:53.202990 Starting Zabbix Agent 2 (6.0.30)
+2024/06/13 12:44:53.239675 OpenSSL library (OpenSSL 3.0.11 19 Sep 2023) initialized
+2024/06/13 12:44:53.239675 using configuration file: C:\Program Files\Zabbix Agent 2\zabbix_agent2.conf
+2024/06/13 12:44:53.239675 using plugin 'Agent' (built-in) providing following interfaces: exporter
+2024/06/13 12:44:53.239675 using plugin 'Ceph' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/13 12:44:53.239675 using plugin 'Cpu' (built-in) providing following interfaces: exporter, collector, runner
+2024/06/13 12:44:53.239675 using plugin 'DNS' (built-in) providing following interfaces: exporter
+2024/06/13 12:44:53.239675 using plugin 'File' (built-in) providing following interfaces: exporter, configurator
+2024/06/13 12:44:53.241201 using plugin 'Log' (built-in) providing following interfaces: exporter, configurator
+2024/06/13 12:44:53.241201 using plugin 'MQTT' (built-in) providing following interfaces: watcher, configurator
+2024/06/13 12:44:53.241201 using plugin 'Memcached' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/13 12:44:53.241201 using plugin 'Memory' (built-in) providing following interfaces: exporter
+2024/06/13 12:44:53.241201 using plugin 'Modbus' (built-in) providing following interfaces: exporter, configurator
+2024/06/13 12:44:53.241201 using plugin 'Mysql' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/13 12:44:53.241201 using plugin 'NetIf' (built-in) providing following interfaces: exporter
+2024/06/13 12:44:53.241201 using plugin 'Oracle' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/13 12:44:53.241201 using plugin 'Proc' (built-in) providing following interfaces: exporter
+2024/06/13 12:44:53.241201 using plugin 'Redis' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/13 12:44:53.241201 using plugin 'Smart' (built-in) providing following interfaces: exporter, configurator
+2024/06/13 12:44:53.241201 using plugin 'Swap' (built-in) providing following interfaces: exporter
+2024/06/13 12:44:53.241201 using plugin 'SystemRun' (built-in) providing following interfaces: exporter, configurator
+2024/06/13 12:44:53.241201 using plugin 'TCP' (built-in) providing following interfaces: exporter, configurator
+2024/06/13 12:44:53.241201 using plugin 'UDP' (built-in) providing following interfaces: exporter, configurator
+2024/06/13 12:44:53.241201 using plugin 'Uname' (built-in) providing following interfaces: exporter
+2024/06/13 12:44:53.241201 using plugin 'Uptime' (built-in) providing following interfaces: exporter
+2024/06/13 12:44:53.241201 using plugin 'Users' (built-in) providing following interfaces: exporter, configurator
+2024/06/13 12:44:53.242970 using plugin 'VFSDir' (built-in) providing following interfaces: exporter
+2024/06/13 12:44:53.244475 using plugin 'VMemory' (built-in) providing following interfaces: exporter
+2024/06/13 12:44:53.244475 using plugin 'VfsFs' (built-in) providing following interfaces: exporter
+2024/06/13 12:44:53.244475 using plugin 'WebCertificate' (built-in) providing following interfaces: exporter, configurator
+2024/06/13 12:44:53.244475 using plugin 'WebPage' (built-in) providing following interfaces: exporter, configurator
+2024/06/13 12:44:53.244475 using plugin 'WindowsEventlog' (built-in) providing following interfaces: exporter, configurator
+2024/06/13 12:44:53.244475 lowering the plugin WindowsPerfInstance capacity to 1 as the configured capacity 100 exceeds limits
+2024/06/13 12:44:53.244475 using plugin 'WindowsPerfInstance' (built-in) providing following interfaces: exporter
+2024/06/13 12:44:53.244475 using plugin 'WindowsPerfMon' (built-in) providing following interfaces: exporter, collector, runner
+2024/06/13 12:44:53.244475 using plugin 'WindowsServices' (built-in) providing following interfaces: exporter
+2024/06/13 12:44:53.244475 using plugin 'Wmi' (built-in) providing following interfaces: exporter
+2024/06/13 12:44:53.244475 using plugin 'ZabbixAsync' (built-in) providing following interfaces: exporter
+2024/06/13 12:44:53.244475 using plugin 'ZabbixStats' (built-in) providing following interfaces: exporter, configurator
+2024/06/13 12:44:53.244475 lowering the plugin ZabbixSync capacity to 1 as the configured capacity 100 exceeds limits
+2024/06/13 12:44:53.244475 using plugin 'ZabbixSync' (built-in) providing following interfaces: exporter
+2024/06/13 12:44:54.582668 Plugin communication protocol version is 6.0.13
+2024/06/13 12:44:54.583272 Zabbix Agent2 hostname: [Zabbix-Win]
+2024/06/13 19:52:42.758839 Zabbix Agent 2 stopped. (6.0.30)
+2024/06/14 06:51:47.036212 Starting Zabbix Agent 2 (6.0.30)
+2024/06/14 06:51:47.105481 OpenSSL library (OpenSSL 3.0.11 19 Sep 2023) initialized
+2024/06/14 06:51:47.105481 using configuration file: C:\Program Files\Zabbix Agent 2\zabbix_agent2.conf
+2024/06/14 06:51:47.118537 using plugin 'Agent' (built-in) providing following interfaces: exporter
+2024/06/14 06:51:47.118537 using plugin 'Ceph' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/14 06:51:47.118537 using plugin 'Cpu' (built-in) providing following interfaces: exporter, collector, runner
+2024/06/14 06:51:47.118537 using plugin 'DNS' (built-in) providing following interfaces: exporter
+2024/06/14 06:51:47.118537 using plugin 'File' (built-in) providing following interfaces: exporter, configurator
+2024/06/14 06:51:47.118537 using plugin 'Log' (built-in) providing following interfaces: exporter, configurator
+2024/06/14 06:51:47.118537 using plugin 'MQTT' (built-in) providing following interfaces: watcher, configurator
+2024/06/14 06:51:47.118537 using plugin 'Memcached' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/14 06:51:47.118537 using plugin 'Memory' (built-in) providing following interfaces: exporter
+2024/06/14 06:51:47.118537 using plugin 'Modbus' (built-in) providing following interfaces: exporter, configurator
+2024/06/14 06:51:47.119369 using plugin 'Mysql' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/14 06:51:47.119369 using plugin 'NetIf' (built-in) providing following interfaces: exporter
+2024/06/14 06:51:47.119901 using plugin 'Oracle' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/14 06:51:47.119901 using plugin 'Proc' (built-in) providing following interfaces: exporter
+2024/06/14 06:51:47.119901 using plugin 'Redis' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/14 06:51:47.119901 using plugin 'Smart' (built-in) providing following interfaces: exporter, configurator
+2024/06/14 06:51:47.119901 using plugin 'Swap' (built-in) providing following interfaces: exporter
+2024/06/14 06:51:47.119901 using plugin 'SystemRun' (built-in) providing following interfaces: exporter, configurator
+2024/06/14 06:51:47.119901 using plugin 'TCP' (built-in) providing following interfaces: exporter, configurator
+2024/06/14 06:51:47.119901 using plugin 'UDP' (built-in) providing following interfaces: exporter, configurator
+2024/06/14 06:51:47.119901 using plugin 'Uname' (built-in) providing following interfaces: exporter
+2024/06/14 06:51:47.119901 using plugin 'Uptime' (built-in) providing following interfaces: exporter
+2024/06/14 06:51:47.119901 using plugin 'Users' (built-in) providing following interfaces: exporter, configurator
+2024/06/14 06:51:47.119901 using plugin 'VFSDir' (built-in) providing following interfaces: exporter
+2024/06/14 06:51:47.119901 using plugin 'VMemory' (built-in) providing following interfaces: exporter
+2024/06/14 06:51:47.119901 using plugin 'VfsFs' (built-in) providing following interfaces: exporter
+2024/06/14 06:51:47.119901 using plugin 'WebCertificate' (built-in) providing following interfaces: exporter, configurator
+2024/06/14 06:51:47.119901 using plugin 'WebPage' (built-in) providing following interfaces: exporter, configurator
+2024/06/14 06:51:47.119901 using plugin 'WindowsEventlog' (built-in) providing following interfaces: exporter, configurator
+2024/06/14 06:51:47.119901 lowering the plugin WindowsPerfInstance capacity to 1 as the configured capacity 100 exceeds limits
+2024/06/14 06:51:47.119901 using plugin 'WindowsPerfInstance' (built-in) providing following interfaces: exporter
+2024/06/14 06:51:47.119901 using plugin 'WindowsPerfMon' (built-in) providing following interfaces: exporter, collector, runner
+2024/06/14 06:51:47.119901 using plugin 'WindowsServices' (built-in) providing following interfaces: exporter
+2024/06/14 06:51:47.119901 using plugin 'Wmi' (built-in) providing following interfaces: exporter
+2024/06/14 06:51:47.119901 using plugin 'ZabbixAsync' (built-in) providing following interfaces: exporter
+2024/06/14 06:51:47.119901 using plugin 'ZabbixStats' (built-in) providing following interfaces: exporter, configurator
+2024/06/14 06:51:47.119901 lowering the plugin ZabbixSync capacity to 1 as the configured capacity 100 exceeds limits
+2024/06/14 06:51:47.119901 using plugin 'ZabbixSync' (built-in) providing following interfaces: exporter
+2024/06/14 06:51:48.850732 Plugin communication protocol version is 6.0.13
+2024/06/14 06:51:48.850732 Zabbix Agent2 hostname: [Zabbix-Win]
+2024/06/14 06:51:52.910397 [101] cannot connect to [10.0.2.10:10051]: dial tcp :0->10.0.2.10:10051: i/o timeout
+2024/06/14 06:51:52.910397 [101] active check configuration update from host [Zabbix-Win] started to fail
+2024/06/14 06:53:55.540421 [101] active check configuration update from [10.0.2.10:10051] is working again
+2024/06/14 11:34:54.360321 Zabbix Agent 2 stopped. (6.0.30)
+2024/06/17 07:04:53.355258 Starting Zabbix Agent 2 (6.0.30)
+2024/06/17 07:04:53.425064 OpenSSL library (OpenSSL 3.0.11 19 Sep 2023) initialized
+2024/06/17 07:04:53.425064 using configuration file: C:\Program Files\Zabbix Agent 2\zabbix_agent2.conf
+2024/06/17 07:04:53.435140 using plugin 'Agent' (built-in) providing following interfaces: exporter
+2024/06/17 07:04:53.435140 using plugin 'Ceph' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/17 07:04:53.435140 using plugin 'Cpu' (built-in) providing following interfaces: exporter, collector, runner
+2024/06/17 07:04:53.435140 using plugin 'DNS' (built-in) providing following interfaces: exporter
+2024/06/17 07:04:53.435693 using plugin 'File' (built-in) providing following interfaces: exporter, configurator
+2024/06/17 07:04:53.435693 using plugin 'Log' (built-in) providing following interfaces: exporter, configurator
+2024/06/17 07:04:53.435693 using plugin 'MQTT' (built-in) providing following interfaces: watcher, configurator
+2024/06/17 07:04:53.435693 using plugin 'Memcached' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/17 07:04:53.435693 using plugin 'Memory' (built-in) providing following interfaces: exporter
+2024/06/17 07:04:53.435693 using plugin 'Modbus' (built-in) providing following interfaces: exporter, configurator
+2024/06/17 07:04:53.436671 using plugin 'Mysql' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/17 07:04:53.436671 using plugin 'NetIf' (built-in) providing following interfaces: exporter
+2024/06/17 07:04:53.436671 using plugin 'Oracle' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/17 07:04:53.436671 using plugin 'Proc' (built-in) providing following interfaces: exporter
+2024/06/17 07:04:53.436671 using plugin 'Redis' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/17 07:04:53.436671 using plugin 'Smart' (built-in) providing following interfaces: exporter, configurator
+2024/06/17 07:04:53.436671 using plugin 'Swap' (built-in) providing following interfaces: exporter
+2024/06/17 07:04:53.436671 using plugin 'SystemRun' (built-in) providing following interfaces: exporter, configurator
+2024/06/17 07:04:53.436671 using plugin 'TCP' (built-in) providing following interfaces: exporter, configurator
+2024/06/17 07:04:53.436671 using plugin 'UDP' (built-in) providing following interfaces: exporter, configurator
+2024/06/17 07:04:53.436671 using plugin 'Uname' (built-in) providing following interfaces: exporter
+2024/06/17 07:04:53.436671 using plugin 'Uptime' (built-in) providing following interfaces: exporter
+2024/06/17 07:04:53.436671 using plugin 'Users' (built-in) providing following interfaces: exporter, configurator
+2024/06/17 07:04:53.436671 using plugin 'VFSDir' (built-in) providing following interfaces: exporter
+2024/06/17 07:04:53.436671 using plugin 'VMemory' (built-in) providing following interfaces: exporter
+2024/06/17 07:04:53.436671 using plugin 'VfsFs' (built-in) providing following interfaces: exporter
+2024/06/17 07:04:53.436671 using plugin 'WebCertificate' (built-in) providing following interfaces: exporter, configurator
+2024/06/17 07:04:53.436671 using plugin 'WebPage' (built-in) providing following interfaces: exporter, configurator
+2024/06/17 07:04:53.436671 using plugin 'WindowsEventlog' (built-in) providing following interfaces: exporter, configurator
+2024/06/17 07:04:53.436671 lowering the plugin WindowsPerfInstance capacity to 1 as the configured capacity 100 exceeds limits
+2024/06/17 07:04:53.436671 using plugin 'WindowsPerfInstance' (built-in) providing following interfaces: exporter
+2024/06/17 07:04:53.436671 using plugin 'WindowsPerfMon' (built-in) providing following interfaces: exporter, collector, runner
+2024/06/17 07:04:53.436671 using plugin 'WindowsServices' (built-in) providing following interfaces: exporter
+2024/06/17 07:04:53.436671 using plugin 'Wmi' (built-in) providing following interfaces: exporter
+2024/06/17 07:04:53.436671 using plugin 'ZabbixAsync' (built-in) providing following interfaces: exporter
+2024/06/17 07:04:53.436671 using plugin 'ZabbixStats' (built-in) providing following interfaces: exporter, configurator
+2024/06/17 07:04:53.436671 lowering the plugin ZabbixSync capacity to 1 as the configured capacity 100 exceeds limits
+2024/06/17 07:04:53.436671 using plugin 'ZabbixSync' (built-in) providing following interfaces: exporter
+2024/06/17 07:04:55.328359 Plugin communication protocol version is 6.0.13
+2024/06/17 07:04:55.328359 Zabbix Agent2 hostname: [Zabbix-Win]
+2024/06/17 07:04:59.399883 [101] cannot connect to [10.0.2.10:10051]: dial tcp :0->10.0.2.10:10051: i/o timeout
+2024/06/17 07:04:59.399883 [101] active check configuration update from host [Zabbix-Win] started to fail
+2024/06/17 07:07:01.999586 [101] active check configuration update from [10.0.2.10:10051] is working again
+2024/06/17 10:03:43.370605 Zabbix Agent 2 stopped. (6.0.30)
+2024/06/18 06:52:58.976729 Starting Zabbix Agent 2 (6.0.30)
+2024/06/18 06:52:59.036530 OpenSSL library (OpenSSL 3.0.11 19 Sep 2023) initialized
+2024/06/18 06:52:59.036530 using configuration file: C:\Program Files\Zabbix Agent 2\zabbix_agent2.conf
+2024/06/18 06:52:59.041556 using plugin 'Agent' (built-in) providing following interfaces: exporter
+2024/06/18 06:52:59.041556 using plugin 'Ceph' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/18 06:52:59.041556 using plugin 'Cpu' (built-in) providing following interfaces: exporter, collector, runner
+2024/06/18 06:52:59.041556 using plugin 'DNS' (built-in) providing following interfaces: exporter
+2024/06/18 06:52:59.041556 using plugin 'File' (built-in) providing following interfaces: exporter, configurator
+2024/06/18 06:52:59.042094 using plugin 'Log' (built-in) providing following interfaces: exporter, configurator
+2024/06/18 06:52:59.042094 using plugin 'MQTT' (built-in) providing following interfaces: watcher, configurator
+2024/06/18 06:52:59.042094 using plugin 'Memcached' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/18 06:52:59.042094 using plugin 'Memory' (built-in) providing following interfaces: exporter
+2024/06/18 06:52:59.042094 using plugin 'Modbus' (built-in) providing following interfaces: exporter, configurator
+2024/06/18 06:52:59.042441 using plugin 'Mysql' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/18 06:52:59.042441 using plugin 'NetIf' (built-in) providing following interfaces: exporter
+2024/06/18 06:52:59.042974 using plugin 'Oracle' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/18 06:52:59.042974 using plugin 'Proc' (built-in) providing following interfaces: exporter
+2024/06/18 06:52:59.042974 using plugin 'Redis' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/18 06:52:59.042974 using plugin 'Smart' (built-in) providing following interfaces: exporter, configurator
+2024/06/18 06:52:59.042974 using plugin 'Swap' (built-in) providing following interfaces: exporter
+2024/06/18 06:52:59.042974 using plugin 'SystemRun' (built-in) providing following interfaces: exporter, configurator
+2024/06/18 06:52:59.042974 using plugin 'TCP' (built-in) providing following interfaces: exporter, configurator
+2024/06/18 06:52:59.042974 using plugin 'UDP' (built-in) providing following interfaces: exporter, configurator
+2024/06/18 06:52:59.042974 using plugin 'Uname' (built-in) providing following interfaces: exporter
+2024/06/18 06:52:59.042974 using plugin 'Uptime' (built-in) providing following interfaces: exporter
+2024/06/18 06:52:59.042974 using plugin 'Users' (built-in) providing following interfaces: exporter, configurator
+2024/06/18 06:52:59.042974 using plugin 'VFSDir' (built-in) providing following interfaces: exporter
+2024/06/18 06:52:59.042974 using plugin 'VMemory' (built-in) providing following interfaces: exporter
+2024/06/18 06:52:59.042974 using plugin 'VfsFs' (built-in) providing following interfaces: exporter
+2024/06/18 06:52:59.042974 using plugin 'WebCertificate' (built-in) providing following interfaces: exporter, configurator
+2024/06/18 06:52:59.042974 using plugin 'WebPage' (built-in) providing following interfaces: exporter, configurator
+2024/06/18 06:52:59.042974 using plugin 'WindowsEventlog' (built-in) providing following interfaces: exporter, configurator
+2024/06/18 06:52:59.042974 lowering the plugin WindowsPerfInstance capacity to 1 as the configured capacity 100 exceeds limits
+2024/06/18 06:52:59.042974 using plugin 'WindowsPerfInstance' (built-in) providing following interfaces: exporter
+2024/06/18 06:52:59.042974 using plugin 'WindowsPerfMon' (built-in) providing following interfaces: exporter, collector, runner
+2024/06/18 06:52:59.042974 using plugin 'WindowsServices' (built-in) providing following interfaces: exporter
+2024/06/18 06:52:59.042974 using plugin 'Wmi' (built-in) providing following interfaces: exporter
+2024/06/18 06:52:59.042974 using plugin 'ZabbixAsync' (built-in) providing following interfaces: exporter
+2024/06/18 06:52:59.042974 using plugin 'ZabbixStats' (built-in) providing following interfaces: exporter, configurator
+2024/06/18 06:52:59.042974 lowering the plugin ZabbixSync capacity to 1 as the configured capacity 100 exceeds limits
+2024/06/18 06:52:59.042974 using plugin 'ZabbixSync' (built-in) providing following interfaces: exporter
+2024/06/18 06:53:00.975212 Plugin communication protocol version is 6.0.13
+2024/06/18 06:53:00.975212 Zabbix Agent2 hostname: [Zabbix-Win]
+2024/06/18 08:15:06.247293 Zabbix Agent 2 stopped. (6.0.30)
+2024/06/20 07:28:07.004156 Starting Zabbix Agent 2 (6.0.30)
+2024/06/20 07:28:07.066608 OpenSSL library (OpenSSL 3.0.11 19 Sep 2023) initialized
+2024/06/20 07:28:07.066608 using configuration file: C:\Program Files\Zabbix Agent 2\zabbix_agent2.conf
+2024/06/20 07:28:07.077429 using plugin 'Agent' (built-in) providing following interfaces: exporter
+2024/06/20 07:28:07.077429 using plugin 'Ceph' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/20 07:28:07.077429 using plugin 'Cpu' (built-in) providing following interfaces: exporter, collector, runner
+2024/06/20 07:28:07.077978 using plugin 'DNS' (built-in) providing following interfaces: exporter
+2024/06/20 07:28:07.077978 using plugin 'File' (built-in) providing following interfaces: exporter, configurator
+2024/06/20 07:28:07.077978 using plugin 'Log' (built-in) providing following interfaces: exporter, configurator
+2024/06/20 07:28:07.077978 using plugin 'MQTT' (built-in) providing following interfaces: watcher, configurator
+2024/06/20 07:28:07.077978 using plugin 'Memcached' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/20 07:28:07.077978 using plugin 'Memory' (built-in) providing following interfaces: exporter
+2024/06/20 07:28:07.077978 using plugin 'Modbus' (built-in) providing following interfaces: exporter, configurator
+2024/06/20 07:28:07.078968 using plugin 'Mysql' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/20 07:28:07.078968 using plugin 'NetIf' (built-in) providing following interfaces: exporter
+2024/06/20 07:28:07.078968 using plugin 'Oracle' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/20 07:28:07.078968 using plugin 'Proc' (built-in) providing following interfaces: exporter
+2024/06/20 07:28:07.078968 using plugin 'Redis' (built-in) providing following interfaces: exporter, runner, configurator
+2024/06/20 07:28:07.078968 using plugin 'Smart' (built-in) providing following interfaces: exporter, configurator
+2024/06/20 07:28:07.078968 using plugin 'Swap' (built-in) providing following interfaces: exporter
+2024/06/20 07:28:07.078968 using plugin 'SystemRun' (built-in) providing following interfaces: exporter, configurator
+2024/06/20 07:28:07.078968 using plugin 'TCP' (built-in) providing following interfaces: exporter, configurator
+2024/06/20 07:28:07.078968 using plugin 'UDP' (built-in) providing following interfaces: exporter, configurator
+2024/06/20 07:28:07.078968 using plugin 'Uname' (built-in) providing following interfaces: exporter
+2024/06/20 07:28:07.078968 using plugin 'Uptime' (built-in) providing following interfaces: exporter
+2024/06/20 07:28:07.078968 using plugin 'Users' (built-in) providing following interfaces: exporter, configurator
+2024/06/20 07:28:07.078968 using plugin 'VFSDir' (built-in) providing following interfaces: exporter
+2024/06/20 07:28:07.078968 using plugin 'VMemory' (built-in) providing following interfaces: exporter
+2024/06/20 07:28:07.078968 using plugin 'VfsFs' (built-in) providing following interfaces: exporter
+2024/06/20 07:28:07.078968 using plugin 'WebCertificate' (built-in) providing following interfaces: exporter, configurator
+2024/06/20 07:28:07.078968 using plugin 'WebPage' (built-in) providing following interfaces: exporter, configurator
+2024/06/20 07:28:07.078968 using plugin 'WindowsEventlog' (built-in) providing following interfaces: exporter, configurator
+2024/06/20 07:28:07.078968 lowering the plugin WindowsPerfInstance capacity to 1 as the configured capacity 100 exceeds limits
+2024/06/20 07:28:07.078968 using plugin 'WindowsPerfInstance' (built-in) providing following interfaces: exporter
+2024/06/20 07:28:07.078968 using plugin 'WindowsPerfMon' (built-in) providing following interfaces: exporter, collector, runner
+2024/06/20 07:28:07.078968 using plugin 'WindowsServices' (built-in) providing following interfaces: exporter
+2024/06/20 07:28:07.078968 using plugin 'Wmi' (built-in) providing following interfaces: exporter
+2024/06/20 07:28:07.078968 using plugin 'ZabbixAsync' (built-in) providing following interfaces: exporter
+2024/06/20 07:28:07.078968 using plugin 'ZabbixStats' (built-in) providing following interfaces: exporter, configurator
+2024/06/20 07:28:07.078968 lowering the plugin ZabbixSync capacity to 1 as the configured capacity 100 exceeds limits
+2024/06/20 07:28:07.078968 using plugin 'ZabbixSync' (built-in) providing following interfaces: exporter
+2024/06/20 07:28:08.881331 Plugin communication protocol version is 6.0.13
+2024/06/20 07:28:08.881331 Zabbix Agent2 hostname: [Zabbix-Win]

@@ -1,0 +1,209 @@
+ 20981:20240604:094308.333 Starting Zabbix Agent [Zabbix server]. Zabbix 6.0.30 (revision 680df722d6b).
+ 20981:20240604:094308.333 **** Enabled features ****
+ 20981:20240604:094308.333 IPv6 support:          YES
+ 20981:20240604:094308.333 TLS support:           YES
+ 20981:20240604:094308.333 **************************
+ 20981:20240604:094308.333 using configuration file: /etc/zabbix/zabbix_agentd.conf
+ 20981:20240604:094308.333 agent #0 started [main process]
+ 20982:20240604:094308.334 agent #1 started [collector]
+ 20983:20240604:094308.335 agent #2 started [listener #1]
+ 20985:20240604:094308.341 agent #4 started [listener #3]
+ 20986:20240604:094308.341 agent #5 started [active checks #1]
+ 20984:20240604:094308.342 agent #3 started [listener #2]
+ 20986:20240604:094308.354 Unable to connect to [127.0.0.1]:10051 [cannot connect to [[127.0.0.1]:10051]: [111] Connection refused]
+ 20986:20240604:094308.354 Active check configuration update started to fail
+ 20981:20240604:101029.645 Got signal [signal:15(SIGTERM),sender_pid:21140,sender_uid:106,reason:0]. Exiting ...
+ 20981:20240604:101029.647 Zabbix Agent stopped. Zabbix 6.0.30 (revision 680df722d6b).
+ 21148:20240604:101029.675 Starting Zabbix Agent [Zabbix server]. Zabbix 6.0.30 (revision 680df722d6b).
+ 21148:20240604:101029.675 **** Enabled features ****
+ 21148:20240604:101029.675 IPv6 support:          YES
+ 21148:20240604:101029.675 TLS support:           YES
+ 21148:20240604:101029.675 **************************
+ 21148:20240604:101029.675 using configuration file: /etc/zabbix/zabbix_agentd.conf
+ 21148:20240604:101029.675 agent #0 started [main process]
+ 21149:20240604:101029.678 agent #1 started [collector]
+ 21155:20240604:101029.688 agent #4 started [listener #3]
+ 21154:20240604:101029.688 agent #3 started [listener #2]
+ 21153:20240604:101029.689 agent #2 started [listener #1]
+ 21156:20240604:101029.692 agent #5 started [active checks #1]
+ 21156:20240604:101029.696 Unable to connect to [127.0.0.1]:10051 [cannot connect to [[127.0.0.1]:10051]: [111] Connection refused]
+ 21156:20240604:101029.696 Active check configuration update started to fail
+ 21156:20240604:101129.710 Active check configuration update from [127.0.0.1:10051] is working again
+ 21148:20240604:102956.125 Got signal [signal:15(SIGTERM),sender_pid:21482,sender_uid:106,reason:0]. Exiting ...
+ 21148:20240604:102956.128 Zabbix Agent stopped. Zabbix 6.0.30 (revision 680df722d6b).
+   469:20240604:130018.098 Starting Zabbix Agent [Zabbix server]. Zabbix 6.0.30 (revision 680df722d6b).
+   469:20240604:130018.102 **** Enabled features ****
+   469:20240604:130018.102 IPv6 support:          YES
+   469:20240604:130018.102 TLS support:           YES
+   469:20240604:130018.102 **************************
+   469:20240604:130018.102 using configuration file: /etc/zabbix/zabbix_agentd.conf
+   469:20240604:130018.102 agent #0 started [main process]
+   475:20240604:130018.110 agent #1 started [collector]
+   477:20240604:130018.111 agent #3 started [listener #2]
+   476:20240604:130018.111 agent #2 started [listener #1]
+   479:20240604:130018.114 agent #5 started [active checks #1]
+   478:20240604:130018.119 agent #4 started [listener #3]
+   479:20240604:130018.123 Unable to connect to [127.0.0.1]:10051 [cannot connect to [[127.0.0.1]:10051]: [111] Connection refused]
+   479:20240604:130018.123 Active check configuration update started to fail
+   479:20240604:130118.138 Active check configuration update from [127.0.0.1:10051] is working again
+   469:20240604:133136.914 Got signal [signal:15(SIGTERM),sender_pid:1389,sender_uid:106,reason:0]. Exiting ...
+   469:20240604:133136.916 Zabbix Agent stopped. Zabbix 6.0.30 (revision 680df722d6b).
+   458:20240606:113713.386 Starting Zabbix Agent [Zabbix server]. Zabbix 6.0.30 (revision 680df722d6b).
+   458:20240606:113713.387 **** Enabled features ****
+   458:20240606:113713.387 IPv6 support:          YES
+   458:20240606:113713.387 TLS support:           YES
+   458:20240606:113713.387 **************************
+   458:20240606:113713.387 using configuration file: /etc/zabbix/zabbix_agentd.conf
+   458:20240606:113713.388 agent #0 started [main process]
+   463:20240606:113713.392 agent #4 started [listener #3]
+   464:20240606:113713.398 agent #5 started [active checks #1]
+   462:20240606:113713.400 agent #3 started [listener #2]
+   464:20240606:113713.402 Unable to connect to [127.0.0.1]:10051 [cannot connect to [[127.0.0.1]:10051]: [111] Connection refused]
+   464:20240606:113713.402 Active check configuration update started to fail
+   460:20240606:113713.409 agent #1 started [collector]
+   461:20240606:113713.410 agent #2 started [listener #1]
+   464:20240606:113813.424 Active check configuration update from [127.0.0.1:10051] is working again
+   458:20240606:122704.276 Got signal [signal:15(SIGTERM),sender_pid:2931,sender_uid:106,reason:0]. Exiting ...
+   458:20240606:122704.280 Zabbix Agent stopped. Zabbix 6.0.30 (revision 680df722d6b).
+  2937:20240606:122704.298 Starting Zabbix Agent [Zabbix server]. Zabbix 6.0.30 (revision 680df722d6b).
+  2937:20240606:122704.298 **** Enabled features ****
+  2937:20240606:122704.298 IPv6 support:          YES
+  2937:20240606:122704.298 TLS support:           YES
+  2937:20240606:122704.298 **************************
+  2937:20240606:122704.298 using configuration file: /etc/zabbix/zabbix_agentd.conf
+  2937:20240606:122704.298 agent #0 started [main process]
+  2938:20240606:122704.299 agent #1 started [collector]
+  2939:20240606:122704.300 agent #2 started [listener #1]
+  2941:20240606:122704.304 agent #4 started [listener #3]
+  2940:20240606:122704.305 agent #3 started [listener #2]
+  2942:20240606:122704.309 agent #5 started [active checks #1]
+  2937:20240606:155438.368 Got signal [signal:15(SIGTERM),sender_pid:5565,sender_uid:106,reason:0]. Exiting ...
+  2937:20240606:155438.371 Zabbix Agent stopped. Zabbix 6.0.30 (revision 680df722d6b).
+  5571:20240606:155438.397 Starting Zabbix Agent [Zabbix server]. Zabbix 6.0.30 (revision 680df722d6b).
+  5571:20240606:155438.397 **** Enabled features ****
+  5571:20240606:155438.397 IPv6 support:          YES
+  5571:20240606:155438.397 TLS support:           YES
+  5571:20240606:155438.397 **************************
+  5571:20240606:155438.397 using configuration file: /etc/zabbix/zabbix_agentd.conf
+  5571:20240606:155438.398 agent #0 started [main process]
+  5572:20240606:155438.400 agent #1 started [collector]
+  5573:20240606:155438.400 agent #2 started [listener #1]
+  5576:20240606:155438.402 agent #5 started [active checks #1]
+  5574:20240606:155438.405 agent #3 started [listener #2]
+  5575:20240606:155438.407 agent #4 started [listener #3]
+  5571:20240606:161356.243 Got signal [signal:15(SIGTERM),sender_pid:5856,sender_uid:106,reason:0]. Exiting ...
+  5571:20240606:161356.255 Zabbix Agent stopped. Zabbix 6.0.30 (revision 680df722d6b).
+  5863:20240606:161356.291 Starting Zabbix Agent [Zabbix server]. Zabbix 6.0.30 (revision 680df722d6b).
+  5863:20240606:161356.291 **** Enabled features ****
+  5863:20240606:161356.291 IPv6 support:          YES
+  5863:20240606:161356.291 TLS support:           YES
+  5863:20240606:161356.291 **************************
+  5863:20240606:161356.291 using configuration file: /etc/zabbix/zabbix_agentd.conf
+  5863:20240606:161356.292 agent #0 started [main process]
+  5864:20240606:161356.292 agent #1 started [collector]
+  5867:20240606:161356.295 agent #4 started [listener #3]
+  5866:20240606:161356.297 agent #3 started [listener #2]
+  5865:20240606:161356.297 agent #2 started [listener #1]
+  5868:20240606:161356.300 agent #5 started [active checks #1]
+  5863:20240606:170623.998 Got signal [signal:15(SIGTERM),sender_pid:6398,sender_uid:106,reason:0]. Exiting ...
+  5863:20240606:170624.000 Zabbix Agent stopped. Zabbix 6.0.30 (revision 680df722d6b).
+   447:20240610:070440.884 Starting Zabbix Agent [Zabbix server]. Zabbix 6.0.30 (revision 680df722d6b).
+   447:20240610:070440.887 **** Enabled features ****
+   447:20240610:070440.887 IPv6 support:          YES
+   447:20240610:070440.888 TLS support:           YES
+   447:20240610:070440.888 **************************
+   447:20240610:070440.888 using configuration file: /etc/zabbix/zabbix_agentd.conf
+   447:20240610:070440.888 agent #0 started [main process]
+   454:20240610:070440.890 agent #3 started [listener #2]
+   452:20240610:070440.891 agent #2 started [listener #1]
+   451:20240610:070440.895 agent #1 started [collector]
+   455:20240610:070440.896 agent #4 started [listener #3]
+   456:20240610:070440.905 agent #5 started [active checks #1]
+   456:20240610:070440.915 Unable to connect to [127.0.0.1]:10051 [cannot connect to [[127.0.0.1]:10051]: [111] Connection refused]
+   456:20240610:070440.915 Active check configuration update started to fail
+   456:20240610:070540.926 Active check configuration update from [127.0.0.1:10051] is working again
+   447:20240610:081936.357 Got signal [signal:15(SIGTERM),sender_pid:1644,sender_uid:106,reason:0]. Exiting ...
+   447:20240610:081936.373 Zabbix Agent stopped. Zabbix 6.0.30 (revision 680df722d6b).
+   443:20240611:081516.956 Starting Zabbix Agent [Zabbix server]. Zabbix 6.0.30 (revision 680df722d6b).
+   443:20240611:081516.957 **** Enabled features ****
+   443:20240611:081516.957 IPv6 support:          YES
+   443:20240611:081516.957 TLS support:           YES
+   443:20240611:081516.957 **************************
+   443:20240611:081516.957 using configuration file: /etc/zabbix/zabbix_agentd.conf
+   443:20240611:081516.957 agent #0 started [main process]
+   452:20240611:081516.961 agent #3 started [listener #2]
+   451:20240611:081516.967 agent #2 started [listener #1]
+   454:20240611:081516.968 agent #5 started [active checks #1]
+   453:20240611:081516.971 agent #4 started [listener #3]
+   450:20240611:081516.977 agent #1 started [collector]
+   454:20240611:081516.994 Unable to connect to [127.0.0.1]:10051 [cannot connect to [[127.0.0.1]:10051]: [111] Connection refused]
+   454:20240611:081516.994 Active check configuration update started to fail
+   454:20240611:081616.010 Active check configuration update from [127.0.0.1:10051] is working again
+   443:20240611:121044.603 Got signal [signal:15(SIGTERM),sender_pid:3003,sender_uid:106,reason:0]. Exiting ...
+   443:20240611:121044.615 Zabbix Agent stopped. Zabbix 6.0.30 (revision 680df722d6b).
+   449:20240613:055316.044 Starting Zabbix Agent [Zabbix server]. Zabbix 6.0.30 (revision 680df722d6b).
+   449:20240613:055316.045 **** Enabled features ****
+   449:20240613:055316.045 IPv6 support:          YES
+   449:20240613:055316.045 TLS support:           YES
+   449:20240613:055316.045 **************************
+   449:20240613:055316.045 using configuration file: /etc/zabbix/zabbix_agentd.conf
+   449:20240613:055316.045 agent #0 started [main process]
+   454:20240613:055316.052 agent #2 started [listener #1]
+   456:20240613:055316.054 agent #4 started [listener #3]
+   457:20240613:055316.056 agent #5 started [active checks #1]
+   453:20240613:055316.058 agent #1 started [collector]
+   455:20240613:055316.059 agent #3 started [listener #2]
+   457:20240613:055316.076 Unable to connect to [127.0.0.1]:10051 [cannot connect to [[127.0.0.1]:10051]: [111] Connection refused]
+   457:20240613:055316.076 Active check configuration update started to fail
+   457:20240613:055416.088 Active check configuration update from [127.0.0.1:10051] is working again
+   449:20240613:195242.217 Got signal [signal:15(SIGTERM),sender_pid:9181,sender_uid:106,reason:0]. Exiting ...
+   449:20240613:195242.224 Zabbix Agent stopped. Zabbix 6.0.30 (revision 680df722d6b).
+   463:20240614:065152.961 Starting Zabbix Agent [Zabbix server]. Zabbix 6.0.30 (revision 680df722d6b).
+   463:20240614:065152.962 **** Enabled features ****
+   463:20240614:065152.963 IPv6 support:          YES
+   463:20240614:065152.963 TLS support:           YES
+   463:20240614:065152.963 **************************
+   463:20240614:065152.963 using configuration file: /etc/zabbix/zabbix_agentd.conf
+   463:20240614:065152.965 agent #0 started [main process]
+   466:20240614:065152.976 agent #1 started [collector]
+   470:20240614:065152.976 agent #5 started [active checks #1]
+   468:20240614:065152.980 agent #3 started [listener #2]
+   467:20240614:065152.991 agent #2 started [listener #1]
+   469:20240614:065152.991 agent #4 started [listener #3]
+   470:20240614:065152.994 Unable to connect to [127.0.0.1]:10051 [cannot connect to [[127.0.0.1]:10051]: [111] Connection refused]
+   470:20240614:065152.994 Active check configuration update started to fail
+   470:20240614:065252.006 Active check configuration update from [127.0.0.1:10051] is working again
+   463:20240614:113721.108 Got signal [signal:15(SIGTERM),sender_pid:4005,sender_uid:106,reason:0]. Exiting ...
+   463:20240614:113721.110 Zabbix Agent stopped. Zabbix 6.0.30 (revision 680df722d6b).
+   458:20240617:070501.204 Starting Zabbix Agent [Zabbix server]. Zabbix 6.0.30 (revision 680df722d6b).
+   458:20240617:070501.208 **** Enabled features ****
+   458:20240617:070501.208 IPv6 support:          YES
+   458:20240617:070501.208 TLS support:           YES
+   458:20240617:070501.208 **************************
+   458:20240617:070501.208 using configuration file: /etc/zabbix/zabbix_agentd.conf
+   458:20240617:070501.212 agent #0 started [main process]
+   461:20240617:070501.215 agent #3 started [listener #2]
+   459:20240617:070501.216 agent #1 started [collector]
+   463:20240617:070501.220 agent #5 started [active checks #1]
+   460:20240617:070501.228 agent #2 started [listener #1]
+   462:20240617:070501.232 agent #4 started [listener #3]
+   463:20240617:070501.238 Unable to connect to [127.0.0.1]:10051 [cannot connect to [[127.0.0.1]:10051]: [111] Connection refused]
+   463:20240617:070501.238 Active check configuration update started to fail
+   463:20240617:070601.257 Active check configuration update from [127.0.0.1:10051] is working again
+   458:20240617:100343.055 Got signal [signal:15(SIGTERM),sender_pid:2515,sender_uid:106,reason:0]. Exiting ...
+   458:20240617:100343.057 Zabbix Agent stopped. Zabbix 6.0.30 (revision 680df722d6b).
+   448:20240618:065258.338 Starting Zabbix Agent [Zabbix server]. Zabbix 6.0.30 (revision 680df722d6b).
+   448:20240618:065258.339 **** Enabled features ****
+   448:20240618:065258.339 IPv6 support:          YES
+   448:20240618:065258.339 TLS support:           YES
+   448:20240618:065258.339 **************************
+   448:20240618:065258.339 using configuration file: /etc/zabbix/zabbix_agentd.conf
+   448:20240618:065258.340 agent #0 started [main process]
+   450:20240618:065258.356 agent #1 started [collector]
+   455:20240618:065258.357 agent #5 started [active checks #1]
+   455:20240618:065258.360 Unable to connect to [127.0.0.1]:10051 [cannot connect to [[127.0.0.1]:10051]: [111] Connection refused]
+   453:20240618:065258.368 agent #3 started [listener #2]
+   452:20240618:065258.372 agent #2 started [listener #1]
+   454:20240618:065258.372 agent #4 started [listener #3]
+   455:20240618:065258.375 Active check configuration update started to fail
+   455:20240618:065358.383 Active check configuration update from [127.0.0.1:10051] is working again
