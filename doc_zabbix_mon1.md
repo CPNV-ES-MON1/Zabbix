@@ -50,3 +50,36 @@ apt install zabbix-agent2-plugin-mssql
 ```
 mysql -uroot -p
 ```
+enter your-nice-password
+```
+create database zabbix character set utf8mb4 collate utf8mb4_bin; 
+create user cpnv@localhost identified by 'your-nice-password'; 
+grant all privileges on zabbix.* to cpnv@localhost; 
+set global log_bin_trust_function_creators = 1; 
+quit; 
+```
+# ???
+```
+zcat /usr/share/zabbix-sql-scripts/mysql/server.sql.gz | mysql --default-character-set=utf8mb4 -ucpnv -p zabbix 
+```
+# Disable log_bin_trust_function_creators option after importing database schema
+```
+# mysql -uroot -p
+enter your-nice-password
+set global log_bin_trust_function_creators = 0;
+quit; 
+```
+# Configure the database for Zabbix server
+```
+sudo nano /etc/zabbix/zabbix_server.conf
+DBPassword=your-nice-password
+```
+# Start Zabbix server and agent processes
+```
+systemctl restart zabbix-server zabbix-agent2 nginx php8.2-fpm
+systemctl enable zabbix-server zabbix-agent2 nginx php8.2-fpm
+```
+# Open Zabbix UI web page
+```
+http://192.168.0.144
+```
