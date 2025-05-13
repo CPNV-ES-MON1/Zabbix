@@ -16,41 +16,101 @@ MySQL
 Web server :
 Nginx
 
+# Update repo & upgrade packages
+**Input**
+```
+sudo apt update && sudo apt upgrade
+```
+**Output**
+```
+Hit:1 http://mirror.init7.net/debian bookworm InRelease                     
+Hit:2 http://mirror.init7.net/debian bookworm-updates InRelease             
+Hit:3 http://security.debian.org/debian-security bookworm-security InRelease
+Reading package lists... Done                 
+Building dependency tree... Done
+Reading state information... Done
+All packages are up to date.
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Calculating upgrade... Done
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+```
 # List all installed packages
+**Input**
 ```
 sudo apt list --installed > all-packages-before-zabbix.txt
 ```
-# Update repo & upgrade packages
+**Output**
 ```
-apt update && apt upgrade
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
 ```
+See in this text file: /home/all-packages-before-zabbix.txt
+
 # Get latest version of zabbix server package
+**Input**
 ```
 wget https://repo.zabbix.com/zabbix/7.0/debian/pool/main/z/zabbix-release/zabbix-release_latest_7.0+debian12_all.deb
-dpkg -i zabbix-release_latest_7.0+debian12_all.deb
+```
+**Output**
+```
+--2025-05-13 09:00:32--  https://repo.zabbix.com/zabbix/7.0/debian/pool/main/z/zabbix-release/zabbix-release_latest_7.0+debian12_all.deb
+Resolving repo.zabbix.com (repo.zabbix.com)... 178.128.6.101, 2604:a880:2:d0::2062:d001
+Connecting to repo.zabbix.com (repo.zabbix.com)|178.128.6.101|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 8096 (7.9K) [application/octet-stream]
+Saving to: ‘zabbix-release_latest_7.0+debian12_all.deb’
+
+zabbix-release_latest_7.0+debian12_all.deb           100%[=====================================================================================================================>]   7.91K  --.-KB/s    in 0s      
+
+2025-05-13 09:00:35 (136 MB/s) - ‘zabbix-release_latest_7.0+debian12_all.deb’ saved [8096/8096]
+```
+**Input**
+```
+sudo dpkg -i zabbix-release_latest_7.0+debian12_all.deb
+```
+**Output**
+```
+Selecting previously unselected package zabbix-release.
+(Reading database ... 33663 files and directories currently installed.)
+Preparing to unpack zabbix-release_latest_7.0+debian12_all.deb ...
+Unpacking zabbix-release (1:7.0-2+debian12) ...
+Setting up zabbix-release (1:7.0-2+debian12) ...
 ```
 # List all installed packages
+**Input**
 ```
 sudo apt list --installed > all-packages-after-zabbix.txt
 ```
+**Output**
+```
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+```
+See in this text file: /home/all-packages-after-zabbix.txt
+
 # List differences between 2 files
+**Input**
 ```
 diff -u all-packages-before-zabbix.txt all-packages-after-zabbix.txt
 diff -u all-packages-before-zabbix.txt all-packages-after-zabbix.txt > differences-before-after-zabbix.txt
 ```
 # Install Zabbix server, frontend, agent2
+**Input**
 ```
 sudo apt install zabbix-server-mysql zabbix-frontend-php zabbix-nginx-conf zabbix-sql-scripts zabbix-agent2
 ```
 # Install Zabbix agent 2 plugin
+**Input**
 ```
 apt install zabbix-agent2-plugin-mssql
 ```
 # Create initial database
+**Input**
 ```
 mysql -uroot -p
 ```
 enter your-nice-password
+**Input**
 ```
 create database zabbix character set utf8mb4 collate utf8mb4_bin; 
 create user cpnv@localhost identified by 'your-nice-password'; 
@@ -58,11 +118,13 @@ grant all privileges on zabbix.* to cpnv@localhost;
 set global log_bin_trust_function_creators = 1; 
 quit; 
 ```
+**Input**
 # ???
 ```
 zcat /usr/share/zabbix-sql-scripts/mysql/server.sql.gz | mysql --default-character-set=utf8mb4 -ucpnv -p zabbix 
 ```
 # Disable log_bin_trust_function_creators option after importing database schema
+**Input**
 ```
 # mysql -uroot -p
 enter your-nice-password
@@ -70,16 +132,19 @@ set global log_bin_trust_function_creators = 0;
 quit; 
 ```
 # Configure the database for Zabbix server
+**Input**
 ```
 sudo nano /etc/zabbix/zabbix_server.conf
 DBPassword=your-nice-password
 ```
 # Start Zabbix server and agent processes
+**Input**
 ```
 systemctl restart zabbix-server zabbix-agent2 nginx php8.2-fpm
 systemctl enable zabbix-server zabbix-agent2 nginx php8.2-fpm
 ```
 # Open Zabbix UI web page
+**Input**
 ```
 http://192.168.0.144
 ```
