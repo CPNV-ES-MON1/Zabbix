@@ -67,6 +67,28 @@ zabbix-release_latest_7.0+debian12_all.deb           100%[======================
 ```
 **Input**
 ```
+sudo apt update
+```
+**Output**
+```
+Hit:1 http://mirror.init7.net/debian bookworm InRelease                                               
+Hit:2 http://mirror.init7.net/debian bookworm-updates InRelease                                       
+Hit:3 http://security.debian.org/debian-security bookworm-security InRelease                     
+Get:4 https://repo.zabbix.com/zabbix-tools/debian-ubuntu bookworm InRelease [2,476 B]
+Get:5 https://repo.zabbix.com/zabbix/7.0/debian bookworm InRelease [3,945 B]
+Get:6 https://repo.zabbix.com/zabbix-tools/debian-ubuntu bookworm/main Sources [1,166 B]              
+Get:7 https://repo.zabbix.com/zabbix-tools/debian-ubuntu bookworm/main all Packages [766 B]           
+Get:8 https://repo.zabbix.com/zabbix/7.0/debian bookworm/main Sources [21.1 kB]                        
+Get:9 https://repo.zabbix.com/zabbix/7.0/debian bookworm/main amd64 Packages [40.8 kB]                 
+Get:10 https://repo.zabbix.com/zabbix/7.0/debian bookworm/main all Packages [8,275 B]                  
+Fetched 78.4 kB in 7s (11.5 kB/s)                                                                      
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+All packages are up to date.
+```
+**Input**
+```
 sudo dpkg -i zabbix-release_latest_7.0+debian12_all.deb
 ```
 **Output**
@@ -92,22 +114,71 @@ See in this text file: /home/all-packages-after-zabbix.txt
 **Input**
 ```
 diff -u all-packages-before-zabbix.txt all-packages-after-zabbix.txt
+```
+**Output**
+```
+--- all-packages-before-zabbix.txt	2025-05-13 08:59:10.668967942 -0400
++++ all-packages-after-zabbix.txt	2025-05-13 09:03:49.473399013 -0400
+@@ -335,6 +335,7 @@
+ xdg-user-dirs/stable,now 0.18-1 amd64 [installed,automatic]
+ xkb-data/stable,now 2.35.1-1 all [installed,automatic]
+ xz-utils/stable-security,now 5.4.1-1 amd64 [installed]
++zabbix-release/now 1:7.0-2+debian12 all [installed,local]
+ zerofree/stable,now 1.1.1-1 amd64 [installed,automatic]
+ zlib1g/stable,now 1:1.2.13.dfsg-1 amd64 [installed]
+ zstd/stable,now 1.5.4+dfsg2-5 amd64 [installed]
+```
+**Input**
+```
 diff -u all-packages-before-zabbix.txt all-packages-after-zabbix.txt > differences-before-after-zabbix.txt
 ```
+**Output**
+```
+/
+```
+See in this text file: /home/differences-before-after-zabbix.txt
+
 # Install Zabbix server, frontend, agent2
 **Input**
 ```
-sudo apt install zabbix-server-mysql zabbix-frontend-php zabbix-nginx-conf zabbix-sql-scripts zabbix-agent2
+sudo apt -y install zabbix-server-mysql zabbix-frontend-php zabbix-nginx-conf zabbix-sql-scripts zabbix-agent2
+```
+**Output**
+```
+no error displayed
 ```
 # Install Zabbix agent 2 plugin
 **Input**
 ```
-apt install zabbix-agent2-plugin-mssql
+sudo apt -y install zabbix-agent2-plugin-mssql
+```
+**Output**
+```
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following NEW packages will be installed:
+  zabbix-agent2-plugin-mssql
+0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+Need to get 2,412 kB of archives.
+After this operation, 8,228 kB of additional disk space will be used.
+Get:1 https://repo.zabbix.com/zabbix/7.0/debian bookworm/main amd64 zabbix-agent2-plugin-mssql amd64 1:7.0.12-1+debian12 [2,412 kB]
+Fetched 2,412 kB in 8s (293 kB/s)                                                                                                                                                                                 
+Selecting previously unselected package zabbix-agent2-plugin-mssql.
+(Reading database ... 37462 files and directories currently installed.)
+Preparing to unpack .../zabbix-agent2-plugin-mssql_1%3a7.0.12-1+debian12_amd64.deb ...
+Unpacking zabbix-agent2-plugin-mssql (1:7.0.12-1+debian12) ...
+Setting up zabbix-agent2-plugin-mssql (1:7.0.12-1+debian12) ...
 ```
 # Create initial database
 **Input**
 ```
 mysql -uroot -p
+```
+**Output**
+```
+Enter password: 
+ERROR 2002 (HY000): Can't connect to local server through socket '/run/mysqld/mysqld.sock' (2)
 ```
 enter your-nice-password
 **Input**
