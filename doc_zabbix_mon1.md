@@ -38,6 +38,7 @@ Reading state information... Done
 Calculating upgrade... Done
 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
 ```
+
 # List all installed packages
 **Input**
 ```
@@ -69,6 +70,18 @@ zabbix-release_latest_7.0+debian12_all.deb           100%[======================
 ```
 **Input**
 ```
+sudo dpkg -i zabbix-release_latest_7.0+debian12_all.deb
+```
+**Output**
+```
+Selecting previously unselected package zabbix-release.
+(Reading database ... 33663 files and directories currently installed.)
+Preparing to unpack zabbix-release_latest_7.0+debian12_all.deb ...
+Unpacking zabbix-release (1:7.0-2+debian12) ...
+Setting up zabbix-release (1:7.0-2+debian12) ...
+```
+**Input**
+```
 sudo apt update
 ```
 **Output**
@@ -88,18 +101,6 @@ Reading package lists... Done
 Building dependency tree... Done
 Reading state information... Done
 All packages are up to date.
-```
-**Input**
-```
-sudo dpkg -i zabbix-release_latest_7.0+debian12_all.deb
-```
-**Output**
-```
-Selecting previously unselected package zabbix-release.
-(Reading database ... 33663 files and directories currently installed.)
-Preparing to unpack zabbix-release_latest_7.0+debian12_all.deb ...
-Unpacking zabbix-release (1:7.0-2+debian12) ...
-Setting up zabbix-release (1:7.0-2+debian12) ...
 ```
 # List all installed packages
 **Input**
@@ -457,10 +458,51 @@ diff -u all-packages-after-zabbix.txt all-packages-after-server-frontend-agent2.
  zlib1g/stable,now 1:1.2.13.dfsg-1 amd64 [installed]
  zstd/stable,now 1.5.4+dfsg2-5 amd64 [installed]
 ```
-# Download mysql-server
+
+
+
+sudo apt -y install default-mysql-server
+sudo systemctl status mysql
+
+
+
+
+
+
+
+
+
+
+# Download requirements packages
+## Frontend
 ```
-sudo apt install default-mysql-server
+sudo apt -y install default-mysql-server
+sudo apt -y install php8.2
+sudo apt -y install nginx
+sudo apt -y install php8.2-mysql
+sudo apt -y install php-bcmath
+sudo apt -y install php-mbstring
+sudo apt -y install php-net-socket
+sudo apt -y install php-gd
+
+# If necessary
+sudo apt -y install php-xml
+sudo apt -y install php-xmlwriter
+sudo apt -y install php-xmlreader
+sudo apt -y install php-ctype
+
+sudo apt -y install php-session
 ```
+## Server/proxy
+```
+sudo apt -y install libpcre2-32-0
+sudo apt -y install libevent-2.1-7
+sudo apt -y install libevent-pthreads-2.1-7
+...
+```
+
+
+
 
 # Create initial database
 **Input**
