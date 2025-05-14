@@ -16,6 +16,8 @@ MySQL
 Web server :
 Nginx
 
+# Create a snapshot after a clean install
+
 # Update repo & upgrade packages
 **Input**
 ```
@@ -170,9 +172,6 @@ Preparing to unpack .../zabbix-agent2-plugin-mssql_1%3a7.0.12-1+debian12_amd64.d
 Unpacking zabbix-agent2-plugin-mssql (1:7.0.12-1+debian12) ...
 Setting up zabbix-agent2-plugin-mssql (1:7.0.12-1+debian12) ...
 ```
-
-
-
 
 # List all installed packages
 **Input**
@@ -457,6 +456,10 @@ diff -u all-packages-after-zabbix.txt all-packages-after-server-frontend-agent2.
  zerofree/stable,now 1.1.1-1 amd64 [installed,automatic]
  zlib1g/stable,now 1:1.2.13.dfsg-1 amd64 [installed]
  zstd/stable,now 1.5.4+dfsg2-5 amd64 [installed]
+```
+# Download mysql-server
+```
+sudo apt install default-mysql-server
 ```
 
 # Create initial database
