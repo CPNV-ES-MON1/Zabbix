@@ -297,8 +297,6 @@ quit;
 Bye
 ```
 
-# TODO : modification dans zabbix_server.conf
-
 # Create initial database
 **Input**
 ```
@@ -318,9 +316,9 @@ set global log_bin_trust_function_creators = 1;
 quit; 
 ```
 **Input**
-# ???
+# Set up the schema and import the data into the zabbix database
 ```
-zcat /usr/share/zabbix-sql-scripts/mysql/server.sql.gz | mysql --default-character-set=utf8mb4 -ucpnv -p zabbix 
+zcat /usr/share/zabbix-sql-scripts/mysql/server.sql.gz | mysql --default-character-set=utf8mb4 -u zabbix -p zabbix 
 ```
 # Disable log_bin_trust_function_creators option after importing database schema
 **Input**
@@ -334,7 +332,7 @@ quit;
 **Input**
 ```
 sudo nano /etc/zabbix/zabbix_server.conf
-DBPassword=your-nice-password
+DBPassword=<password habituel du cpnv>
 ```
 # Start Zabbix server and agent processes
 **Input**
@@ -342,6 +340,9 @@ DBPassword=your-nice-password
 systemctl restart zabbix-server zabbix-agent2 nginx php8.2-fpm
 systemctl enable zabbix-server zabbix-agent2 nginx php8.2-fpm
 ```
+
+???
+
 # Open Zabbix UI web page
 **Input**
 ```
