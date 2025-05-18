@@ -1,7 +1,7 @@
 # Schéma de la connexion entre un administrateur et la base de données en passant par le serveur zabbix
 
 ```mermaid
-graph LR;
+flowchart LR;
     admin--http:80-->zabbix-srv;
     subgraph Zabbix Server ;
         zabbix-srv-->php;
