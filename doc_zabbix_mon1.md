@@ -372,6 +372,29 @@ systemctl enable zabbix-server zabbix-agent2 nginx php8.2-fpm
 ```
 http://192.168.0.144
 ```
+# Configure DB connection
+**Input**
+```
+Database type: MySQL
+Database host: localhost
+Database port: 0
+Database name: zabbix
+Store credentials in: Plain text
+User: zabbix
+Password: password habituel du cpnv
+```
+# Settings
+**Input**
+```
+Zabbix server name: mon1-zabbix
+Default time zone: UTC+02:00 Europe/Zurich
+Default theme: Dark
+```
+**Output**
+```
+Configuration file "conf/zabbix.conf.php" created.
+```
+
 
 
 # Note pendant la session de debug
