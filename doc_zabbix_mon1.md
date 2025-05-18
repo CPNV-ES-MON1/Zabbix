@@ -48,6 +48,7 @@ sudo apt list --installed > all-packages-before-zabbix.txt
 ```
 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
 ```
+
 See in this text file: /home/all-packages-before-zabbix.txt
 
 # Get latest version of zabbix server package
@@ -68,6 +69,7 @@ zabbix-release_latest_7.0+ubuntu24.04_all.deb               100%[===============
 
 2025-05-14 08:35:21 (474 MB/s) - ‘zabbix-release_latest_7.0+ubuntu24.04_all.deb’ saved [8100/8100]
 ```
+
 **Input**
 ```
 dpkg -i zabbix-release_latest_7.0+ubuntu24.04_all.deb
@@ -80,6 +82,7 @@ Preparing to unpack zabbix-release_latest_7.0+ubuntu24.04_all.deb ...
 Unpacking zabbix-release (1:7.0-2+ubuntu24.04) ...
 Setting up zabbix-release (1:7.0-2+ubuntu24.04) ..
 ```
+
 **Input**
 ```
 sudo apt update
@@ -101,6 +104,7 @@ Building dependency tree... Done
 Reading state information... Done
 1 package can be upgraded. Run 'apt list --upgradable' to see it.
 ```
+
 # List all installed packages
 **Input**
 ```
@@ -146,6 +150,7 @@ diff -u all-packages-before-zabbix.txt all-packages-after-zabbix.txt
  libcrypt-dev/noble,now 1:4.4.36-4build1 amd64 [installed,automatic]
  libcrypt1/noble,now 1:4.4.36-4build1 amd64 [installed,automatic]
 ```
+
 **Input**
 ```
 diff -u all-packages-before-zabbix.txt all-packages-after-zabbix.txt > differences-before-after-zabbix.txt
@@ -154,6 +159,7 @@ diff -u all-packages-before-zabbix.txt all-packages-after-zabbix.txt > differenc
 ```
 /
 ```
+
 See in this text file: /home/differences-before-after-zabbix.txt
 
 # Install Zabbix server, frontend, agent2
@@ -165,7 +171,8 @@ apt install zabbix-server-mysql zabbix-frontend-php zabbix-nginx-conf zabbix-sql
 ```
 no error displayed
 ```
-# Install mySQL-server
+
+# Install mysql-server
 **Input**
 ```
 sudo apt install mysql-server
@@ -195,133 +202,102 @@ No user sessions are running outdated binaries.
 
 No VM guests are running outdated hypervisor (qemu) binaries on this host.
 ```
-# création de la database
+
+# Database creation
 **input**
 ```
 mysql -uroot -p
 ```
-
-**output**
+**Output**
 ```
 /
 ```
-**input**
+
+**Input**
 ```
 create database zabbix character set utf8mb4 collate utf8mb4_bin;
 ```
-
-**output**
+**Output**
 ```
 Query OK, 1 row affected (0.01 sec)
 ```
-**input**
+
+**Input**
 ```
 create user zabbix@localhost identified by 'Pa$$w0rd';
 ```
-
-**output**
+**Output**
 ```
 Query OK, 0 rows affected (0.02 sec)
 ```
-**input**
+
+**Input**
 ```
 grant all privileges on zabbix.* to zabbix@localhost;
 ```
-
-**output**
+**Output**
 ```
 Query OK, 0 rows affected (0.00 sec)
 ```
-**input**
+
+**Input**
 ```
 set global log_bin_trust_function_creators = 1;
 ```
-
-**output**
+**Output**
 ```
 Query OK, 0 rows affected, 1 warning (0.00 sec)
 ```
-**input**
+
+**Input**
 ```
 quit;
 ```
-
-**output**
+**Output**
 ```
 Bye!
 ```
-# mport initial schema and data
-**input**
+
+# Import initial diagram and data
+**Input**
 ```
 zcat /usr/share/zabbix-sql-scripts/mysql/server.sql.gz | mysql --default-character-set=utf8mb4 -uzabbix -p zabbix
 ```
-
-**output**
+**Output**
 ```
 Enter password: 
 ```
+
 # Disable log_bin_trust_function_creators option after importing database schema.
 
-**input**
+**Input**
 ```
 mysql -uroot -p
 ```
-
-**output**
+**Output**
 ```
 /
 ```
-**input**
+
+**Input**
 ```
 set global log_bin_trust_function_creators = 0;
 ```
-
-**output**
+**Output**
 ```
 Query OK, 0 rows affected, 1 warning (0.00 sec)
 ```
 
-**input**
+**Input**
 ```
 quit;
 ```
-
-**output**
+**Output**
 ```
 Bye
 ```
 
-# a faire: modification dans zabbix_server.conf
-# Download requirements packages
-## Frontend
-```
-sudo apt -y install default-mysql-server
-sudo apt -y install php8.2
-sudo apt -y install nginx
-sudo apt -y install php8.2-mysql
-sudo apt -y install php-bcmath
-sudo apt -y install php-mbstring
-sudo apt -y install php-net-socket
-sudo apt -y install php-gd
-
-# If necessary
-sudo apt -y install php-xml
-sudo apt -y install php-xmlwriter
-sudo apt -y install php-xmlreader
-sudo apt -y install php-ctype
-
-sudo apt -y install php-session
-```
-## Server/proxy
-```
-sudo apt -y install libpcre2-32-0
-sudo apt -y install libevent-2.1-7
-sudo apt -y install libevent-pthreads-2.1-7
-...
-```
-
-
-
+# TODO : modification dans zabbix_server.conf
 
 # Create initial database
 **Input**
@@ -331,7 +307,6 @@ mysql -uroot -p
 **Output**
 ```
 Enter password: 
-ERROR 2002 (HY000): Can't connect to local server through socket '/run/mysqld/mysqld.sock' (2)
 ```
 enter your-nice-password
 **Input**
