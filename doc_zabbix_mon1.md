@@ -204,7 +204,7 @@ No VM guests are running outdated hypervisor (qemu) binaries on this host.
 ```
 
 # Database creation
-**input**
+**Input**
 ```
 mysql -uroot -p
 ```
@@ -308,6 +308,7 @@ mysql -uroot -p
 ```
 Enter password: 
 ```
+
 enter your-nice-password
 **Input**
 ```
@@ -345,7 +346,7 @@ systemctl enable zabbix-server zabbix-agent2 nginx php8.2-fpm
 # Open Zabbix UI web page
 **Input**
 ```
-http://192.168.0.144
+http://192.168.0.145
 ```
 # Check of pre-requisites
 **Output**
@@ -380,6 +381,7 @@ PHP option "arg_separator.output"	&	&	OK
 PHP curl	on		OK
 System locale	en_US.utf8	en_US	OK
 ```
+
 # Configure DB connection
 **Input**
 ```
@@ -402,8 +404,6 @@ Default theme: Dark
 ```
 Configuration file "conf/zabbix.conf.php" created.
 ```
-
-
 
 # Note pendant la session de debug
 ## Informations générales :
