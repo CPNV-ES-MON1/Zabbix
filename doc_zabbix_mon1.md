@@ -224,7 +224,7 @@ Query OK, 1 row affected (0.01 sec)
 
 **Input**
 ```
-create user zabbix@localhost identified by 'Pa$$w0rd';
+create user zabbix@localhost identified by 'enter-your-password';
 ```
 **Output**
 ```
@@ -309,7 +309,6 @@ mysql -uroot -p
 Enter password: 
 ```
 
-enter your-nice-password
 **Input**
 ```
 create database zabbix character set utf8mb4 collate utf8mb4_bin; 
