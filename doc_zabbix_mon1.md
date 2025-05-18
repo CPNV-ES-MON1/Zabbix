@@ -372,6 +372,39 @@ systemctl enable zabbix-server zabbix-agent2 nginx php8.2-fpm
 ```
 http://192.168.0.144
 ```
+# Check of pre-requisites
+**Output**
+```
+PHP version	8.3.6	8.0.0	OK
+PHP option "memory_limit"	128M	128M	OK
+PHP option "post_max_size"	16M	16M	OK
+PHP option "upload_max_filesize"	2M	2M	OK
+PHP option "max_execution_time"	300	300	OK
+PHP option "max_input_time"	300	300	OK
+PHP databases support	MySQL
+		OK
+PHP bcmath	on		OK
+PHP mbstring	on		OK
+PHP option "mbstring.func_overload"	off	off	OK
+PHP sockets	on		OK
+PHP gd	2.3.3	2.0	OK
+PHP gd PNG support	on		OK
+PHP gd JPEG support	on		OK
+PHP gd GIF support	on		OK
+PHP gd FreeType support	on		OK
+PHP libxml	2.9.14	2.6.15	OK
+PHP xmlwriter	on		OK
+PHP xmlreader	on		OK
+PHP LDAP	on		OK
+PHP OpenSSL	on		OK
+PHP ctype	on		OK
+PHP session	on		OK
+PHP option "session.auto_start"	off	off	OK
+PHP gettext	on		OK
+PHP option "arg_separator.output"	&	&	OK
+PHP curl	on		OK
+System locale	en_US.utf8	en_US	OK
+```
 # Configure DB connection
 **Input**
 ```
