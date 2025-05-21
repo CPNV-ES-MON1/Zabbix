@@ -1,3 +1,5 @@
+# Prerequisites
+
 Zabbix version :
 7.0 LTS
 
@@ -18,7 +20,8 @@ Nginx
 
 # Create a snapshot after a clean install
 
-# Update repo & upgrade packages
+# Installation
+## Update repo & upgrade packages
 **Input**
 ```
 sudo apt update && sudo apt upgrade
@@ -39,7 +42,7 @@ Calculating upgrade... Done
 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
 ```
 
-# List all installed packages
+## List all installed packages
 **Input**
 ```
 sudo apt list --installed > all-packages-before-zabbix.txt
@@ -51,7 +54,7 @@ WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
 
 See in this text file: /home/all-packages-before-zabbix.txt
 
-# Get latest version of zabbix server package
+## Get latest version of zabbix server package
 **Input**
 ```
 wget https://repo.zabbix.com/zabbix/7.0/ubuntu-arm64/pool/main/z/zabbix-release/zabbix-release_latest_7.0+ubuntu24.04_all.deb
@@ -105,7 +108,7 @@ Reading state information... Done
 1 package can be upgraded. Run 'apt list --upgradable' to see it.
 ```
 
-# List all installed packages
+## List all installed packages
 **Input**
 ```
 sudo apt list --installed > all-packages-after-zabbix.txt
@@ -116,7 +119,7 @@ WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
 ```
 See in this text file: /home/all-packages-after-zabbix.txt
 
-# List differences between 2 files
+## List differences between 2 files
 **Input**
 ```
 diff -u all-packages-before-zabbix.txt all-packages-after-zabbix.txt
@@ -162,7 +165,7 @@ diff -u all-packages-before-zabbix.txt all-packages-after-zabbix.txt > differenc
 
 See in this text file: /home/differences-before-after-zabbix.txt
 
-# Install Zabbix server, frontend, agent2
+## Install Zabbix server, frontend, agent2
 **Input**
 ```
 apt install zabbix-server-mysql zabbix-frontend-php zabbix-nginx-conf zabbix-sql-scripts zabbix-agent
@@ -172,7 +175,7 @@ apt install zabbix-server-mysql zabbix-frontend-php zabbix-nginx-conf zabbix-sql
 no error displayed
 ```
 
-# Install mysql-server
+## Install mysql-server
 **Input**
 ```
 sudo apt install mysql-server
@@ -258,7 +261,7 @@ quit;
 Bye!
 ```
 
-# Set up the schema and import the data into the zabbix database
+## Set up the schema and import the data into the zabbix database
 **Input**
 ```
 zcat /usr/share/zabbix-sql-scripts/mysql/server.sql.gz | mysql --default-character-set=utf8mb4 -uzabbix -p zabbix
@@ -268,7 +271,7 @@ zcat /usr/share/zabbix-sql-scripts/mysql/server.sql.gz | mysql --default-charact
 Enter password: 
 ```
 
-# Disable log_bin_trust_function_creators option after importing database schema.
+## Disable log_bin_trust_function_creators option after importing database schema.
 
 **Input**
 ```
@@ -297,7 +300,7 @@ quit;
 Bye
 ```
 
-# Modification des fichier de configuration
+## Modification des fichiers de configuration
 **zabbix_server.conf**
 ```
 nano /etc/zabbix/zabbix_server.conf
@@ -320,7 +323,7 @@ server {
         listen          8080;
         server_name     mon1-zabbix.local;
 ```
-# Restart and enable services
+## Restart and enable services
 **Input**
 ```
 systemctl restart zabbix-server zabbix-agent nginx php8.3-fpm
@@ -359,14 +362,16 @@ root@ubuntu24-mon1:/etc/zabbix# ip a
     inet6 fe80::20c:29ff:fe0b:7815/64 scope link
        valid_lft forever preferred_lft forever
 ```
+
 **Pour accéder à zabbix: <ip du server>:8080**
-# Configure the database for Zabbix server
+
+## Configure the database for Zabbix server
 **Input**
 ```
 sudo nano /etc/zabbix/zabbix_server.conf
 DBPassword=<password habituel du cpnv>
 ```
-# Start Zabbix server and agent processes
+## Start Zabbix server and agent processes
 **Input**
 ```
 systemctl restart zabbix-server zabbix-agent2 nginx php8.2-fpm
@@ -378,7 +383,7 @@ systemctl enable zabbix-server zabbix-agent2 nginx php8.2-fpm
 ```
 http://<ip of the server>
 ```
-# Check of pre-requisites
+## Check of pre-requisites
 **Output**
 ```
 PHP version	8.3.6	8.0.0	OK
@@ -412,7 +417,7 @@ PHP curl	on		OK
 System locale	en_US.utf8	en_US	OK
 ```
 
-# Configure DB connection
+## Configure DB connection
 **Input**
 ```
 Database type: MySQL
@@ -423,7 +428,8 @@ Store credentials in: Plain text
 User: zabbix
 Password: <password habituel du cpnv>
 ```
-# Settings
+
+## Settings
 **Input**
 ```
 Zabbix server name: mon1-zabbix
@@ -435,7 +441,18 @@ Default theme: Dark
 Configuration file "conf/zabbix.conf.php" created.
 ```
 
-# Note pendant la session de debug
+# Web interface
+## User creation
+```
+Useranme: gir
+Password: <password habituel du cpnv><password habituel du cpnv> (oui 2x sinon il détecte un mdp nul)
+Time zone: (UTC+02:00) Europe/Zurich
+Refresh: 30s
+Rows per page: 50
+Role: Admin role
+```
+
+# Session de debug
 ## Informations générales :
 Le problème que nous rencontrons est au niveaux de la connexion à NGINX. Celui-ci à l'aire de tourner correctement mais impossible d'afficher la page de zabbix. 
 
