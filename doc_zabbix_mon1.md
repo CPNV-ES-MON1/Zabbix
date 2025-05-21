@@ -450,10 +450,10 @@ System locale	en_US.utf8	en_US	OK
 ```
 Database type: MySQL
 Database host: localhost
-Database port: 0
+Database port: 10050 (in doc: Zabbix server uses to poll clients)
 Database name: zabbix
 Store credentials in: Plain text
-User: zabbix
+User: zabbix-connector
 Password: password habituel du cpnv
 ```
 # Settings
