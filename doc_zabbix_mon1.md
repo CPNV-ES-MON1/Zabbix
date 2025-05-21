@@ -258,7 +258,7 @@ quit;
 Bye!
 ```
 
-# Import initial diagram and data
+# Set up the schema and import the data into the zabbix database
 **Input**
 ```
 zcat /usr/share/zabbix-sql-scripts/mysql/server.sql.gz | mysql --default-character-set=utf8mb4 -uzabbix -p zabbix
@@ -297,38 +297,7 @@ quit;
 Bye
 ```
 
-# Create initial database
-**Input**
-```
-mysql -uroot -p
-```
-**Output**
-```
-Enter password: 
-```
-
-**Input**
-```
-create database zabbix character set utf8mb4 collate utf8mb4_bin; 
-create user cpnv@localhost identified by '<password habituel du cpnv>'; 
-grant all privileges on zabbix.* to cpnv@localhost; 
-set global log_bin_trust_function_creators = 1; 
-quit; 
-```
-**Input**
-# Set up the schema and import the data into the zabbix database
-```
-zcat /usr/share/zabbix-sql-scripts/mysql/server.sql.gz | mysql --default-character-set=utf8mb4 -u zabbix -p zabbix 
-```
-# Disable log_bin_trust_function_creators option after importing database schema
-**Input**
-```
-# mysql -uroot -p
-<password habituel du cpnv>
-set global log_bin_trust_function_creators = 0;
-quit; 
-```
-# modification des fichier de configuration
+# Modification des fichier de configuration
 **zabbix_server.conf**
 ```
 nano /etc/zabbix/zabbix_server.conf
@@ -341,9 +310,9 @@ nano /etc/zabbix/zabbix_server.conf
 # Default:
  DBPassword=[password]
 ```
-**nginx.conf**
+**Modification de nginx.conf**
 ```
- nano /etc/zabbix/zabbix_server.conf
+nano /etc/zabbix/zabbix_server.conf
 
 nano /etc/zabbix/nginx.conf
 
@@ -351,20 +320,20 @@ server {
         listen          8080;
         server_name     mon1-zabbix.local;
 ```
-# restart et enable des services
-**input**
+# Restart and enable services
+**Input**
 ```
 systemctl restart zabbix-server zabbix-agent nginx php8.3-fpm
 ```
-**output**
+**Output**
 ```
 /
 ```
-**input**
+**Input**
 ```
 systemctl enable zabbix-server zabbix-agent nginx php8.3-fpm
 ```
-**output**
+**Output**
 ```
 Synchronizing state of zabbix-server.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
 Executing: /usr/lib/systemd/systemd-sysv-install enable zabbix-server
@@ -390,7 +359,7 @@ root@ubuntu24-mon1:/etc/zabbix# ip a
     inet6 fe80::20c:29ff:fe0b:7815/64 scope link
        valid_lft forever preferred_lft forever
 ```
-**pour acceder a zabbix: [ip du server]:8080**
+**Pour accéder à zabbix: <ip du server>:8080**
 # Configure the database for Zabbix server
 **Input**
 ```
@@ -403,8 +372,6 @@ DBPassword=<password habituel du cpnv>
 systemctl restart zabbix-server zabbix-agent2 nginx php8.2-fpm
 systemctl enable zabbix-server zabbix-agent2 nginx php8.2-fpm
 ```
-
-???
 
 # Open Zabbix UI web page
 **Input**
