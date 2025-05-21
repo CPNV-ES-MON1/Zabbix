@@ -442,14 +442,29 @@ Configuration file "conf/zabbix.conf.php" created.
 ```
 
 # Web interface
-## User creation
+## Create user
 ```
+Logged as Admin / zabbix (Super admin role)
+Users/Users/Create user
+
 Useranme: gir
 Password: <password habituel du cpnv><password habituel du cpnv> (oui 2x sinon il détecte un mdp nul)
+Groups: TOTP group/Zabbix administrators
 Time zone: (UTC+02:00) Europe/Zurich
+Theme: Dark
 Refresh: 30s
 Rows per page: 50
-Role: Admin role
+Role: Super admin role
+```
+
+## Enable MFA
+```
+Users/Authentication/MFA settings/Add
+
+Type: TOTP
+Name: MFA-zabbix
+Hash function SHA-512
+Code length: 6
 ```
 
 # Session de debug
