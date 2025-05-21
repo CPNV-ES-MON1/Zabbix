@@ -328,6 +328,69 @@ enter your-nice-password
 set global log_bin_trust_function_creators = 0;
 quit; 
 ```
+# modification des fichier de configuration
+**zabbix_server.conf**
+```
+nano /etc/zabbix/zabbix_server.conf
+
+ ### Option: DBPassword
+#       Database password.
+#       Comment this line if no password is used.
+#
+# Mandatory: no
+# Default:
+ DBPassword=[password]
+```
+**nginx.conf**
+```
+ nano /etc/zabbix/zabbix_server.conf
+
+nano /etc/zabbix/nginx.conf
+
+server {
+        listen          8080;
+        server_name     mon1-zabbix.local;
+```
+# restart et enable des services
+**input**
+```
+systemctl restart zabbix-server zabbix-agent nginx php8.3-fpm
+```
+**output**
+```
+/
+```
+**input**
+```
+systemctl enable zabbix-server zabbix-agent nginx php8.3-fpm
+```
+**output**
+```
+Synchronizing state of zabbix-server.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install enable zabbix-server
+Synchronizing state of zabbix-agent.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install enable zabbix-agent
+Synchronizing state of nginx.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install enable nginx
+Synchronizing state of php8.3-fpm.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install enable php8.3-fpm
+Created symlink /etc/systemd/system/multi-user.target.wants/zabbix-server.service → /usr/lib/systemd/system/zabbix-server.service.
+root@ubuntu24-mon1:/etc/zabbix# ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute
+       valid_lft forever preferred_lft forever
+2: ens33: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UNKNOWN group default qlen 1000
+    link/ether 00:0c:29:0b:78:15 brd ff:ff:ff:ff:ff:ff
+    altname enp2s1
+    inet 192.168.153.140/24 metric 100 brd 192.168.153.255 scope global dynamic ens33
+       valid_lft 1315sec preferred_lft 1315sec
+    inet6 fe80::20c:29ff:fe0b:7815/64 scope link
+       valid_lft forever preferred_lft forever
+```
+**pour acceder a zabbix: [ip du server]:8080**
 # Configure the database for Zabbix server
 **Input**
 ```
