@@ -310,7 +310,7 @@ Enter password:
 **Input**
 ```
 create database zabbix character set utf8mb4 collate utf8mb4_bin; 
-create user cpnv@localhost identified by 'your-nice-password'; 
+create user cpnv@localhost identified by '<password habituel du cpnv>'; 
 grant all privileges on zabbix.* to cpnv@localhost; 
 set global log_bin_trust_function_creators = 1; 
 quit; 
@@ -324,7 +324,7 @@ zcat /usr/share/zabbix-sql-scripts/mysql/server.sql.gz | mysql --default-charact
 **Input**
 ```
 # mysql -uroot -p
-enter your-nice-password
+<password habituel du cpnv>
 set global log_bin_trust_function_creators = 0;
 quit; 
 ```
@@ -409,7 +409,7 @@ systemctl enable zabbix-server zabbix-agent2 nginx php8.2-fpm
 # Open Zabbix UI web page
 **Input**
 ```
-http://192.168.0.145
+http://<ip of the server>
 ```
 # Check of pre-requisites
 **Output**
@@ -453,8 +453,8 @@ Database host: localhost
 Database port: 10050 (in doc: Zabbix server uses to poll clients)
 Database name: zabbix
 Store credentials in: Plain text
-User: zabbix-connector
-Password: password habituel du cpnv
+User: zabbix
+Password: <password habituel du cpnv>
 ```
 # Settings
 **Input**
