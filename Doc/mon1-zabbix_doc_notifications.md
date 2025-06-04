@@ -48,6 +48,7 @@ click on .../Settings/Advanced/copy Internal room ID
 - Name : matrix
 - Type : Webhook
 - Parameters
+
 |Name|Value|
 |---|---|
 |alert_message|{ALERT.MESSAGE}|
