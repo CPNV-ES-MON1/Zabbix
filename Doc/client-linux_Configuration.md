@@ -99,7 +99,7 @@ il existe un "linux by zabbix agent active" il ne faut pas le prendre car le ser
 
 on le met ensuite dans un Host Groupe (exemple avec le groupe "virtual machine")
 
-on lui aoute une interface qui est le moen de communication entre le zabbix server et l'agent et choisisant le type agent.
+on lui aoute une interface qui est le moyen de communication entre le zabbix server et l'agent et choisisant le type agent.
 dans l'insterface on spécifie l'IP et le port qu'utilise l'agent.
 
 ```
