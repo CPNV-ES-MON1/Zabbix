@@ -3,7 +3,7 @@
 on installe l'agent sur la documentation de zabbix
 https://www.zabbix.com/download_agents
 ```
-# configuration de l'agent**
+# configuration de l'agent
 
 **spécification du dossier d'installation**
 ```
