@@ -3,11 +3,9 @@ ICT - GGR - RDI
 
 # Database configuration
 
-## Table of content
+# Table of content
 
 
-- [Database configuration](#database-configuration)
-  - [Table of content](#table-of-content)
 - [1. Database creation](#1-database-creation)
   - [1.1. Connect to MySQL](#11-connect-to-mysql)
   - [1.2. Create databse](#12-create-databse)
@@ -19,10 +17,8 @@ ICT - GGR - RDI
   - [1.8. Modification des fichiers de configuration](#18-modification-des-fichiers-de-configuration)
     - [1.8.1. zabbix\_server.conf](#181-zabbix_serverconf)
     - [1.8.2. nginx.conf](#182-nginxconf)
-  - [1.9. Restart services](#19-restart-services)
-  - [1.10. Enable services](#110-enable-services)
-- [2. Configure the database for Zabbix server](#2-configure-the-database-for-zabbix-server)
-- [3. Start Zabbix server and agent processes](#3-start-zabbix-server-and-agent-processes)
+- [2. Restart services](#2-restart-services)
+- [3. Enable services](#3-enable-services)
 
 <br>
 <br>
@@ -132,8 +128,6 @@ nano /etc/zabbix/zabbix_server.conf
 # Mandatory: no
 # Default:
  DBPassword=[password]
-
-StartVMwareCollectors=2
 ```
 ### 1.8.2. nginx.conf
 ```
@@ -145,14 +139,14 @@ server {
         listen          8080;
         server_name     mon1-zabbix.local;
 ```
-## 1.9. Restart services
+# 2. Restart services
 **Input**
 ```
 systemctl restart zabbix-server zabbix-agent nginx php8.3-fpm
 ```
 **Output** - no output
 
-## 1.10. Enable services
+# 3. Enable services
 **Input**
 ```
 systemctl enable zabbix-server zabbix-agent nginx php8.3-fpm
@@ -185,16 +179,3 @@ root@ubuntu24-mon1:/etc/zabbix# ip a
 ```
 
 Pour accéder à zabbix: **\<ip du server>:8080**
-
-# 2. Configure the database for Zabbix server
-**Input**
-```
-sudo nano /etc/zabbix/zabbix_server.conf
-DBPassword=<password habituel du cpnv>
-```
-# 3. Start Zabbix server and agent processes
-**Input**
-```
-systemctl restart zabbix-server zabbix-agent2 nginx php8.2-fpm
-systemctl enable zabbix-server zabbix-agent2 nginx php8.2-fpm
-```
