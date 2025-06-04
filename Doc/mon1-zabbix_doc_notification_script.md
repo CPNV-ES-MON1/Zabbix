@@ -1,4 +1,3 @@
-```
 const required_input = [
   "matrix_url",
   "matrix_room",
@@ -187,4 +186,3 @@ try {
   Zabbix.Log(4, "[Matrix Webhook] Error: " + error)
   throw "Sending failed: " + error
 }
-```
