@@ -1,4 +1,5 @@
-```
+
+```mermaid
 flowchart LR
  subgraph subGraph6["zabbix-srv"]
         zabbix-srv["zabbix-service"]
