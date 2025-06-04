@@ -132,6 +132,8 @@ nano /etc/zabbix/zabbix_server.conf
 # Mandatory: no
 # Default:
  DBPassword=[password]
+
+StartVMwareCollectors=2
 ```
 ### 1.8.2. nginx.conf
 ```
