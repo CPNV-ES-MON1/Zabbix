@@ -42,3 +42,12 @@ click on .../Settings/Advanced/copy Internal room ID
 - Internal room ID : ZYZY
 
 # Zabbix webhook configuration
+
+## Create from scratch webhook
+- Alerts/Media types/Create media type/
+- Name : matrix
+- Type : Webhook
+- Script : look at `mon1-zabbix_doc_notificatin_script`
+- Timeout : 30s
+- Menu entry name :
+- Menu entry URL : 
