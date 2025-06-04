@@ -1,9 +1,4 @@
----
-config:
-  layout: elk
-  theme: neo
-  look: neo
----
+```
 flowchart LR
  subgraph subGraph6["zabbix-srv"]
         zabbix-srv["zabbix-service"]
@@ -38,3 +33,4 @@ flowchart LR
     zabbix-srv --> php
     php --> WebUI
     Admin-client["Admin-client"] -- https:8080 --> WebUI
+```
