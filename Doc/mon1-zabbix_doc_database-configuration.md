@@ -28,7 +28,7 @@ ICT - GGR - RDI
 
 **Input**
 ```
-mysql -uroot -p
+sudo mysql -uroot -p
 ```
 **Output** - No output
 ## 1.2. Create databse
@@ -94,7 +94,7 @@ Enter password:
 
 **Input**
 ```
-mysql -uroot -p
+sudo mysql -uroot -p
 ```
 **Output** - no output
 
@@ -131,8 +131,6 @@ nano /etc/zabbix/zabbix_server.conf
 ```
 ### 1.8.2. nginx.conf
 ```
-nano /etc/zabbix/zabbix_server.conf
-
 nano /etc/zabbix/nginx.conf
 
 server {
@@ -142,14 +140,14 @@ server {
 # 2. Restart services
 **Input**
 ```
-systemctl restart zabbix-server zabbix-agent nginx php8.3-fpm
+sudo systemctl restart zabbix-server zabbix-agent nginx php8.3-fpm
 ```
 **Output** - no output
 
 # 3. Enable services
 **Input**
 ```
-systemctl enable zabbix-server zabbix-agent nginx php8.3-fpm
+sudo systemctl enable zabbix-server zabbix-agent nginx php8.3-fpm
 ```
 **Output**
 ```
