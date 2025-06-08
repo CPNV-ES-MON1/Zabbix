@@ -77,7 +77,16 @@ wget https://repo.zabbix.com/zabbix/7.0/ubuntu/pool/main/z/zabbix-release/zabbix
 ```
 **Output**
 ```
+--2025-06-08 16:14:11--  https://repo.zabbix.com/zabbix/7.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_latest_7.0+ubuntu24.04_all.deb
+Resolving repo.zabbix.com (repo.zabbix.com)... 178.128.6.101, 2604:a880:2:d0::2062:d001
+Connecting to repo.zabbix.com (repo.zabbix.com)|178.128.6.101|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 8092 (7.9K) [application/octet-stream]
+Saving to: ‘zabbix-release_latest_7.0+ubuntu24.04_all.deb.1’
 
+zabbix-release_latest_7.0+ubuntu24.04_al 100%[=================================================================================>]   7.90K  --.-KB/s    in 0s
+
+2025-06-08 16:14:12 (404 MB/s) - ‘zabbix-release_latest_7.0+ubuntu24.04_all.deb.1’ saved [8092/8092]
 ```
 
 ### 2.3.2. Install the pckets
