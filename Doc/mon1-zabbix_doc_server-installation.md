@@ -73,26 +73,17 @@ See in this text file: /home/all-packages-before-zabbix.txt
 ### 2.3.1. Dowload packets
 **Input**
 ```
-wget https://repo.zabbix.com/zabbix/7.0/ubuntu-arm64/pool/main/z/zabbix-release/zabbix-release_latest_7.0+ubuntu24.04_all.deb
+wget https://repo.zabbix.com/zabbix/7.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_latest_7.0+ubuntu24.04_all.deb
 ```
 **Output**
 ```
---2025-05-14 08:35:20--  https://repo.zabbix.com/zabbix/7.0/ubuntu-arm64/pool/main/z/zabbix-release/zabbix-release_latest_7.0+ubuntu24.04_all.deb
-Resolving repo.zabbix.com (repo.zabbix.com)... 178.128.6.101, 2604:a880:2:d0::2062:d001
-Connecting to repo.zabbix.com (repo.zabbix.com)|178.128.6.101|:443... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 8100 (7.9K) [application/octet-stream]
-Saving to: ‘zabbix-release_latest_7.0+ubuntu24.04_all.deb’
 
-zabbix-release_latest_7.0+ubuntu24.04_all.deb               100%[========================================================================================================================================>]   7.91K  --.-KB/s    in 0s
-
-2025-05-14 08:35:21 (474 MB/s) - ‘zabbix-release_latest_7.0+ubuntu24.04_all.deb’ saved [8100/8100]
 ```
 
 ### 2.3.2. Install the pckets
 **Input**
 ```
-dpkg -i zabbix-release_latest_7.0+ubuntu24.04_all.deb
+sudo dpkg -i zabbix-release_latest_7.0+ubuntu24.04_all.deb
 ```
 **Output**
 ```
@@ -182,13 +173,13 @@ diff -u all-packages-before-zabbix.txt all-packages-after-zabbix.txt > differenc
 ### 2.5.2. Check the result
 **Input**
 ```
-nano /home/differences-before-after-zabbix.txt
+nano differences-before-after-zabbix.txt
 ```
 
 ## 2.6. Install Zabbix server, frontend, agent2
 **Input**
 ```
-apt install zabbix-server-mysql zabbix-frontend-php zabbix-nginx-conf zabbix-sql-scripts zabbix-agent
+ sudo apt install zabbix-server-mysql zabbix-frontend-php zabbix-nginx-conf zabbix-sql-scripts zabbix-agent2
 ```
 **Output**
 ```
