@@ -126,32 +126,29 @@ In `Monitoring > Hosts` select `create host`
 
 **onglet host**
 ```
-dans l'onglet host on va lui mettre sont hostname zabbix, sont visible name.
-ensuite sous template on choisis le template "linux by zabbix agent"
-!!ATTENTION!!
-il existe un "linux by zabbix agent active" il ne faut pas le prendre car le server actif de l'agent n'a pas été configuré
+here we are completing the folling paremeter:
 
-on le met ensuite dans un Host Groupe (exemple avec le groupe "virtual machine")
-
-on lui aoute une interface qui est le moyen de communication entre le zabbix server et l'agent et choisisant le type agent.
-dans l'insterface on spécifie l'IP et le port qu'utilise l'agent.
-
+Hostname zabbix = [name]
+visible name = [name]
+chose template= "linux by zabbix agent"
+!!WARNING!! do not use the "linux by zabbix agent active"
+Host group = "Virtual machine"
+add interface with ip and port for the agent (10050 by default)
 ```
 **onglet inventory**
 ```
-ici on passe l'inventaire en mode automatique sinon on ne pourra pas avoir cet host sous inventory>host dans zabbix
+here juste chose the option "automiatic" to enter the host to the inventory
 ```
 ## 5.2. configuration de l'item
 ```
-sous Data collection>hosts on clique sur items de notre host.
+undercollection>hosts>items of the host
+we chose the CPU utilisazion item and change the following parameter
 
-ici on cherche l'item "CPU utilisation" et on clique dessus.
-
-là on modifie l'option "Update interval" pour mettre 5s
+Update interval=5s
 ```
 ## 5.3. ajout de l'host sur ele dashboard avec l'item du CPU
 ```
-sous Dashboard on va cliquer sur les paramètre de l'onglet ou se trouve deja notre server zabbix.
-
-ici on va ajouter notre client linux sous "Hosts" et on va ajouter une collonne avec l'item "CPU utilization"
+under Dashboad>parameter
+add the host to the dashboard
+add the collumn CPU utilization
 ```
