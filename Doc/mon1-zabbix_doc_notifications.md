@@ -1,4 +1,9 @@
-# Sources https://github.com/jooola/zabbix-matrix-webhook?tab=readme-ov-file
+# Sources
+## Set up matrix notifications
+https://github.com/jooola/zabbix-matrix-webhook?tab=readme-ov-file
+## Matrix notification diagram
+https://patrick.cloke.us/posts/2023/05/08/matrix-push-rules-notifications/
+https://patrick.cloke.us/images/matrix-push-rules-and-notifications/mobile-push-flow.png
 
 # Matrix configuration
 
@@ -32,14 +37,16 @@ Icon from the account/All settings/Help & About/Advanced/Access Token/copy this 
 ```
 click on .../Invite/Enter the bot username (zabbix-mon1)
 ```
-#### Retrieve room ID
-```
-click on .../Settings/Advanced/copy Internal room ID
-```
+
 ### Set up an encrypted room on this account
 - Room 2 :
 - Name : zabbix-room-unencrypted
 - Internal room ID : BABA
+
+#### Invite the bot in the room
+```
+click on .../Invite/Enter the bot username (zabbix-mon1)
+```
 
 # Zabbix webhook configuration
 
@@ -66,4 +73,18 @@ click on .../Settings/Advanced/copy Internal room ID
 - Script : look at `mon1-zabbix_doc_notificatin_script` or https://github.com/jooola/zabbix-matrix-webhook/blob/main/latest/matrix.js
 - Timeout : 30s
 
+## Create/configure the matrix media type for a user that represent the webhook
+### Retrieve room ID
+```
+click on .../Settings/Advanced/copy Internal room ID
+```
+### Configuration for the user gir
+Users/gir/Media/Add
+- Type: matrix
+- Send to: Internal room ID
+- When active: <default choices>
+- Use if severity: <default choices>
 
+# Test webhook
+- Alerts/Media types/locate the relevant webhook <matrix>/click on Test/click on Test
+- Check on the element software
