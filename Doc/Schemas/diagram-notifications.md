@@ -1,4 +1,4 @@
-
+```mermaid
 flowchart LR
 
 subgraph itemCpu["CPU idle time"]
@@ -66,3 +66,4 @@ end
     botInvites --> matrixUserRoomsZabbix
     userSend@{ shape: rect}
     webhookRoom@{ shape: rect}
+```
