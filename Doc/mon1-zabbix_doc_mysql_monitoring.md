@@ -1,7 +1,7 @@
 # in /etc/zabbix/zabbix_agentd.conf
-add the following line the the config
+add the following line the config
 ```
-	UserParameter=mysql.service.status,systemctl is-active mysql.service
+UserParameter=mysql.service.status,systemctl is-active mysql.service
 ```
 sudo systemctl restart zabbix-agent
 # in zabbix webui
