@@ -23,6 +23,7 @@ ICT - GGR - RDI
 ```
 http://<ip of the server>:8080
 ```
+Then select language
 ## 1.1. Check of pre-requisites
 **Output**
 ```
