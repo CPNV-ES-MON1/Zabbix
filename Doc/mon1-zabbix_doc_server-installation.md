@@ -27,7 +27,7 @@ ICT - GGR - RDI
 
 | Zabbix Version | OS distribution | OS version    | Zabbix component          | Database | Web server |
 | -------------- | --------------- | ------------- | ------------------------- | -------- | ---------- |
-| 7.0 LTS        | Ubuntu24.04LTS  | 12 (Bookworm) | Server, Frontend, Agent 2 | MySQL    | Ngnix      |
+| 7.0 LTS        | Ubuntu          | 24.04 (noble) | Server, Frontend, Agent 2 | MySQL    | Ngnix      |
 |                |                 |               |                           |          |            |
 
 Once the VM in installed, don't forget to make a snapshot to prevent having to reinstall it in case of an issue.
