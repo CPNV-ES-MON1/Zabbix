@@ -44,7 +44,7 @@ https://github.com/jooola/zabbix-matrix-webhook?tab=readme-ov-file
 - Name : matrix-notifications
 - Type : Webhook
 - Parameters
-- 
+
 |Name|Value|
 |---|---|
 |alert_message|{ALERT.MESSAGE}|
