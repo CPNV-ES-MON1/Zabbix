@@ -14,7 +14,7 @@ flowchart LR
   end
  subgraph trigger["Trigger"]
         triggerName["Name: Linux high CPU utilisation"]
-        triggerCondition["Condition: CPU high (90%) for 30 sec"]
+        triggerCondition["Condition: Linux high CPU utilisation (CPU higher than 90% for 30 sec)"]
         triggerAction["Action name: CPU alert matrix"]
         triggerOperation
   end
