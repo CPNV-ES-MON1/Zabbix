@@ -7,9 +7,8 @@ sudo systemctl restart zabbix-agent
 # in zabbix webui
 under Data collection>hosts>[host item]>"create item"
 
-|||
+|Field|Value|
 |---------------------------------------------------|----|
-|Field                  |	Value                     |
 |Name	                  | MySQL Service Status      |
 |Type                 	| Zabbix agent              |
 |Key	                  | mysql.service.status      |
