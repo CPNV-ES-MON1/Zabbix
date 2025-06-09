@@ -140,21 +140,21 @@ server {
 # 2. Restart services
 **Input**
 ```
-sudo systemctl restart zabbix-server zabbix-agent nginx php8.3-fpm
+sudo systemctl restart zabbix-server zabbix-agent2 nginx php8.3-fpm
 ```
 **Output** - no output
 
 # 3. Enable services
 **Input**
 ```
-sudo systemctl enable zabbix-server zabbix-agent nginx php8.3-fpm
+sudo systemctl enable zabbix-server zabbix-agent2 nginx php8.3-fpm
 ```
 **Output**
 ```
 Synchronizing state of zabbix-server.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
 Executing: /usr/lib/systemd/systemd-sysv-install enable zabbix-server
-Synchronizing state of zabbix-agent.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
-Executing: /usr/lib/systemd/systemd-sysv-install enable zabbix-agent
+Synchronizing state of zabbix-agent2.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install enable zabbix-agent2
 Synchronizing state of nginx.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
 Executing: /usr/lib/systemd/systemd-sysv-install enable nginx
 Synchronizing state of php8.3-fpm.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
