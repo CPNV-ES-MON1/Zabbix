@@ -1,4 +1,5 @@
 ```mermaid
+
 flowchart LR
 
 subgraph itemCpu["CPU idle time"]
@@ -19,7 +20,7 @@ end
 
 subgraph triggerOperation["Operations"]
         triggerOperationUser["Send to user: matrix"]
-        triggerOperationMedia["Send to type: matrix-notifications"]
+        triggerOperationMedia["Send to media type: matrix-notifications"]
 end
 
 subgraph trigger["Trigger"]
@@ -31,13 +32,13 @@ end
 subgraph user["User"]
         userName["Name: matrix"]
         userType["Type: matrix-notifications"]
-        userSend@{ label: "Send to: ID of 'matrix-notifications'" }
+        userSend@{ label: "Send to: RoomID of 'zabbix-notifications'" }
 end
 
 subgraph webhook["Webhook"]
         webhookName["Name: matrix-notifications"]
-        webhookRoom@{ label: "RoomID: ID of 'matrix-notifications'" }
-        webhookToken["Token: Token2"]
+        webhookRoom@{ label: "RoomID: ID of 'zabbix-notifications'" }
+        webhookToken["Token: Token2 (account of the bot)"]
 end
 
 subgraph botInvites["Invited to room"]
@@ -45,8 +46,8 @@ subgraph botInvites["Invited to room"]
 end
 
 subgraph bot["Bot matrix"]
-        botName["Name: Zabbix-MON1"]
-        botToken["Token: Token2"]
+        botName["Name: zabbix-mon1"]
+        botToken["Token: Token2 (account of the bot)"]
         botInvites
 end
 
