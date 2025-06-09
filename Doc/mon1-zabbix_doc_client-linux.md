@@ -135,18 +135,18 @@ chose template= "linux by zabbix agent"
 Host group = "Virtual machine"
 add interface with ip and port for the agent (10050 by default)
 ```
-**onglet inventory**
+**inventory page**
 ```
 here juste chose the option "automiatic" to enter the host to the inventory
 ```
-## 5.2. configuration de l'item
+## 5.2. item configuration
 ```
 undercollection>hosts>items of the host
 we chose the CPU utilisazion item and change the following parameter
 
 Update interval=5s
 ```
-## 5.3. ajout de l'host sur ele dashboard avec l'item du CPU
+## 5.3. adding the host to the main dashboard
 ```
 under Dashboad>parameter
 add the host to the dashboard
