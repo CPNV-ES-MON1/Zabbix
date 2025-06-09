@@ -1,52 +1,63 @@
-# This diagram shows how thes matrix's notifications works
 
-```mermaid
 flowchart LR
- subgraph itemCpu["CPU idle time"]
+
+subgraph itemCpu["CPU idle time"]
         itemCpuCheck["Check the CPU every 5 sec"]
-  end
- subgraph item["Item"]
+end
+
+subgraph item["Item"]
         itemCpu
-  end
+end
+
+subgraph triggerActions["Actions"]
+        triggerAction["Action name: CPU alert matrix"]
+end
 
 subgraph triggerConditions["Conditions"]
         triggerCondition["Linux high CPU utilisation (CPU higher than 90% for 30 sec)"]
- end
+end
 
 subgraph triggerOperation["Operations"]
         triggerOperationUser["Send to user: matrix"]
         triggerOperationMedia["Send to type: matrix-notifications"]
-  end
- subgraph trigger["Trigger"]
-        triggerAction["Action name: CPU alert matrix"]
+end
+
+subgraph trigger["Trigger"]
+        triggerActions
         triggerConditions
         triggerOperation
-  end
- subgraph user["User"]
+end
+
+subgraph user["User"]
         userName["Name: matrix"]
         userType["Type: matrix-notifications"]
         userSend@{ label: "Send to: ID of 'matrix-notifications'" }
-  end
- subgraph webhook["Webhook"]
+end
+
+subgraph webhook["Webhook"]
         webhookName["Name: matrix-notifications"]
         webhookRoom@{ label: "RoomID: ID of 'matrix-notifications'" }
         webhookToken["Token: Token2"]
-  end
- subgraph botInvites["Invited to room"]
+end
+
+subgraph botInvites["Invited to room"]
         botInvitesRoom["zabbix-notifications"]
-  end
- subgraph bot["Bot matrix"]
+end
+
+subgraph bot["Bot matrix"]
         botName["Name: Zabbix-MON1"]
         botToken["Token: Token2"]
         botInvites
-  end
- subgraph matrixUserRooms["User's Rooms"]
+end
+
+subgraph matrixUserRooms["User's Rooms"]
         matrixUserRoomsZabbix["zabbix-notifications"]
-  end
- subgraph matrixUser["Matrix user"]
+end
+
+subgraph matrixUser["Matrix user"]
         name["Name: girigr"]
         matrixUserRooms
-  end
+end
     zabbixServer["Zabbix server"] --> itemCpu
     itemCpu --> triggerCondition
     triggerOperationUser --> user
@@ -55,5 +66,3 @@ subgraph triggerOperation["Operations"]
     botInvites --> matrixUserRoomsZabbix
     userSend@{ shape: rect}
     webhookRoom@{ shape: rect}
-    
-```
