@@ -81,6 +81,12 @@ Users/Users/Create user/
 - Alerts/Media types/locate the relevant webhook <matrix>/click on Test/click on Test
 - Check on the element software with 2nd Matrix account connected
 
+Output
+```
+✅ {ALERT.SUBJECT}
+{ALERT.MESSAGE}
+```
+
 # Zabbix trigger configuration
 Alerts/Actions/Trigger actions/Create action
 /Action
@@ -110,3 +116,27 @@ Data collection/Templates/Linux by Zabbix agent
 - Linux: High CPU utilization
   - Event name: Linux: High CPU utilization (over {$CPU.UTIL.CRIT}% for 30s)
   - min(/Linux by Zabbix agent/system.cpu.util,30s)>{$CPU.UTIL.CRIT}
+
+## Test to stress CPU
+### On server
+1st terminal
+```
+sudo apt install -y stress
+stress --cpu 2 --timeout 300s
+```
+2nd terminal
+```
+sudo apt install -y btop
+btop
+```
+
+### On matrix room zabbix-notifications
+Output
+```
+Problem: Linux: High CPU utilization (over 90% for 30s)
+Problem started at 12:53:54 on 2025.06.09
+Problem name: Linux: High CPU utilization (over 90% for 30s)
+Host: Zabbix server
+Severity: Warning
+Operational data: Current utilization: 99.98 %
+```
