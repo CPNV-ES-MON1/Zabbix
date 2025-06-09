@@ -117,6 +117,16 @@ Data collection/Templates/Linux by Zabbix agent
   - Event name: Linux: High CPU utilization (over {$CPU.UTIL.CRIT}% for 30s)
   - min(/Linux by Zabbix agent/system.cpu.util,30s)>{$CPU.UTIL.CRIT}
 
+## Authorize scripts in Zabbix
+On the server
+```
+sudo nano /etc/zabbix/zabbix_server.conf
+```
+ctrl+w -> enableglo
+```
+EnableGlobalScripts=1
+```
+
 ## Test to stress CPU
 ### On server
 1st terminal
