@@ -6,6 +6,7 @@ add the following line the the config
 sudo systemctl restart zabbix-agent
 # in zabbix webui
 under Data collection>hosts>[host item]>"create item"
+|||
 |---------------------------------------------------||
 |Field                  |	Value                     |
 |Name	                  | MySQL Service Status      |
