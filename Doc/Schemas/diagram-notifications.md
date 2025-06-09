@@ -19,6 +19,7 @@ subgraph triggerOperation["Operations"]
   end
  subgraph trigger["Trigger"]
         triggerAction["Action name: CPU alert matrix"]
+        triggerConditions
         triggerOperation
   end
  subgraph user["User"]
