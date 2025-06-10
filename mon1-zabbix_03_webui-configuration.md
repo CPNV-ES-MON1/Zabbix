@@ -4,8 +4,6 @@ ICT - GGR - RDI
 # Webui configuration and MFA setup
 
 ## Table of content
-- [Webui configuration and MFA setup](#webui-configuration-and-mfa-setup)
-  - [Table of content](#table-of-content)
 - [1. Open Zabbix UI web page](#1-open-zabbix-ui-web-page)
   - [1.1. Check of pre-requisites](#11-check-of-pre-requisites)
   - [1.2. Configure DB connection](#12-configure-db-connection)
@@ -13,8 +11,10 @@ ICT - GGR - RDI
 - [2. Web interface](#2-web-interface)
   - [2.1. Create user](#21-create-user)
   - [2.2. Enable MFA](#22-enable-mfa)
+  - [2.3. Create group](#23-create-group)
 
 
+<br>
 <br>
 <br>
 
@@ -107,7 +107,7 @@ Hash function SHA-512
 Code length: 6
 ```
 
-## 2.3 Create group
+## 2.3. Create group
 ```
 Users/Users groups/create
 
