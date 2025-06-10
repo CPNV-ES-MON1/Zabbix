@@ -1,9 +1,6 @@
 ## installation in cli linux
 ```
-wget https://dev.mysql.com/get/mysql-apt-config_0.8.34-1_all.deb
-sudo dpkg -i mysql-apt-config_0.8.34-1_all.deb
-sudo apt update
-sudo apt-get install mysql-server
+sudo apt-get install mariadb-server
 ```
 
 # in /etc/zabbix/zabbix_agent2.conf
