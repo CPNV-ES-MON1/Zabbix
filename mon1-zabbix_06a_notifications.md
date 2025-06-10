@@ -1,11 +1,40 @@
-# Sources
-## Matrix notification diagram
+Mon 1 - Zabbix documentation <br>
+ICT - GGR - RDI
+
+# Notifications
+
+## Table of content
+
+- [1. Sources](#1-sources)
+  - [1.1. Matrix notification diagram](#11-matrix-notification-diagram)
+- [2. Matrix configuration](#2-matrix-configuration)
+  - [2.1. Create a 1st Matrix account on app.element.io (bot)](#21-create-a-1st-matrix-account-on-appelementio-bot)
+    - [2.1.1. Retrieve the bot's access token](#211-retrieve-the-bots-access-token)
+  - [2.2. Create a 2nd Matrix account on app.element.io (user account)](#22-create-a-2nd-matrix-account-on-appelementio-user-account)
+    - [2.2.1. Set up an encrypted room on this account](#221-set-up-an-encrypted-room-on-this-account)
+      - [2.2.1.1. Invite the bot in the room](#2211-invite-the-bot-in-the-room)
+- [3. Zabbix webhook configuration](#3-zabbix-webhook-configuration)
+  - [3.1. Create from scratch webhook](#31-create-from-scratch-webhook)
+  - [3.2. Create/configure the matrix media type for a user that represent the webhook](#32-createconfigure-the-matrix-media-type-for-a-user-that-represent-the-webhook)
+    - [3.2.1. Create a zabbix user named "matrix"](#321-create-a-zabbix-user-named-matrix)
+    - [3.2.2. Test webhook](#322-test-webhook)
+- [4. Zabbix trigger configuration](#4-zabbix-trigger-configuration)
+  - [4.1. Templates configuration](#41-templates-configuration)
+  - [4.2. Authorize scripts in Zabbix](#42-authorize-scripts-in-zabbix)
+  - [4.3. Test to stress CPU](#43-test-to-stress-cpu)
+    - [4.3.1. On the client (windows)](#431-on-the-client-windows)
+    - [4.3.2. On matrix room zabbix-notifications](#432-on-matrix-room-zabbix-notifications)
+
+
+
+# 1. Sources
+## 1.1. Matrix notification diagram
 https://patrick.cloke.us/posts/2023/05/08/matrix-push-rules-notifications/
 https://patrick.cloke.us/images/matrix-push-rules-and-notifications/mobile-push-flow.png
 
-# Matrix configuration
+# 2. Matrix configuration
 
-## Create a 1st Matrix account on app.element.io (bot)
+## 2.1. Create a 1st Matrix account on app.element.io (bot)
 - Username : zabbix-mon1
 - Email : ianalain.clot@eduvaud.ch
 - Password : XYXY
@@ -13,32 +42,32 @@ https://patrick.cloke.us/images/matrix-push-rules-and-notifications/mobile-push-
 - Access Token : YXYX
 - Recovery Key : XXYY
 
-### Retrieve the bot's access token
+### 2.1.1. Retrieve the bot's access token
 ! This token change every time you logout/login, to be more permanent, download and install the app from https://element.io/download
 ```
 Icon from the account/All settings/Help & About/Advanced/Access Token/copy this access token
 ```
 
-## Create a 2nd Matrix account on app.element.io (user account)
+## 2.2. Create a 2nd Matrix account on app.element.io (user account)
 - Username : girigr
 - Email : pd34glp@eduvaud.ch
 - Password : YZYZ
 - Access Token : ZYZY
 - Recovery Key : YYZZ
 
-### Set up an encrypted room on this account
+### 2.2.1. Set up an encrypted room on this account
 - Name : zabbix-notifications
 - Internal room ID : ABAB
 
-#### Invite the bot in the room
+#### 2.2.1.1. Invite the bot in the room
 ```
 click on .../Invite/Enter the bot username (zabbix-mon1)
 ```
 
-# Zabbix webhook configuration
+# 3. Zabbix webhook configuration
 https://github.com/jooola/zabbix-matrix-webhook?tab=readme-ov-file
 
-## Create from scratch webhook
+## 3.1. Create from scratch webhook
 - Alerts/Media types/Create media type/
 /Media type
 - Name : matrix-notifications
@@ -66,8 +95,8 @@ https://github.com/jooola/zabbix-matrix-webhook?tab=readme-ov-file
   - subject: Problem: surcharge de CPU
   - message: CPU en surcharge sur {HOST.NAME} l'infrastructure risque des ralentissements.
 
-## Create/configure the matrix media type for a user that represent the webhook
-### Create a zabbix user named "matrix"
+## 3.2. Create/configure the matrix media type for a user that represent the webhook
+### 3.2.1. Create a zabbix user named "matrix"
 Users/Users/Create user/
 
 /User
@@ -83,7 +112,7 @@ Users/Users/Create user/
 /Permissions
 - Admin role (because it needs it)
 
-### Test webhook
+### 3.2.2. Test webhook
 - Alerts/Media types/locate the relevant webhook <matrix>/click on Test/click on Test
 - Check on the element software with 2nd Matrix account connected
 
@@ -93,7 +122,7 @@ Output
 {ALERT.MESSAGE}
 ```
 
-# Zabbix trigger configuration
+# 4. Zabbix trigger configuration
 Alerts/Actions/Trigger actions/Create action
 
 /Action
@@ -114,7 +143,7 @@ Alerts/Actions/Trigger actions/Create action
   - Pause operations for symptom problems
   - Pause operations for suppressed problems
 
-## Templates configuration
+## 4.1. Templates configuration
 Data collection/Templates/Windows by Zabbix agent
 
 /Items
@@ -126,7 +155,7 @@ Data collection/Templates/Windows by Zabbix agent
   - Event name: Windows: High CPU utilization (over {$CPU.UTIL.CRIT}% for 30s)
   - min(/Windows by Zabbix agent/system.cpu.util,30s)>{$CPU.UTIL.CRIT}
 
-## Authorize scripts in Zabbix
+## 4.2. Authorize scripts in Zabbix
 On the server
 ```
 sudo nano /etc/zabbix/zabbix_server.conf
@@ -136,13 +165,13 @@ ctrl+w -> enableglo
 EnableGlobalScripts=1
 ```
 
-## Test to stress CPU
-### On the client (windows)
+## 4.3. Test to stress CPU
+### 4.3.1. On the client (windows)
 Make a CPU stress with this software:<br>
 https://learn.microsoft.com/en-us/sysinternals/downloads/cpustres 
 
 
-### On matrix room zabbix-notifications
+### 4.3.2. On matrix room zabbix-notifications
 Output
 ```
 Problem: Windows: High CPU utilization (over 90% for 30s)
