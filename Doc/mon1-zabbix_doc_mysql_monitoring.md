@@ -28,7 +28,7 @@ sudo systemctl restart zabbix-agent2
 
 # in zabbix webui
 Data collection>hosts>
-- Click on "Items" of the linux host <zabbix-lin-cli>
+- Click on "Items" of the linux host "zabbix-lin-cli"
 - Create item
 
 |Field|Value|
@@ -37,7 +37,7 @@ Data collection>hosts>
 |Type                 	| Zabbix agent              |
 |Key	                  | mysql.service.status      |
 |Type of information	  | Log                       |
-|Host interface         | <host-linux-ip>:10050     |
+|Host interface         | "host-linux-ip":10050     |
 |Update interval	      | 30s                       |
 |log time format        |	date +"%d.%m.%Y %I:%M %p" |
 
