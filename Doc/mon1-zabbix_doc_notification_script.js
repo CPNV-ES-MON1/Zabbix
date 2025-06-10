@@ -14,7 +14,7 @@ const required_input = [
   "enable_icons",
 ]
 
-const update_color = "#000000"
+const update_color = "#ff0800"
 const recovery_color = "#098e68"
 const severity_colors = [
   "#5a5a5a", // Not classified
