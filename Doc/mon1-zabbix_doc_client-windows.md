@@ -156,6 +156,7 @@ Renamme cpu_log.txt in cpu_log.bat
 Add the line in "C:\Program Files\Zabbix Agent\zabbix_agentd.conf"
 ```
 UserParameter=cpu.util.custom,C:\Script\cpu_log.bat
+Timeout=10
 ```
 
 ## 4.2. Host item configuration
