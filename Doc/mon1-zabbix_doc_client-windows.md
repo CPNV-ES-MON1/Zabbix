@@ -1,11 +1,33 @@
-# Installation of the zabbix agent
+Mon 1 - Zabbix documentation <br>
+ICT - GGR - RDI
+
+# Windows client configuration
+
+## Table of content
+- [Windows client configuration](#windows-client-configuration)
+  - [Table of content](#table-of-content)
+- [1. Installation of the zabbix agent](#1-installation-of-the-zabbix-agent)
+- [2. configuration on the client](#2-configuration-on-the-client)
+- [3. configuration on zabbix server](#3-configuration-on-zabbix-server)
+  - [3.1. adding the host](#31-adding-the-host)
+  - [3.2. item configuration](#32-item-configuration)
+  - [3.3. add the host to the dashboard with the item](#33-add-the-host-to-the-dashboard-with-the-item)
+- [4. script creation on the windows client](#4-script-creation-on-the-windows-client)
+  - [4.1. zabbix agent configuration](#41-zabbix-agent-configuration)
+  - [4.2. host item configuration](#42-host-item-configuration)
+
+
+<br>
+<br>
+
+# 1. Installation of the zabbix agent
 
 https://www.zabbix.com/download_agents?version=7.0+LTS&release=7.0.12&os=Windows&os_version=Any&hardware=amd64&encryption=OpenSSL&packaging=MSI&show_legacy=0
 - Windows / Any / amd64 / 7.0 LTS / OpenSSL / MSI
 - Click on Download Zabbix agent 2 v7.0.12
 - Then open the MSI that has been downloaded
 
-# configuration on the client
+# 2. configuration on the client
 
 **installation steps**
 ```
@@ -19,9 +41,9 @@ port : 10050 (by default)
 PSK : no
 add agent location PATH : yes
 ```
-# configuration on zabbix server
+# 3. configuration on zabbix server
 
-## adding the host
+## 3.1. adding the host
 ```
 monitoring>host>create host
 ```
@@ -44,7 +66,7 @@ use the automatic option
 ```
 you now can press "Add" to save the new host
 
-## item configuration
+## 3.2. item configuration
 ```
 Go to Data collection>hosts>
 
@@ -54,17 +76,18 @@ select "CPU utilization"
 - Update interval : 5s
 ```
 
-## add the host to the dashboard with the item
+## 3.3. add the host to the dashboard with the item
 ```
 Dashboards>Top hosts by CPU utilization>Setting icon
 - Hosts: Select>write Virtual machines>select <MON1-CLI-WIN>
 - Columns: Add
   - Name: CPU utilization
   - Item name: type "CPU utilisation" and select it
+- Apply
 ```
-You now can apply the new configuration
+CLICK ON Save changes
 
-# script creation on the windows client
+# 4. script creation on the windows client
 On the windows machine, go to C:\ and create a folder named "script"
 Create 3 file under "C:/script"
 ```
@@ -105,12 +128,12 @@ echo %CURRENT% > "%STATE_FILE%"
 :: Always output current value
 echo %CURRENT%
 ```
-## zabbix agent configuration
+## 4.1. zabbix agent configuration
 add the line in "C:\programes Files\Zabbix Agent\zabbix_agentd.conf"
 ```
 UserParameter=cpu.util.custom, C:\Script\cpu_log.bat
 ```
-## host item configuration
+## 4.2. host item configuration
 add an item under the windows host
 ```
 Type = Zabbix agent
