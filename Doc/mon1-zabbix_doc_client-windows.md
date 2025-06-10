@@ -20,6 +20,12 @@ ICT - GGR - RDI
 <br>
 <br>
 
+
+# Test cpu stress
+
+**Install software**
+https://downloads.jam-software.de/heavyload/HeavyLoad-x64-Setup.exe
+
 # 1. Installation of the zabbix agent
 
 Open Powershell in admin (ctrl+x / a)
@@ -165,8 +171,3 @@ Type of information = Numeric (unsigned)
 Units = %
 Update interval = 5s
 ```
-
-# Test cpu stress
-
-**Install software**
-https://learn.microsoft.com/en-us/sysinternals/downloads/cpustres
