@@ -89,7 +89,7 @@ Users/Users/Create user
 
 Useranme: gir
 Password: <password habituel du cpnv><password habituel du cpnv> (oui 2x sinon il détecte un mdp nul)
-Groups: TOTP group/Zabbix administrators
+Groups: Zabbix administrators
 Time zone: (UTC+02:00) Europe/Zurich
 Theme: Dark
 Refresh: 30s
@@ -106,3 +106,15 @@ Name: MFA-zabbix
 Hash function SHA-512
 Code length: 6
 ```
+
+## 2.3 Create group
+```
+Users/Users groups/create
+
+Group name: TOTP group
+Users: Admin / gir
+Frontend access: System default
+Multi-factor authentication: MFA-zabbix
+Enabled: Enabled
+```
+The next time you'll login, you'll be asked to setup your MFA.
