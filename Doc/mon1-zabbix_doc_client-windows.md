@@ -24,7 +24,7 @@ ICT - GGR - RDI
 
 Open Powershell in admin (ctrl+x / a)
 
-curl -o "$env:USERPROFILE\Downloads\zabbix-agent.msi" "https://cdn.zabbix.com/zabbix/binaries/stable/7.0/7.0.12/zabbix_agent2-7.0.12-windows-amd64-openssl.msi"
+curl -o "$env:USERPROFILE\Downloads\zabbix-agent.msi" "https://cdn.zabbix.com/zabbix/binaries/stable/7.0/7.0.12/zabbix_agent-7.0.12-windows-amd64-openssl.msi"
 
 # 2. configuration on the client
 
@@ -131,7 +131,7 @@ Renamme cpu_log.txt in cpu_log.bat
 
 ## 4.1. Zabbix agent configuration
 
-Add the line in "C:\Program Files\Zabbix Agent 2\zabbix_agentd.conf"
+Add the line in "C:\Program Files\Zabbix Agent\zabbix_agentd.conf"
 ```
 UserParameter=cpu.util.custom, C:\Script\cpu_log.bat
 ```
@@ -141,9 +141,6 @@ UserParameter=cpu.util.custom, C:\Script\cpu_log.bat
 - Data collection>Hosts>
 - Click on "Items" of the windows host <MON1-CLI-WIN>
 - Create item
-- 
-
-Add an item under the windows host
 ```
 Name = CPU trigger
 Type = Zabbix agent
