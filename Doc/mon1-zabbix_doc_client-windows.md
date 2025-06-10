@@ -20,12 +20,6 @@ ICT - GGR - RDI
 <br>
 <br>
 
-
-# Test cpu stress
-
-**Install software**
-https://downloads.jam-software.de/heavyload/HeavyLoad-x64-Setup.exe
-
 # 1. Installation of the zabbix agent
 
 Open Powershell in admin (ctrl+x / a)
@@ -171,3 +165,22 @@ Key = cpu.util.custom
 Type of information = Numeric (unsigned)
 Update interval = 5s
 ```
+
+# Test CPU alert
+
+**Install software**
+https://downloads.jam-software.de/heavyload/HeavyLoad-x64-Setup.exe
+
+## Upper than 90%
+- Run .\Downloads\HeavyLoad-x64-Setup.exe
+- Tab Test Options: uncheck Stress GPU
+- Check CPU Usage on interface
+- Click play button to stress cpu
+- Open Powershell in admin
+- cd ../..
+- cd "Program Files\Zabbix Agent"
+- cat .\zabbix_agentd.log
+
+## Lesser thant 90%
+- Click stop button to unstress cpu
+- cat .\zabbix_agentd.log
