@@ -20,39 +20,40 @@ ICT - GGR - RDI
 <br>
 <br>
 
-# 1. Pakages installation
-Strat by installing the pakages you'll need and update the list of installed pakages
+# 1. Packages installation
+Start by installing the packages you'll need and update the list of installed pakages
 
 **input**
 ```
-wget https://repo.zabbix.com/zabbix/7.2/release/debian/pool/main/z/zabbix-release/zabbix-release_latest_7.2+debian11_all.deb
+wget https://repo.zabbix.com/zabbix/7.0/debian/pool/main/z/zabbix-release/zabbix-release_latest_7.0+debian12_all.deb
 ```
 **output**
 ```
---2025-06-04 10:46:01--  https://repo.zabbix.com/zabbix/7.2/release/debian/pool/main/z/zabbix-release/zabbix-release_latest_7.2+debian11_all.deb
+--2025-06-10 10:37:30--  https://repo.zabbix.com/zabbix/7.0/debian/pool/main/z/zabbix-release/zabbix-release_latest_7.0+debian12_all.deb
 Resolving repo.zabbix.com (repo.zabbix.com)... 178.128.6.101, 2604:a880:2:d0::2062:d001
 Connecting to repo.zabbix.com (repo.zabbix.com)|178.128.6.101|:443... connected.
 HTTP request sent, awaiting response... 200 OK
-Length: 7288 (7.1K) [application/octet-stream]
-Saving to: ‘zabbix-release_latest_7.2+debian11_all.deb.2’
+Length: 8096 (7.9K) [application/octet-stream]
+Saving to: ‘zabbix-release_latest_7.0+debian12_all.deb’
 
-zabbix-release_latest_7.2+debian11_all.deb.2                100%[========================================================================================================================================>]   7.12K  --.-KB/s    in 0s
+zabbix-release_latest_7.0+debian12_all.deb           100%[=====================================================================================================================>]   7.91K  --.-KB/s    in 0s      
 
-2025-06-04 10:46:02 (221 MB/s) - ‘zabbix-release_latest_7.2+debian11_all.deb.2’ saved [7288/7288]
+2025-06-10 10:37:30 (56.4 MB/s) - ‘zabbix-release_latest_7.0+debian12_all.deb’ saved [8096/8096]
 ```
 <br>
 <br>
 
 **input**
 ```
- sudo dpkg -i zabbix-release_latest_7.2+debian11_all.deb
+sudo dpkg -i zabbix-release_latest_7.0+debian12_all.deb
 ```
 **output**
 ```
-(Reading database ... 141484 files and directories currently installed.)
-Preparing to unpack zabbix-release_latest_7.2+debian11_all.deb ...
-Unpacking zabbix-release (1:7.2-1+debian11) over (1:7.2-1+debian11) ...
-Setting up zabbix-release (1:7.2-1+debian11) ...
+Selecting previously unselected package zabbix-release.
+(Reading database ... 156489 files and directories currently installed.)
+Preparing to unpack zabbix-release_latest_7.0+debian12_all.deb ...
+Unpacking zabbix-release (1:7.0-2+debian12) ...
+Setting up zabbix-release (1:7.0-2+debian12) ...
 ```
 <br>
 <br>
@@ -63,6 +64,17 @@ sudo apt update
 ```
 **output**
 ```
+Hit:1 http://mirror.init7.net/debian bookworm InRelease
+Hit:2 http://security.debian.org/debian-security bookworm-security InRelease
+Hit:3 http://mirror.init7.net/debian bookworm-updates InRelease        
+Get:4 https://repo.zabbix.com/zabbix-tools/debian-ubuntu bookworm InRelease [2,476 B]
+Get:5 https://repo.zabbix.com/zabbix/7.0/debian bookworm InRelease [3,945 B]
+Get:6 https://repo.zabbix.com/zabbix-tools/debian-ubuntu bookworm/main Sources [1,166 B]
+Get:7 https://repo.zabbix.com/zabbix-tools/debian-ubuntu bookworm/main all Packages [766 B]
+Get:8 https://repo.zabbix.com/zabbix/7.0/debian bookworm/main Sources [22.5 kB]
+Get:9 https://repo.zabbix.com/zabbix/7.0/debian bookworm/main amd64 Packages [43.9 kB]
+Get:10 https://repo.zabbix.com/zabbix/7.0/debian bookworm/main all Packages [8,803 B]
+Fetched 83.6 kB in 2s (50.1 kB/s)
 Reading package lists... Done
 Building dependency tree... Done
 Reading state information... Done
@@ -74,15 +86,30 @@ All packages are up to date.
 # 2. Agent installation
 **input**
 ```
-sudo apt install zabbix-agent
+sudo apt install zabbix-agent2
 ```
 **output**
 ```
 Reading package lists... Done
 Building dependency tree... Done
 Reading state information... Done
-zabbix-agent is already the newest version (1:7.2.7-1+debian11).
-0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+The following package was automatically installed and is no longer required:
+  linux-image-6.1.0-32-amd64
+Use 'sudo apt autoremove' to remove it.
+The following NEW packages will be installed:
+  zabbix-agent2
+0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+Need to get 6,015 kB of archives.
+After this operation, 19.2 MB of additional disk space will be used.
+Get:1 https://repo.zabbix.com/zabbix/7.0/debian bookworm/main amd64 zabbix-agent2 amd64 1:7.0.13-1+debian12 [6,015 kB]
+Fetched 6,015 kB in 3s (1,940 kB/s)              
+Selecting previously unselected package zabbix-agent2.
+(Reading database ... 156498 files and directories currently installed.)
+Preparing to unpack .../zabbix-agent2_1%3a7.0.13-1+debian12_amd64.deb ...
+Unpacking zabbix-agent2 (1:7.0.13-1+debian12) ...
+Setting up zabbix-agent2 (1:7.0.13-1+debian12) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/zabbix-agent2.service → /lib/systemd/system/zabbix-agent2.service.
+Processing triggers for man-db (2.11.2-2) ...
 ```
 <br>
 <br>
@@ -90,7 +117,7 @@ zabbix-agent is already the newest version (1:7.2.7-1+debian11).
 # 3. Restart and enable services
 **input**
 ```
-sudo systemctl restart zabbix-agent
+sudo systemctl restart zabbix-agent2
 ```
 **ouput** - no output
 
@@ -98,49 +125,61 @@ sudo systemctl restart zabbix-agent
 
 **input**
 ```
-sudo systemctl enable zabbix-agent
+sudo systemctl enable zabbix-agent2
 ```
 **ouput**
 ```
-Synchronizing state of zabbix-agent.service with SysV service script with /lib/systemd/systemd-sysv-install.
-Executing: /lib/systemd/systemd-sysv-install enable zabbix-agent
+Synchronizing state of zabbix-agent2.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable zabbix-agent2
 ```
 <br>
 <br>
 
-# 4. Agent configuration
-Check in `/etc/zabbix/zabbix_agentd.conf` that the following settings are well setup:
+# 4. Agent configuration in `/etc/zabbix/zabbix_agentd.conf`
 
+Change value: Server/Hostname
 ```
-Server=192.168.153.140
+Server=<ip of the zabbix server>
+Hostname=<zabbix-lin-cli>
+```
+
+Untag: ListenPort as follow
+```
 ListenPort=10050
-Hostname=Zabbix-client
 ```
+
 <br>
 <br>
 
 # 5. Webui configuration
 
 ## 5.1. Add host
-In `Monitoring > Hosts` select `create host`
 
-**onglet host**
-```
-here we are completing the folling paremeter:
+In Monitoring>Hosts>select Create host
 
-Hostname zabbix = [name]
-visible name = [name]
-chose template= "linux by zabbix agent"
-!!WARNING!! do not use the "linux by zabbix agent active"
-Host group = "Virtual machine"
-add interface with ip and port for the agent (10050 by default)
+**Tab Host**
 ```
-**inventory page**
+- Host name: <zabbix-lin-cli>
+- Visible name: <zabbix-lin-cli>
+- click on Templates
+- search for linux by zabbix agent (!!WARNING!! do not use the "linux by zabbix agent active")
+- Host groups: Virtual machines
+- Interfaces: Add
+  - ip: <linux host ip>
+  - port: 10050 (by default)
 ```
-here juste chose the option "automiatic" to enter the host to the inventory
+**Tab inventory**
+```
+use the automatic option
 ```
 ## 5.2. item configuration
 ```
+Data collection>hosts>
+- Click on "Items" of the linux host <zabbix-lin-cli> (be sure not to have any filters and click Apply)
+
+select "CPU utilization"
+- Update interval : 5s
+
 undercollection>hosts>items of the host
 we chose the CPU utilisazion item and change the following parameter
 
