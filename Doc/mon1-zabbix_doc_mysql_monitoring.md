@@ -41,10 +41,53 @@ Data collection>hosts>
 Add the item.
 
 # Test if toggle from on to off and off to on
+## Check on file
+**Input**
 ```
 sudo systemctl status mysql.service
 sudo systemctl stop mysql.service
-sudo systemctl status mysql.service
-sudo systemctl restart mysql.service
+sudo cat /var/log/zabbix/mysql_status.log
+```
+**Output**
+```
+2025-06-10 22:10:33 MySQL service changed from  to active
+2025-06-10 22:12:33 MySQL service changed from active to inactive
+```
+**Input**
+```
+sudo systemctl start mysql.service
 sudo systemctl status mysql.service
 ```
+**Output**
+```
+2025-06-10 22:10:33 MySQL service changed from  to active
+2025-06-10 22:12:33 MySQL service changed from active to inactive
+2025-06-10 22:13:33 MySQL service changed from inactive to active
+```
+
+## Check in zabbix server
+
+**Input**
+```
+sudo systemctl status mysql.service
+sudo systemctl stop mysql.service
+```
+**Output**
+Monitoring>Hosts>"zabbix-lin-cli">Latest data>
+- Name: mysq>Apply
+- History
+- In Value, a line was add to write inactive
+```
+2025-06-10 10:12:33 PM		inactive
+```
+
+**Input**
+```
+sudo systemctl start mysql.service
+sudo systemctl status mysql.service
+```
+**Output**
+Monitoring>Hosts>"zabbix-lin-cli">Latest data>
+- Name: mysq>Apply
+- History
+- In Value, a line was add to write active
