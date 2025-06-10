@@ -93,8 +93,8 @@ Dashboards>Top hosts by CPU utilization>Setting icon
 CLICK ON Save changes
 
 # 4. Script that mention the overload and the transmission of information to the zabbix server
-On the windows machine, go to C:\ and create a folder named "script"
-Create 2 files under "C:/script"
+On the windows machine, go to C:\ and create a folder named "Script"
+Create 2 files under "C:/Script"
 ```
 cpu_last_state.txt
 cpu_log.txt
@@ -155,7 +155,7 @@ Renamme cpu_log.txt in cpu_log.bat
 
 Add the line in "C:\Program Files\Zabbix Agent\zabbix_agentd.conf"
 ```
-UserParameter=cpu.util.custom, C:\Script\cpu_log.bat
+UserParameter=cpu.util.custom,C:\Script\cpu_log.bat
 ```
 
 ## 4.2. Host item configuration
@@ -168,6 +168,5 @@ Name = CPU trigger
 Type = Zabbix agent
 Key = cpu.util.custom
 Type of information = Numeric (unsigned)
-Units = %
 Update interval = 5s
 ```
