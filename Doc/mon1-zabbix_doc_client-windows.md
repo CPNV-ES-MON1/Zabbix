@@ -3,17 +3,18 @@
 https://www.zabbix.com/download_agents?version=7.0+LTS&release=7.0.12&os=Windows&os_version=Any&hardware=amd64&encryption=OpenSSL&packaging=MSI&show_legacy=0
 - Windows / Any / amd64 / 7.0 LTS / OpenSSL / MSI
 - Click on Download Zabbix agent 2 v7.0.12
+- Then open the MSI that has been downloaded
 
 # configuration on the client
 
-**installation folder**
+**installation steps**
 ```
 after accepting the license we let the parameter of the next page by default.
 ```
 **zabbix server configuration**
 ```
 hostname : <MON1-CLI-WIN>
-ip : <zabbix server ip<
+ip : <zabbix server ip>
 port : 10050 (by default)
 PSK : no
 add agent location PATH : yes
@@ -28,10 +29,10 @@ monitoring>host>create host
 ```
 - hostname : <MON1-CLI-WIN>
 - visible name : <MON1-CLI-WIN>
-- click on template
+- click on Templates
 - search for windows by zabbix agent
-- host groupe : virtual machine
-- interface:
+- host group : virtual machines
+- interfaces:
   - select: agent
   - ip : <windows host ip>
   - port : 10050 (by default)
@@ -41,10 +42,12 @@ monitoring>host>create host
 ```
 use the automatic option
 ```
+you now can press "Add" to save the new host
 
 ## item configuration
 ```
-Data collection>hosts>
+Go to Data collection>hosts>
+
 - Click on "Items" of the windows host <MON1-CLI-WIN> (be sure not to have any filters and click Apply)
 
 select "CPU utilization"
@@ -57,10 +60,13 @@ Dashboards>Top hosts by CPU utilization>Setting icon
 - Hosts: Select>write Virtual machines>select <MON1-CLI-WIN>
 - Columns: Add
   - Name: CPU utilization
-  - Item name: Select>select CPU utilization
+  - Item name: type "CPU utilisation" and select it
 ```
-# script creaation on the windows client
-create 3 file under "C:/script"
+You now can apply the new configuration
+
+# script creation on the windows client
+On the windows machine, go to C:\ and create a folder named "script"
+Create 3 file under "C:/script"
 ```
 cpu_last_state.txt
 cpu_last_state.txt
