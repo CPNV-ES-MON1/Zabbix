@@ -177,17 +177,16 @@ use the automatic option
 Data collection>hosts>
 - Click on "Items" of the linux host <zabbix-lin-cli> (be sure not to have any filters and click Apply)
 
-select "CPU utilization"
+select "CPU idle time"
 - Update interval : 5s
-
-undercollection>hosts>items of the host
-we chose the CPU utilisazion item and change the following parameter
-
-Update interval=5s
 ```
 ## 5.3. adding the host to the main dashboard
 ```
-under Dashboad>parameter
-add the host to the dashboard
-add the collumn CPU utilization
+Dashboards>Top hosts by CPU utilization>Setting icon
+- Hosts: Select>write Virtual machines>select <MON1-CLI-WIN>
+- Columns: Add
+  - Name: CPU utilization
+  - Item name: type "CPU utilisation" and select it
+- Apply
 ```
+CLICK ON Save changes !!!!!
