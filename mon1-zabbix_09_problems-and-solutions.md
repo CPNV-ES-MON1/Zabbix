@@ -1,11 +1,9 @@
 Mon 1 - Zabbix documentation <br>
 ICT - GGR - RDI
 
-# Client linux configuration
+# Problems and solutions
 
 ## Table of content
-- [Client linux configuration](#client-linux-configuration)
-  - [Table of content](#table-of-content)
 - [1. Commun debugg session](#1-commun-debugg-session)
   - [1.1. General ifnformations:](#11-general-ifnformations)
   - [1.2. Debugg proposition:](#12-debugg-proposition)
