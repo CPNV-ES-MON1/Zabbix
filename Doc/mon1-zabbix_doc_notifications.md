@@ -103,8 +103,8 @@ Alerts/Actions/Trigger actions/Create action
   - Operator: equals
   - Trigger source: Host
   - Triggers: Select
-    - Host: Zabbix server
-      - Linux: High CPU utilization
+    - Host: MON1-CLI-WIN
+      - Windows: High CPU utilization
 
 /Operations
 - Operations: Add
@@ -115,16 +115,16 @@ Alerts/Actions/Trigger actions/Create action
   - Pause operations for suppressed problems
 
 ## Templates configuration
-Data collection/Templates/Linux by Zabbix agent
+Data collection/Templates/Windows by Zabbix agent
 
 /Items
-- CPU idle time (heritage to CPU utilization)
+- CPU utilization
   - Update interval: 5s
 
 /Triggers
-- Linux: High CPU utilization
-  - Event name: Linux: High CPU utilization (over {$CPU.UTIL.CRIT}% for 30s)
-  - min(/Linux by Zabbix agent/system.cpu.util,30s)>{$CPU.UTIL.CRIT}
+- Windows: High CPU utilization
+  - Event name: Windows: High CPU utilization (over {$CPU.UTIL.CRIT}% for 30s)
+  - min(/Windows by Zabbix agent/system.cpu.util,30s)>{$CPU.UTIL.CRIT}
 
 ## Authorize scripts in Zabbix
 On the server
@@ -137,25 +137,18 @@ EnableGlobalScripts=1
 ```
 
 ## Test to stress CPU
-### On server
-1st terminal
-```
-sudo apt install -y stress
-stress --cpu 2 --timeout 300s
-```
-2nd terminal
-```
-sudo apt install -y btop
-btop
-```
+### On the client (windows)
+Make a CPU stress with this software:<br>
+https://learn.microsoft.com/en-us/sysinternals/downloads/cpustres 
+
 
 ### On matrix room zabbix-notifications
 Output
 ```
-Problem: Linux: High CPU utilization (over 90% for 30s)
+Problem: Windows: High CPU utilization (over 90% for 30s)
 Problem started at 12:53:54 on 2025.06.09
-Problem name: Linux: High CPU utilization (over 90% for 30s)
-Host: Zabbix server
+Problem name: Windows: High CPU utilization (over 90% for 30s)
+Host: MON1-CLI-WIN
 Severity: Warning
 Operational data: Current utilization: 99.98 %
 ```
