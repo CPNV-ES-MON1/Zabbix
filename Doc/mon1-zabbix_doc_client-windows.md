@@ -149,3 +149,8 @@ Type of information = Numeric (unsigned)
 Units = %
 Update interval = 5s
 ```
+
+# Test cpu stress
+
+**Install software**
+https://learn.microsoft.com/en-us/sysinternals/downloads/cpustres
