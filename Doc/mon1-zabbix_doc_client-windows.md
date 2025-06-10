@@ -103,35 +103,43 @@ set "LOG_FILE=C:\Program Files\Zabbix Agent\zabbix_agentd.log"
 set "THRESHOLD=90"
 set "CURRENT="
 
+:: Récupère la charge CPU actuelle
 for /f "tokens=2 delims==." %%A in ('wmic cpu get loadpercentage /value ^| findstr LoadPercentage') do (
     set /a CURRENT=%%A
 )
 
+:: Vérifie que la valeur a bien été récupérée
 if not defined CURRENT (
     echo 0
     exit /b
 )
 
+:: Si le fichier d'état n'existe pas, on l'initialise
 if not exist "%STATE_FILE%" (
     echo !CURRENT! > "%STATE_FILE%"
 )
 
+:: Lecture de l'ancienne valeur
 set /p PREV=<"%STATE_FILE%"
 
-:: Check if threshold was crossed
+:: Vérifie que PREV est bien un nombre
+for /f %%B in ("!PREV!") do set /a PREV=%%B
+
+:: Log si le seuil est franchi à la hausse
 if !CURRENT! GEQ %THRESHOLD% (
     if !PREV! LSS %THRESHOLD% (
-        echo %DATE% %TIME% CPU usage rose above %THRESHOLD%%: !CURRENT!%% >> "%LOG_FILE%"
+        echo !DATE! !TIME! CPU usage rose above %THRESHOLD%%: !CURRENT!%% >> "%LOG_FILE%"
     )
 ) else (
     if !PREV! GEQ %THRESHOLD% (
-        echo %DATE% %TIME% CPU usage fell below %THRESHOLD%%: !CURRENT!%% >> "%LOG_FILE%"
+        echo !DATE! !TIME! CPU usage fell below %THRESHOLD%%: !CURRENT!%% >> "%LOG_FILE%"
     )
 )
 
+:: Mise à jour de l'état courant
 echo !CURRENT! > "%STATE_FILE%"
 
-:: Always output current value
+:: Affiche la valeur actuelle pour Zabbix
 echo !CURRENT!
 ```
 
