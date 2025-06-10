@@ -1,11 +1,8 @@
 # Installation of the zabbix agent
 
-win+x / a
-```
-curl -O 'C:\Users\Administrateur\Downloads\zabbix-agent.msi' "https://cdn.zabbix.com/zabbix/binaries/stable/7.0/7.0.12/zabbix_agent2-7.0.12-windows-amd64-openssl.msi"
-
-.\zabbix-agent.msi
-```
+https://www.zabbix.com/download_agents?version=7.0+LTS&release=7.0.12&os=Windows&os_version=Any&hardware=amd64&encryption=OpenSSL&packaging=MSI&show_legacy=0
+- Windows / Any / amd64 / 7.0 LTS / OpenSSL / MSI
+- Click on Download Zabbix agent 2 v7.0.12
 
 # configuration on the client
 
@@ -37,7 +34,7 @@ monitoring>host>create host
 - interface:
   - select: agent
   - ip : <windows host ip>
-  - port : 10050
+  - port : 10050 (by default)
 ```
 
 **Tab inventory**
