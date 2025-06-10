@@ -79,14 +79,14 @@ https://github.com/jooola/zabbix-matrix-webhook?tab=readme-ov-file
 |alert_message|{ALERT.MESSAGE}|
 |alert_subject|{ALERT.SUBJECT}|
 |enable_colors|true|
-|enable_icons|true|
+|enable_icons|false|
 |event_is_problem|{EVENT.VALUE}|
 |event_is_update|{EVENT.UPDATE.STATUS}|
-|event_severity|{EVENT.NSEVERITY}|
+|event_severity|{EVENT.SEVERITY}|
 |matrix_room|BABA|
 |matrix_token|YXYX|
 |matrix_url|https://matrix-client.matrix.org|
-- Script : look at `mon1-zabbix_doc_notificatin_script` or https://github.com/jooola/zabbix-matrix-webhook/blob/main/latest/matrix.js
+- Script : look at `mon1-zabbix_06b_notificatin_script.js` or https://github.com/jooola/zabbix-matrix-webhook/blob/main/latest/matrix.js
 - Timeout : 30s
 
 /Message templates
