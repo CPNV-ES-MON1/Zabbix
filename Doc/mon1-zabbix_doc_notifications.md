@@ -63,6 +63,8 @@ https://github.com/jooola/zabbix-matrix-webhook?tab=readme-ov-file
 /Message templates
 - Message templates: Add
   - Message type: Problem
+  - subject: Problem: surcharge de CPU
+  - message: CPU en surcharge sur {HOST.NAME} l'infrastructure risque des ralentissements.
 
 ## Create/configure the matrix media type for a user that represent the webhook
 ### Create a zabbix user named "matrix"
