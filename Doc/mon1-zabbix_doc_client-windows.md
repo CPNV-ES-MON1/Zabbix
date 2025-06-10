@@ -96,35 +96,43 @@ cpu_log.txt
 Put the folling script in cpu_log.txt file
 ```
 @echo off
-setlocal
+setlocal enabledelayedexpansion
 
 set "STATE_FILE=C:\script\cpu_last_state.txt"
 set "LOG_FILE=C:\Program Files\Zabbix Agent\zabbix_agentd.log"
 set "THRESHOLD=90"
+set "CURRENT="
 
-for /f "tokens=2 delims==." %%A in ('wmic cpu get loadpercentage /value ^| findstr LoadPercentage') do set /a CURRENT=%%A
+for /f "tokens=2 delims==." %%A in ('wmic cpu get loadpercentage /value ^| findstr LoadPercentage') do (
+    set /a CURRENT=%%A
+)
+
+if not defined CURRENT (
+    echo 0
+    exit /b
+)
 
 if not exist "%STATE_FILE%" (
-    echo %CURRENT% > "%STATE_FILE%"
+    echo !CURRENT! > "%STATE_FILE%"
 )
 
 set /p PREV=<"%STATE_FILE%"
 
 :: Check if threshold was crossed
-if %CURRENT% GEQ %THRESHOLD% (
-    if %PREV% LSS %THRESHOLD% (
-        echo %DATE% %TIME% CPU usage rose above %THRESHOLD%%: %CURRENT%%% >> "%LOG_FILE%"
+if !CURRENT! GEQ %THRESHOLD% (
+    if !PREV! LSS %THRESHOLD% (
+        echo %DATE% %TIME% CPU usage rose above %THRESHOLD%%: !CURRENT!%% >> "%LOG_FILE%"
     )
 ) else (
-    if %PREV% GEQ %THRESHOLD% (
-        echo %DATE% %TIME% CPU usage fell below %THRESHOLD%%: %CURRENT%%% >> "%LOG_FILE%"
+    if !PREV! GEQ %THRESHOLD% (
+        echo %DATE% %TIME% CPU usage fell below %THRESHOLD%%: !CURRENT!%% >> "%LOG_FILE%"
     )
 )
 
-echo %CURRENT% > "%STATE_FILE%"
+echo !CURRENT! > "%STATE_FILE%"
 
 :: Always output current value
-echo %CURRENT%
+echo !CURRENT!
 ```
 
 Renamme cpu_log.txt in cpu_log.bat
