@@ -87,11 +87,12 @@ pasre the following script in it
 #!/bin/bash
 
 # Variables
-GLPI_URL="http://[IP_GLPI]/glpi/apirest.php"
-APP_TOKEN="[API_USER_TOKEN]"
-SESSION_TOKEN="CURL_RESULT_TOKEN"
+GLPI_URL="http://192.168.153.147/glpi/apirest.php"
+APP_TOKEN="020Iz4mpzZKA1Evmi1kEKffUERNCtRzXnqznrmZu"
+SESSION_TOKEN="583ipdd817jkklq0ctsvesa867"
+SCRIPT_DIR="/usr/lib/zabbix/alertscripts"
 
-
+# Créer le ticket et récupérer l'ID
 response=$(curl -s -X POST "$GLPI_URL/Ticket" \
   -H "Content-Type: application/json" \
   -H "App-Token: $APP_TOKEN" \
@@ -105,17 +106,20 @@ response=$(curl -s -X POST "$GLPI_URL/Ticket" \
         }
       }')
 
+# Debug : afficher la réponse complète
+echo "Réponse GLPI : $response"
+
 # Extraire l'ID
 ticket_id=$(echo "$response" | grep -oP '"id"\s*:\s*\K\d+')
 
-
+# Sauvegarder dans un fichier
 if [[ -n "$ticket_id" ]]; then
-  echo "$ticket_id" > ticket_id.txt
-  echo "Ticket créé avec ID : $ticket_id (enregistré dans ticket_id.txt)"
+  echo "$ticket_id" > "$SCRIPT_DIR/ticket_id.txt"
+  echo "Ticket créé avec ID : $ticket_id (enregistré dans $SCRIPT_DIR/ticket_id.txt)"
 else
   echo "Erreur : impossible d'extraire l'ID du ticket."
-  echo "Réponse complète : $response"
 fi
+
 ```
 create the file ticket_id.txt
 ```
@@ -129,12 +133,12 @@ sudo chmod +x delticket.sh
 ```
 parse the following code in it
 ```
-#!/bin/bash
+  GNU nano 7.2                                                                                                     delticket.sh                                                                                                              #!/bin/bash
 
-GLPI_URL="http://[IP_GLPI]/glpi/apirest.php"
-APP_TOKEN="[USER_TOKEN]"
-SESSION_TOKEN="[CURL_RESULT_TOKEN]"
-TICKET_ID_FILE="./ticket_id.txt"
+GLPI_URL="http://192.168.153.147/glpi/apirest.php"
+APP_TOKEN="020Iz4mpzZKA1Evmi1kEKffUERNCtRzXnqznrmZu"
+SESSION_TOKEN="583ipdd817jkklq0ctsvesa867"
+TICKET_ID_FILE="/usr/lib/zabbix/alertscripts/ticket_id.txt"
 
 if [[ ! -f "$TICKET_ID_FILE" ]]; then
   echo "Erreur : le fichier $TICKET_ID_FILE est introuvable."
