@@ -62,3 +62,58 @@ Dashboards>Top hosts by CPU utilization>Setting icon
   - Name: CPU utilization
   - Item name: Select>select CPU utilization
 ```
+# script creaation on the windows client
+create 3 file under "C:/script"
+```
+cpu_last_state.txt
+cpu_last_state.txt
+cpu_log.bat
+```
+put the folling script in the .bat file
+```
+@echo off
+setlocal
+
+set "STATE_FILE=C:\script\cpu_last_state.txt"
+set "LOG_FILE=C:\Program Files\Zabbix Agent\zabbix_agentd.log"
+set "THRESHOLD=90"
+
+for /f "tokens=2 delims==." %%A in ('wmic cpu get loadpercentage /value ^| findstr LoadPercentage') do set /a CURRENT=%%A
+
+if not exist "%STATE_FILE%" (
+    echo %CURRENT% > "%STATE_FILE%"
+)
+
+set /p PREV=<"%STATE_FILE%"
+
+:: Check if threshold was crossed
+if %CURRENT% GEQ %THRESHOLD% (
+    if %PREV% LSS %THRESHOLD% (
+        echo %DATE% %TIME% CPU usage rose above %THRESHOLD%%: %CURRENT%%% >> "%LOG_FILE%"
+    )
+) else (
+    if %PREV% GEQ %THRESHOLD% (
+        echo %DATE% %TIME% CPU usage fell below %THRESHOLD%%: %CURRENT%%% >> "%LOG_FILE%"
+    )
+)
+
+echo %CURRENT% > "%STATE_FILE%"
+
+:: Always output current value
+echo %CURRENT%
+```
+## zabbix agent configuration
+add the line in "C:\programes Files\Zabbix Agent\zabbix_agentd.conf"
+```
+UserParameter=cpu.util.custom, C:\Script\cpu_log.bat
+```
+## host item configuration
+add an item under the windows host
+```
+Type = Zabbix agent
+name = CPU trigger
+key = cpu.util.custom
+Type of information = Numeric
+Units = %
+Update interval = 5s
+```
