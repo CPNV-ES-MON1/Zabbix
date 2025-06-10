@@ -135,19 +135,14 @@ Executing: /lib/systemd/systemd-sysv-install enable zabbix-agent2
 <br>
 <br>
 
-# 4. Agent configuration in `/etc/zabbix/zabbix_agentd.conf`
+# 4. Agent configuration in `/etc/zabbix/zabbix_agent2.conf`
 
 Change value: Server/Hostname
 ```
 Server=<ip of the zabbix server>
 Hostname=<zabbix-lin-cli>
+ServerActive=<ip of the zabbix server>
 ```
-
-Untag: ListenPort as follow
-```
-ListenPort=10050
-```
-
 <br>
 <br>
 
@@ -162,9 +157,10 @@ In Monitoring>Hosts>select Create host
 - Host name: <zabbix-lin-cli>
 - Visible name: <zabbix-lin-cli>
 - click on Templates
-- search for linux by zabbix agent (!!WARNING!! do not use the "linux by zabbix agent active")
+  - search for linux by zabbix agent (!!WARNING!! do not use the "linux by zabbix agent active")
 - Host groups: Virtual machines
 - Interfaces: Add
+  - select agent
   - ip: <linux host ip>
   - port: 10050 (by default)
 ```
@@ -172,6 +168,7 @@ In Monitoring>Hosts>select Create host
 ```
 use the automatic option
 ```
+You now can press "Add" to save your configuration
 ## 5.2. item configuration
 ```
 Data collection>hosts>
@@ -183,7 +180,7 @@ select "CPU idle time"
 ## 5.3. adding the host to the main dashboard
 ```
 Dashboards>Top hosts by CPU utilization>Setting icon
-- Hosts: Select>write Virtual machines>select <MON1-CLI-WIN>
+- Hosts: Select>write Virtual machines>select <zabbix-lin-cli>
 - Columns: Add
   - Name: CPU utilization
   - Item name: type "CPU utilisation" and select it
