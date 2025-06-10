@@ -37,7 +37,7 @@ Data collection>hosts>
 |Type                 	| Zabbix agent              |
 |Key	                  | mysql.service.status      |
 |Type of information	  | Log                       |
-|Host interface         | <linux host ip>:10050     |
+|Host interface         | <host-linux-ip>:10050     |
 |Update interval	      | 30s                       |
 |log time format        |	date +"%d.%m.%Y %I:%M %p" |
 
