@@ -1,4 +1,23 @@
-# Set up Glpi for admin notifications
+Mon 1 - Zabbix documentation <br>
+ICT - GGR - RDI
+
+# Ticketing - GLPI
+
+## Table of content
+- [1. Set up Glpi for admin notifications](#1-set-up-glpi-for-admin-notifications)
+- [2. on glpi server](#2-on-glpi-server)
+- [3. on the zabbix webui](#3-on-the-zabbix-webui)
+  - [3.1. media type creation](#31-media-type-creation)
+  - [3.2. user creation](#32-user-creation)
+  - [3.3. add trigger action](#33-add-trigger-action)
+    - [3.3.1. operations](#331-operations)
+    - [3.3.2. Update operations](#332-update-operations)
+
+<br>
+<br>
+<br>
+
+# 1. Set up Glpi for admin notifications
 
 sudo apt update
 
@@ -32,7 +51,7 @@ sudo mv glpi /var/www/html/
 
 sudo chown -R www-data:www-data /var/www/html/glpi
 
-# on glpi server
+# 2. on glpi server
 Setup>General>API
 ```
 URL of the API = http://129.168.153.147/glpi/apirest.php/Ticket
@@ -142,8 +161,8 @@ else
   echo "$response"
 fi
 ```
-# on the zabbix webui
-## media type creation
+# 3. on the zabbix webui
+## 3.1. media type creation
 go to alertes>media types
 enable glpi
 ```
@@ -158,7 +177,7 @@ Name = GLPi-closeTicket
 Type = Script
 Script name = delticket.sh
 ```
-## user creation
+## 3.2. user creation
 go to Users>Users>create user
 ```
 Username = glpi
@@ -177,15 +196,15 @@ type =GLPI-closeTicket
 Send to =http://192.168.153.147/glpi
 When active =1-7,00:00-24:00
 ```
-## add trigger action
+## 3.3. add trigger action
 on alerts>actions>trigger action
 enable the 	Report problems to Zabbix administrators
-### operations
+### 3.3.1. operations
 ```
 Send to users = glpi
 Send to media type = GLPI
 ```
-### Update operations
+### 3.3.2. Update operations
 ```
 Send to users = glpi
 Send to media type = GLPI-closeTicket
