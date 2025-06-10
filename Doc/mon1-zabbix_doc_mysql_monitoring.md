@@ -1,3 +1,8 @@
+## installation in cli linux
+```
+sudo apt install mysql-server
+```
+
 # in /etc/zabbix/zabbix_agentd.conf
 add the following line the config
 ```
