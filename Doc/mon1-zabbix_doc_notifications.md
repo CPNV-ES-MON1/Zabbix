@@ -59,23 +59,27 @@ https://github.com/jooola/zabbix-matrix-webhook?tab=readme-ov-file
 |matrix_url|https://matrix-client.matrix.org|
 - Script : look at `mon1-zabbix_doc_notificatin_script` or https://github.com/jooola/zabbix-matrix-webhook/blob/main/latest/matrix.js
 - Timeout : 30s
+
 /Message templates
 - Message templates: Add
   - Message type: Problem
 
 ## Create/configure the matrix media type for a user that represent the webhook
-### Create a zabbix user
+### Create a zabbix user named "matrix"
 Users/Users/Create user/
+
 /User
 - Username: matrix
 - Password: CDCD
+
 /Media/Add
 - Type: matrix-notifications
 - Send to: ABAB
 - When active: 1-7,00:00-24:00
 - Use if severity: select all if not already done
+
 /Permissions
-- Admin role (because it need 
+- Admin role (because it needs it)
 
 ### Test webhook
 - Alerts/Media types/locate the relevant webhook <matrix>/click on Test/click on Test
@@ -89,6 +93,7 @@ Output
 
 # Zabbix trigger configuration
 Alerts/Actions/Trigger actions/Create action
+
 /Action
 - Name: CPU-alert-matrix
 - Conditions: Add/
@@ -98,6 +103,7 @@ Alerts/Actions/Trigger actions/Create action
   - Triggers: Select
     - Host: Zabbix server
       - Linux: High CPU utilization
+
 /Operations
 - Operations: Add
   - Send to users: matrix
@@ -108,6 +114,7 @@ Alerts/Actions/Trigger actions/Create action
 
 ## Templates configuration
 Data collection/Templates/Linux by Zabbix agent
+
 /Items
 - CPU idle time (heritage to CPU utilization)
   - Update interval: 5s
