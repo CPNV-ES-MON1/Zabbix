@@ -3,7 +3,7 @@ ICT - GGR - RDI
 
 # Database configuration
 
-# Table of content
+## Table of content
 
 
 - [1. Database creation](#1-database-creation)
