@@ -1,53 +1,62 @@
-# instalation of the zabbix agent
+# Installation of the zabbix agent
+
+Windows / Any / amd64 / 7.0 LTS / OpenSSL / MSI / Zabbix agent 2 v7.0.12
+
 ```
 https://www.zabbix.com/download_agents
 ```
-# configuration of the agent
+# configuration on the client
 
 **installation folder**
 ```
-after accepting the license we let the parameter of the nexte page by default.
+after accepting the license we let the parameter of the next page by default.
 ```
 **zabbix server configuration**
 ```
-hostname : [name]
+hostname : <MON1-CLI-WIN>
 ip : [server ip]
 port : 10050 by default
-PSK : yes
+PSK : no
 add agent location PATH : yes
 ```
-# configuration on zabbix
+# configuration on zabbix server
 
 ## adding the host
 ```
 monitoring>host>create host
 ```
-**host page**
+**Tab host**
 ```
-hostname : [name]
-visible name : [name]
-template : windows by zabbix agent
+hostname : <MON1-CLI-WIN>
+visible name : <MON1-CLI-WIN>
+click on template
+search for windows by zabbix agent
 host groupe : virtual machine
 interface:
-  select agent
+  select: agent
   ip : [host ip]
   port : 10050
 ```
-**inventory page**
+
+**Tab inventory**
 ```
 use the automatic option
 ```
+
 ## item configuration
 ```
-Data collection>hosts>[windows host item]
+Data collection>hosts>
+- Click on "Items" of the windows host MON1-CLI-WIN (be sure not to have any filters and click Apply)
 
 select "CPU utilization"
-  Update interval : 5s
-```
-## add the host to the dashboard with the item
-```
-Dashboard>setting
-add the host under "Hosts"
-add "CPU utilization" under the collumns
+- Update interval : 5s
 ```
 
+## add the host to the dashboard with the item
+```
+Dashboards>Top hosts by CPU utilization>Setting icon
+- Hosts: Select>write Virtual machines>select MON1-CLI-WIN
+- Columns: Add
+  - Name: CPU utilization
+  - Item name: Select>select CPU utilization
+```
