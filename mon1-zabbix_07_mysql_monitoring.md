@@ -1,9 +1,24 @@
-## installation in cli linux
+Mon 1 - Zabbix documentation <br>
+ICT - GGR - RDI
+
+# MySQL Monitoring
+
+## Table of content
+
+- [1. Installation in cli linux](#1-installation-in-cli-linux)
+- [2. In /etc/zabbix/zabbix\_agent2.conf](#2-in-etczabbixzabbix_agent2conf)
+- [3. In zabbix webui](#3-in-zabbix-webui)
+- [4. Test if toggle from on to off and off to on](#4-test-if-toggle-from-on-to-off-and-off-to-on)
+  - [4.1. Check on file](#41-check-on-file)
+  - [4.2. Check in zabbix server](#42-check-in-zabbix-server)
+
+
+# 1. Installation in cli linux
 ```
 sudo apt-get install mariadb-server
 ```
 
-# in /etc/zabbix/zabbix_agent2.conf
+# 2. In /etc/zabbix/zabbix_agent2.conf
 
 add the following line the config
 ```
@@ -23,7 +38,7 @@ then restart the service
 sudo systemctl restart zabbix-agent2
 ```
 
-# in zabbix webui
+# 3. In zabbix webui
 Data collection>hosts>
 - Click on "Items" of the linux host "zabbix-lin-cli"
 - Create item
@@ -40,8 +55,8 @@ Data collection>hosts>
 
 Add the item.
 
-# Test if toggle from on to off and off to on
-## Check on file
+# 4. Test if toggle from on to off and off to on
+## 4.1. Check on file
 **Input**
 ```
 sudo systemctl status mysql.service
@@ -65,7 +80,7 @@ sudo systemctl status mysql.service
 2025-06-10 22:13:33 MySQL service changed from inactive to active
 ```
 
-## Check in zabbix server
+## 4.2. Check in zabbix server
 
 **Input**
 ```
