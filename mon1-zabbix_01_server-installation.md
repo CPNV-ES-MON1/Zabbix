@@ -11,7 +11,7 @@ ICT - GGR - RDI
   - [2.2. List all installed packages](#22-list-all-installed-packages)
   - [2.3. Get latest version of zabbix server package](#23-get-latest-version-of-zabbix-server-package)
     - [2.3.1. Dowload packets](#231-dowload-packets)
-    - [2.3.2. Install the pckets](#232-install-the-pckets)
+    - [2.3.2. Install the packets](#232-install-the-packets)
     - [2.3.3. Update packets](#233-update-packets)
   - [2.4. List all installed packages](#24-list-all-installed-packages)
   - [2.5. List differences between 2 files](#25-list-differences-between-2-files)
@@ -20,6 +20,7 @@ ICT - GGR - RDI
   - [2.6. Install Zabbix server, frontend, agent2](#26-install-zabbix-server-frontend-agent2)
   - [2.7. Install mysql-server](#27-install-mysql-server)
 
+<br>
 <br>
 <br>
 
@@ -89,7 +90,7 @@ zabbix-release_latest_7.0+ubuntu24.04_al 100%[==================================
 2025-06-08 16:14:12 (404 MB/s) - ‘zabbix-release_latest_7.0+ubuntu24.04_all.deb.1’ saved [8092/8092]
 ```
 
-### 2.3.2. Install the pckets
+### 2.3.2. Install the packets
 **Input**
 ```
 sudo dpkg -i zabbix-release_latest_7.0+ubuntu24.04_all.deb
