@@ -4,19 +4,18 @@ ICT - GGR - RDI
 # Client linux configuration
 
 ## Table of content
-- [Client linux configuration](#client-linux-configuration)
-  - [Table of content](#table-of-content)
-- [1. Pakages installation](#1-pakages-installation)
+- [1. Packages installation](#1-packages-installation)
 - [2. Agent installation](#2-agent-installation)
 - [3. Restart and enable services](#3-restart-and-enable-services)
-- [4. Agent configuration](#4-agent-configuration)
+- [4. Agent configuration in `/etc/zabbix/zabbix_agent2.conf`](#4-agent-configuration-in-etczabbixzabbix_agent2conf)
 - [5. Webui configuration](#5-webui-configuration)
   - [5.1. Add host](#51-add-host)
-  - [5.2. configuration de l'item](#52-configuration-de-litem)
-  - [5.3. ajout de l'host sur ele dashboard avec l'item du CPU](#53-ajout-de-lhost-sur-ele-dashboard-avec-litem-du-cpu)
+  - [5.2. Item configuration](#52-item-configuration)
+  - [5.3. Adding the host to the main dashboard](#53-adding-the-host-to-the-main-dashboard)
 
 
 
+<br>
 <br>
 <br>
 
@@ -169,7 +168,7 @@ In Monitoring>Hosts>select Create host
 use the automatic option
 ```
 You now can press "Add" to save your configuration
-## 5.2. item configuration
+## 5.2. Item configuration
 ```
 Data collection>hosts>
 - Click on "Items" of the linux host <zabbix-lin-cli> (be sure not to have any filters and click Apply)
@@ -177,7 +176,7 @@ Data collection>hosts>
 select "CPU idle time"
 - Update interval : 5s
 ```
-## 5.3. adding the host to the main dashboard
+## 5.3. Adding the host to the main dashboard
 ```
 Dashboards>Top hosts by CPU utilization>Setting icon
 - Hosts: Select>write Virtual machines>select <zabbix-lin-cli>
