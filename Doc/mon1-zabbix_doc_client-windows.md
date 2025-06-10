@@ -22,10 +22,9 @@ ICT - GGR - RDI
 
 # 1. Installation of the zabbix agent
 
-https://www.zabbix.com/download_agents?version=7.0+LTS&release=7.0.12&os=Windows&os_version=Any&hardware=amd64&encryption=OpenSSL&packaging=MSI&show_legacy=0
-- Windows / Any / amd64 / 7.0 LTS / OpenSSL / MSI
-- Click on Download Zabbix agent 2 v7.0.12
-- Then open the MSI that has been downloaded
+Open Powershell in admin (ctrl+x / a)
+
+curl -o "$env:USERPROFILE\Downloads\zabbix-agent.msi" "https://cdn.zabbix.com/zabbix/binaries/stable/7.0/7.0.12/zabbix_agent2-7.0.12-windows-amd64-openssl.msi"
 
 # 2. configuration on the client
 
@@ -87,15 +86,14 @@ Dashboards>Top hosts by CPU utilization>Setting icon
 ```
 CLICK ON Save changes
 
-# 4. script creation on the windows client
+# 4. Script that mention the overload and the transmission of information to the zabbix server
 On the windows machine, go to C:\ and create a folder named "script"
-Create 3 file under "C:/script"
+Create 2 files under "C:/script"
 ```
 cpu_last_state.txt
-cpu_last_state.txt
-cpu_log.bat
+cpu_log.txt
 ```
-put the folling script in the .bat file
+Put the folling script in cpu_log.txt file
 ```
 @echo off
 setlocal
@@ -128,18 +126,29 @@ echo %CURRENT% > "%STATE_FILE%"
 :: Always output current value
 echo %CURRENT%
 ```
-## 4.1. zabbix agent configuration
-add the line in "C:\programes Files\Zabbix Agent\zabbix_agentd.conf"
+
+Renamme cpu_log.txt in cpu_log.bat
+
+## 4.1. Zabbix agent configuration
+
+Add the line in "C:\Program Files\Zabbix Agent 2\zabbix_agentd.conf"
 ```
 UserParameter=cpu.util.custom, C:\Script\cpu_log.bat
 ```
-## 4.2. host item configuration
-add an item under the windows host
+
+## 4.2. Host item configuration
+
+- Data collection>Hosts>
+- Click on "Items" of the windows host <MON1-CLI-WIN>
+- Create item
+- 
+
+Add an item under the windows host
 ```
+Name = CPU trigger
 Type = Zabbix agent
-name = CPU trigger
-key = cpu.util.custom
-Type of information = Numeric
+Key = cpu.util.custom
+Type of information = Numeric (unsigned)
 Units = %
 Update interval = 5s
 ```
