@@ -1,10 +1,12 @@
 # Installation of the zabbix agent
 
-Windows / Any / amd64 / 7.0 LTS / OpenSSL / MSI / Zabbix agent 2 v7.0.12
+win+x / a
+```
+curl -O 'C:\Users\Administrateur\Downloads\zabbix-agent.msi' "https://cdn.zabbix.com/zabbix/binaries/stable/7.0/7.0.12/zabbix_agent2-7.0.12-windows-amd64-openssl.msi"
 
+.\zabbix-agent.msi
 ```
-https://www.zabbix.com/download_agents
-```
+
 # configuration on the client
 
 **installation folder**
