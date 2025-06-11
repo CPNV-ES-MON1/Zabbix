@@ -87,10 +87,14 @@ Dashboards>Top hosts by CPU utilization>Setting icon
 CLICK ON Save changes
 
 # 4. Script that mention the overload and the transmission of information to the zabbix server
-On the windows machine, go to C:\ and create a folder named "Script"
-Create 2 files under "C:/Script"
+On the windows machine, go to C:\ and create a folder named "script"
+
+Make sure you have enable the file extensions in your file explorer
+
+Create 2 files under "C:/script"
 ```
 cpu_last_state.txt
+cpu_log.bat
 cpu_log.txt
 ```
 Put the folling script in cpu_log.txt file
@@ -143,15 +147,14 @@ echo !CURRENT! > "%STATE_FILE%"
 echo !CURRENT!
 ```
 
-Renamme cpu_log.txt in cpu_log.bat
-
 ## 4.1. Zabbix agent configuration
 
-Add the line in "C:\Program Files\Zabbix Agent\zabbix_agentd.conf"
+Add the line in "C:\Program Files\Zabbix Agent2\zabbix_agent2.conf"
 ```
 UserParameter=cpu.util.custom,C:\Script\cpu_log.bat
 Timeout=10
 ```
+Before going back to the webui, go to the CLI of the zabbix-server, open /etc/zabbix/zabbix_server.conf and set the line  <StartVMwareCollector=2>
 
 ## 4.2. Host item configuration
 
