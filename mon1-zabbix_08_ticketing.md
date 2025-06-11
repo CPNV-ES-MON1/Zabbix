@@ -51,45 +51,58 @@ sudo mv glpi /var/www/html/
 
 sudo chown -R www-data:www-data /var/www/html/glpi
 
-# 2. on glpi server
+# 2. On glpi server
 Setup>General>API
 ```
-URL of the API = http://129.168.153.147/glpi/apirest.php/Ticket
+URL of the API = http://<glpi machine>/glpi/apirest.php/Ticket
 Enable Rest API = yes
 Enable login with credentials = yes
 Enable login with external token = yes
 ```
-under the same page add an API client
+Under the same page add an API client
 ```
-Name = <name>
+Name = <zabbix-server>
 Active = yes
 IPv4 Address Range Start = <Zabbix server ip>
 IPv4 Address Range End = <Zabbix server ip>
-Application Token (app_token) = Regenerate
+Regenerate: true
 ```
-add the client
-go to the api client tab and copy the Application Token (app_token).
-then run this coommand with the token and a user login and password
+
+- Go to Setup>General>API
+- Click on zabbix-server
+- Copy Application Token (app_token)
+
+# On Zabbix server
+- Run this commmand with
+  - ip of glpi server
+  - the token
+  - add glpi login and password
+- 
 ```
 curl -X POST http://[IP_GLPI]/glpi/apirest.php/initSession   -H "Content-Type: application/json"   -H "App-Token: [TOKEN]"   -d '{
     "login": "[LOGIN]",
     "password": "[password]"
   }'
 ```
-copy the session token that you get.
-go to usr/lib/zabbix/alertscripts and create a script "ticket.sh"
+
+- Copy the "session token" that you get!
 ```
+cd /usr/lib/zabbix/alertscripts/
 sudo touch ticket.sh
 sudo chmod +x ticket.sh
+sudo nano ticket.sh
 ```
-pasre the following script in it
+
+- Paste the following script in this file
+- Modify the "app_token" with the previous received
+- Modify the "session token" with the previous received
 ```
 #!/bin/bash
 
 # Variables
 GLPI_URL="http://192.168.153.147/glpi/apirest.php"
-APP_TOKEN="020Iz4mpzZKA1Evmi1kEKffUERNCtRzXnqznrmZu"
-SESSION_TOKEN="583ipdd817jkklq0ctsvesa867"
+<APP_TOKEN="020Iz4mpzZKA1Evmi1kEKffUERNCtRzXnqznrmZu">
+<SESSION_TOKEN="583ipdd817jkklq0ctsvesa867">
 SCRIPT_DIR="/usr/lib/zabbix/alertscripts"
 
 # Créer le ticket et récupérer l'ID
@@ -119,25 +132,28 @@ if [[ -n "$ticket_id" ]]; then
 else
   echo "Erreur : impossible d'extraire l'ID du ticket."
 fi
-
 ```
-create the file ticket_id.txt
+
+- create a file nammed ticket_id.txt
 ```
 sudo touch ticket_id.txt
 sudo chmod 666 ticket_id.txt
 ```
-create a second script 
+
+create a second script nammed delticket.sh
 ```
 sudo touch delticket.sh
 sudo chmod +x delticket.sh
 ```
-parse the following code in it
-```
-  GNU nano 7.2                                                                                                     delticket.sh                                                                                                              #!/bin/bash
 
-GLPI_URL="http://192.168.153.147/glpi/apirest.php"
-APP_TOKEN="020Iz4mpzZKA1Evmi1kEKffUERNCtRzXnqznrmZu"
-SESSION_TOKEN="583ipdd817jkklq0ctsvesa867"
+- Paste the following script in file delticket.sh
+- Modifiy the "ip glpi server"
+- Modify the "app_token" with the previous received
+- Modify the "session token" with the previous received
+```
+GLPI_URL="http://<ip glpi server>/glpi/apirest.php"
+<APP_TOKEN="020Iz4mpzZKA1Evmi1kEKffUERNCtRzXnqznrmZu">
+<SESSION_TOKEN="583ipdd817jkklq0ctsvesa867">
 TICKET_ID_FILE="/usr/lib/zabbix/alertscripts/ticket_id.txt"
 
 if [[ ! -f "$TICKET_ID_FILE" ]]; then
@@ -165,41 +181,50 @@ else
   echo "$response"
 fi
 ```
-# 3. on the zabbix webui
-## 3.1. media type creation
-go to alertes>media types
-enable glpi
+
+# 3. On the Zabbix Webui
+## 3.1. Media type creation
+Alerts>Media types>enable GLPI>modify GLPI
 ```
 Name = GLPI
 Type = Script
 Script name = ticket.sh
-
 ```
-clone the media
+- Update
+- Clone
 ```
 Name = GLPi-closeTicket
 Type = Script
 Script name = delticket.sh
 ```
-## 3.2. user creation
-go to Users>Users>create user
+- Add
+
+## 3.2. User creation
+Users>Users>Create user
+/User
 ```
 Username = glpi
 Name = glpi
 Last name = glpi
 Groups = Zabbix administrators
+```
 
+/Media
+- Media: Add
 ```
-add 2 medias
-```
-type =GLPI
-Send to =http://192.168.153.147/glpi
+type = GLPI
+Send to =http://<ip glpi server>/glpi
 When active =1-7,00:00-24:00
-----------------
-type =GLPI-closeTicket
-Send to =http://192.168.153.147/glpi
+
+type = GLPI-closeTicket
+Send to = http://<ip glpi server>/glpi
 When active =1-7,00:00-24:00
 ```
+- Add
+
+/Permissions
+- Add: Super admin role
+
 ## 3.3. add trigger action
 on alerts>actions>trigger action
 enable the 	Report problems to Zabbix administrators
