@@ -138,7 +138,7 @@ sudo nano ticket.sh
 #!/bin/bash
 
 # Variables
-GLPI_URL="http://<ip glpi server>/glpi/apirest.php"
+GLPI_URL="http://<ip glpi server>:8080/glpi/apirest.php"
 APP_TOKEN="<app_token>"
 SESSION_TOKEN="<session token>"
 SCRIPT_DIR="/usr/lib/zabbix/alertscripts"
@@ -194,7 +194,7 @@ sudo nano delticket.sh
 #!/bin/bash
 
 # Variables
-GLPI_URL="http://<ip glpi server>/glpi/apirest.php"
+GLPI_URL="http://<ip glpi server>:8080/glpi/apirest.php"
 APP_TOKEN="<app_token>"
 SESSION_TOKEN="<session token>"
 TICKET_ID_FILE="/usr/lib/zabbix/alertscripts/ticket_id.txt"
@@ -267,7 +267,7 @@ Send to =http://<ip glpi server>:8080/glpi
 When active =1-7,00:00-24:00
 
 type = GLPI-closeTicket
-Send to = http://<ip glpi server>/glpi
+Send to = http://<ip glpi server>:8080/glpi
 When active =1-7,00:00-24:00
 ```
 
@@ -307,3 +307,4 @@ Send to media type = GLPI-closeTicket
 ### Uncheck unused tick
 - Pause operations for symptom problems
 - Pause operations for suppressed problems
+
