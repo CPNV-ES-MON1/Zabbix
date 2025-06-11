@@ -168,8 +168,7 @@ EnableGlobalScripts=1
 ## 4.3. Test to stress CPU
 ### 4.3.1. On the client (windows)
 Make a CPU stress with this software:<br>
-https://learn.microsoft.com/en-us/sysinternals/downloads/cpustres 
-
+https://downloads.jam-software.de/heavyload/HeavyLoad-x64-Setup.exe 
 
 ### 4.3.2. On matrix room zabbix-notifications
 Output
