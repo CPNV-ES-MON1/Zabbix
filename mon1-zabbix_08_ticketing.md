@@ -91,8 +91,8 @@ Regenerate: true
 - 
 ```
 curl -X POST http://<ip glpi server>/glpi/apirest.php/initSession   -H "Content-Type: application/json"   -H "App-Token: <TOKEN>"   -d '{
-    "login": "<LOGIN>",
-    "password": "[password]"
+    "login": "<username>",
+    "password": "<password>"
   }'
 ```
 
