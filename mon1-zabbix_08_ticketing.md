@@ -170,32 +170,42 @@ sudo chmod +x delticket.sh
 ```
 #!/bin/bash
 
-GLPI_URL="http://<ip glpi server>/glpi/apirest.php"
-APP_TOKEN="<app_token>"
-SESSION_TOKEN="<session token>"
+# Variables
+GLPI_URL="http://10.229.32.4/glpi/apirest.php"
+APP_TOKEN="vfMPhMYj4SXDxlE8E0NolWaU7FZcRTM25F8vpHv0"
+SESSION_TOKEN="riciv3c2asilnt550st1dkj4g8"
 TICKET_ID_FILE="/usr/lib/zabbix/alertscripts/ticket_id.txt"
 
+# Vérifier si le fichier contenant l'ID du ticket existe
 if [ ! -f "$TICKET_ID_FILE" ]; then
   echo "Erreur : le fichier $TICKET_ID_FILE est introuvable."
   exit 1
 fi
 
+# Lire l'ID du ticket depuis le fichier
 ticket_id=$(cat "$TICKET_ID_FILE")
 
+# Vérifier si l'ID est valide
 if [ -z "$ticket_id" ] || ! echo "$ticket_id" | grep -qE '^[0-9]+$'; then
   echo "Erreur : ID invalide dans le fichier ($ticket_id)."
   exit 1
 fi
 
-echo "Suppression du ticket ID $ticket_id..."
-response=$(curl -s -X DELETE "$GLPI_URL/Ticket/$ticket_id" \
-  -H "App-Token: $APP_TOKEN" \
-  -H "Session-Token: $SESSION_TOKEN")
+# Créer le corps de la requête PUT
+json_payload=$(jq -n --arg id "$ticket_id" '{input: [{"id": $id, "status": 6}]}')
 
+# Envoyer la requête PUT à l'API REST de GLPI
+response=$(curl -s -X PUT "$GLPI_URL/Ticket" \
+  -H "Content-Type: application/json" \
+  -H "App-Token: $APP_TOKEN" \
+  -H "Session-Token: $SESSION_TOKEN" \
+  -d "$json_payload")
+
+# Vérifier la réponse de l'API
 if echo "$response" | grep -q "\"$ticket_id\":true"; then
-  echo "✅ Ticket $ticket_id supprimé avec succès."
+  echo "✅ Ticket $ticket_id clôturé avec succès."
 else
-  echo "❌ Échec de la suppression. Réponse de l'API :"
+  echo "❌ Échec de la clôture. Réponse de l'API :"
   echo "$response"
 fi
 ```
