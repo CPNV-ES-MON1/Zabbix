@@ -194,9 +194,9 @@ sudo nano delticket.sh
 #!/bin/bash
 
 # Variables
-GLPI_URL="http://<ip glpi server>:8080/glpi/apirest.php"
-APP_TOKEN="<app_token>"
-SESSION_TOKEN="<session token>"
+GLPI_URL="http://10.229.32.4/glpi/apirest.php"
+APP_TOKEN="vfMPhMYj4SXDxlE8E0NolWaU7FZcRTM25F8vpHv0"
+SESSION_TOKEN="riciv3c2asilnt550st1dkj4g8"
 TICKET_ID_FILE="/usr/lib/zabbix/alertscripts/ticket_id.txt"
 
 # Vérifier si le fichier contenant l'ID du ticket existe
