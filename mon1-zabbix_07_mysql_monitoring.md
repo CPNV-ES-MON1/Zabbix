@@ -56,7 +56,7 @@ Data collection>hosts>
 Add the item.
 
 # 4. Test if toggle from on to off and off to on
-## 4.1. Check on file
+## 4.1. Check n the Linux client
 **Input**
 ```
 sudo systemctl status mysql.service
@@ -81,28 +81,33 @@ sudo systemctl status mysql.service
 ```
 
 ## 4.2. Check in zabbix server
+On the client enter
 
 **Input**
 ```
 sudo systemctl status mysql.service
 sudo systemctl stop mysql.service
 ```
-**Output**
+**Output** - no output
+
 Monitoring>Hosts>"zabbix-lin-cli">Latest data>
-- Name: mysq>Apply
+- Name: mysql>Apply
 - History
 - In Value, a line was add to write inactive
 ```
 2025-06-10 10:12:33 PM		inactive
 ```
 
+On the client, enter
+
 **Input**
 ```
 sudo systemctl start mysql.service
 sudo systemctl status mysql.service
 ```
-**Output**
+**Output** - no output
+
 Monitoring>Hosts>"zabbix-lin-cli">Latest data>
-- Name: mysq>Apply
+- Name: mysql>Apply
 - History
 - In Value, a line was add to write active
