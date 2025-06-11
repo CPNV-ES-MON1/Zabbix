@@ -186,3 +186,8 @@ Dashboards>Top hosts by CPU utilization>Setting icon
 - Apply
 ```
 CLICK ON Save changes !!!!!
+
+# Test stress cpu
+```
+stress --cpu 2 --timeout 300s
+```
