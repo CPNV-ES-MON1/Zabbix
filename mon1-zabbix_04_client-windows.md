@@ -103,7 +103,7 @@ Put the folling script in cpu_log.txt file
 setlocal enabledelayedexpansion
 
 set "STATE_FILE=C:\script\cpu_last_state.txt"
-set "LOG_FILE=C:\Program Files\Zabbix Agent\zabbix_agentd.log"
+set "LOG_FILE=C:\script\cpu_log.txt"
 set "THRESHOLD=90"
 set "CURRENT="
 
