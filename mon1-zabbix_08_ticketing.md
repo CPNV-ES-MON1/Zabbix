@@ -91,7 +91,7 @@ SQL Password
 ## Setup on Webui
 Setup>General>API
 ```
-URL of the API = http://<ip glpi server>/glpi/apirest.php/Ticket
+URL of the API = http://<ip glpi server>:8080/glpi/apirest.php/Ticket
 Enable Rest API = yes
 Enable login with credentials = yes
 Enable login with external token = yes
@@ -116,9 +116,9 @@ Regenerate: true
   - add glpi login and password
 - 
 ```
-curl -X POST http://<ip glpi server>/glpi/apirest.php/initSession   -H "Content-Type: application/json"   -H "App-Token: <TOKEN>"   -d '{
-    "login": "<username>",
-    "password": "<password>"
+curl -X POST http://<ip glpi server>/glpi/apirest.php/initSession   -H "Content-Type: application/json"   -H "App-Token: <app_token>"   -d '{
+    "login": "<glpi>",
+    "password": "<glpi>"
   }'
 ```
 
@@ -183,6 +183,7 @@ create a second script nammed delticket.sh
 ```
 sudo touch delticket.sh
 sudo chmod +x delticket.sh
+sudo nano delticket.sh
 ```
 
 - Paste the following script in file delticket.sh
@@ -236,7 +237,7 @@ fi
 ## 3.1. Media type creation
 Alerts>Media types>enable GLPI>modify GLPI
 ```
-Name = GLPI
+Name = GLPi
 Type = Script
 Script name = ticket.sh
 ```
@@ -254,8 +255,6 @@ Users>Users>Create user
 /User
 ```
 Username = glpi
-Name = glpi
-Last name = glpi
 Groups = Zabbix administrators
 Password = <a beautiful password>
 ```
@@ -264,14 +263,13 @@ Password = <a beautiful password>
 - Media: Add
 ```
 type = GLPI
-Send to =http://<ip glpi server>/glpi
+Send to =http://<ip glpi server>:8080/glpi
 When active =1-7,00:00-24:00
 
 type = GLPI-closeTicket
 Send to = http://<ip glpi server>/glpi
 When active =1-7,00:00-24:00
 ```
-- Add
 
 /Permissions
 - Add: Super admin role
@@ -288,16 +286,24 @@ Enabled: true
 ```
 
 ### 3.3.1. Operations
+- Operations: Remove all existing
 - Operations: Add
 ```
 Send to users = glpi
 Send to media type = GLPI
 ```
+- Add
 
 ### 3.3.2. Recovery operations
+- Recovery operations: Remove all existing
 - Recovery operations: Add
 ```
 Send to users = glpi
 Send to media type = GLPI-closeTicket
 ```
+- Add
 - Update
+
+### Uncheck unused tick
+- Pause operations for symptom problems
+- Pause operations for suppressed problems
