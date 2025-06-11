@@ -254,8 +254,8 @@ Send to users = glpi
 Send to media type = GLPI
 ```
 
-- Operations: Add
 ### 3.3.2. Update operations
+- Update operations: Add
 ```
 Send to users = glpi
 Send to media type = GLPI-closeTicket
