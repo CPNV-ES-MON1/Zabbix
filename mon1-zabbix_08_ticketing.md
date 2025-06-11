@@ -109,10 +109,12 @@ sudo nano ticket.sh
 - Modify the "app_token" with the previous received
 - Modify the "session token" with the previous received
 ```
+#!/bin/bash
+
 # Variables
 GLPI_URL="http://<ip glpi server>/glpi/apirest.php"
-<APP_TOKEN="020Iz4mpzZKA1Evmi1kEKffUERNCtRzXnqznrmZu">
-<SESSION_TOKEN="583ipdd817jkklq0ctsvesa867">
+APP_TOKEN="<app_token>"
+SESSION_TOKEN="<session token>"
 SCRIPT_DIR="/usr/lib/zabbix/alertscripts"
 
 # Créer le ticket et récupérer l'ID
@@ -123,24 +125,25 @@ response=$(curl -s -X POST "$GLPI_URL/Ticket" \
   -d '{
         "input": {
           "name": "Alerte Zabbix : client windows CPU stress",
-          "content": "le client windows a son cpu au dessus de 90%",
+          "content": "Le client Windows a son CPU au-dessus de 90%",
           "status": 1,
           "priority": 3
         }
       }')
 
 # Debug : afficher la réponse complète
-echo "Réponse GLPI : $response"
+echo "Réponse complète de l'API : $response"
 
-# Extraire l'ID
-ticket_id=$(echo "$response" | grep -oP '"id"\s*:\s*\K\d+')
+# Extraire l'ID du ticket
+ticket_id=$(echo "$response" | jq -r '.id')
 
 # Sauvegarder dans un fichier
-if [[ -n "$ticket_id" ]]; then
+if [[ -n "$ticket_id" && "$ticket_id" =~ ^[0-9]+$ ]]; then
   echo "$ticket_id" > "$SCRIPT_DIR/ticket_id.txt"
-  echo "Ticket créé avec ID : $ticket_id (enregistré dans $SCRIPT_DIR/ticket_id.txt)"
+  echo "✅ Ticket créé avec ID : $ticket_id (enregistré dans $SCRIPT_DIR/ticket_id.txt)"
 else
-  echo "Erreur : impossible d'extraire l'ID du ticket."
+  echo "❌ Erreur : impossible d'extraire l'ID du ticket."
+  echo "Réponse de l'API : $response"
 fi
 ```
 
@@ -161,19 +164,21 @@ sudo chmod +x delticket.sh
 - Modify the "app_token" with the previous received
 - Modify the "session token" with the previous received
 ```
+#!/bin/bash
+
 GLPI_URL="http://<ip glpi server>/glpi/apirest.php"
-<APP_TOKEN="020Iz4mpzZKA1Evmi1kEKffUERNCtRzXnqznrmZu">
-<SESSION_TOKEN="583ipdd817jkklq0ctsvesa867">
+APP_TOKEN="<app_token>"
+SESSION_TOKEN="<session token>"
 TICKET_ID_FILE="/usr/lib/zabbix/alertscripts/ticket_id.txt"
 
-if [[ ! -f "$TICKET_ID_FILE" ]]; then
+if [ ! -f "$TICKET_ID_FILE" ]; then
   echo "Erreur : le fichier $TICKET_ID_FILE est introuvable."
   exit 1
 fi
 
 ticket_id=$(cat "$TICKET_ID_FILE")
 
-if [[ -z "$ticket_id" || ! "$ticket_id" =~ ^[0-9]+$ ]]; then
+if [ -z "$ticket_id" ] || ! echo "$ticket_id" | grep -qE '^[0-9]+$'; then
   echo "Erreur : ID invalide dans le fichier ($ticket_id)."
   exit 1
 fi
@@ -183,7 +188,6 @@ response=$(curl -s -X DELETE "$GLPI_URL/Ticket/$ticket_id" \
   -H "App-Token: $APP_TOKEN" \
   -H "Session-Token: $SESSION_TOKEN")
 
-# Vérifier si la suppression a réussi même si la réponse n'est pas vide
 if echo "$response" | grep -q "\"$ticket_id\":true"; then
   echo "✅ Ticket $ticket_id supprimé avec succès."
 else
@@ -254,8 +258,8 @@ Send to users = glpi
 Send to media type = GLPI
 ```
 
-### 3.3.2. Update operations
-- Update operations: Add
+### 3.3.2. Recovery operations
+- Recovery operations: Add
 ```
 Send to users = glpi
 Send to media type = GLPI-closeTicket
