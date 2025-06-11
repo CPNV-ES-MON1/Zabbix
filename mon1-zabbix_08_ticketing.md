@@ -65,8 +65,30 @@ sudo chown -R www-data:www-data /var/www/html/glpi
 
 # 2. On glpi server
 
-http://"ip glpi server"/glpi/install/install.php
+http://"ip glpi server":8080/glpi/install/install.php
 
+## Database connection setup
+SQL server (MariaDB or MySQL)
+```
+localhost
+```
+SQL User
+```
+mon1
+```
+SQL Password
+```
+"nice password"
+```
+
+## Test of the connection at the database
+- Select db name: mon1
+
+## Login
+- user: glpi
+- password: glpi (default username for glpi)
+
+## Setup on Webui
 Setup>General>API
 ```
 URL of the API = http://<ip glpi server>/glpi/apirest.php/Ticket
@@ -171,9 +193,9 @@ sudo chmod +x delticket.sh
 #!/bin/bash
 
 # Variables
-GLPI_URL="http://10.229.32.4/glpi/apirest.php"
-APP_TOKEN="vfMPhMYj4SXDxlE8E0NolWaU7FZcRTM25F8vpHv0"
-SESSION_TOKEN="riciv3c2asilnt550st1dkj4g8"
+GLPI_URL="http://<ip glpi server>/glpi/apirest.php"
+APP_TOKEN="<app_token>"
+SESSION_TOKEN="<session token>"
 TICKET_ID_FILE="/usr/lib/zabbix/alertscripts/ticket_id.txt"
 
 # Vérifier si le fichier contenant l'ID du ticket existe
