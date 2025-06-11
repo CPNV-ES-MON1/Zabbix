@@ -189,5 +189,6 @@ CLICK ON Save changes !!!!!
 
 # Test stress cpu
 ```
+sudo apt install stress
 stress --cpu 2 --timeout 300s
 ```
