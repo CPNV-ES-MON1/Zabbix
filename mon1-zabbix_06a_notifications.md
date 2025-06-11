@@ -167,7 +167,7 @@ EnableGlobalScripts=1
 
 ## 4.3. Test to stress CPU
 ### 4.3.1. On the client (windows)
-Make a CPU stress with the same software we used in the èrvious documentation ("mon1-zabbix_04_client-windows-configuration.md")
+Make a CPU stress with the same software we used in the prvious documentation ("mon1-zabbix_04_client-windows-configuration.md")
 
 ### 4.3.2. On matrix room zabbix-notifications
 Output
