@@ -37,6 +37,7 @@ sudo systemctl status mariadb
 ```
 sudo mysql_secure_installation
 ```
+connect with root accout say yes to all and when asked to, change to root password
 ```
 sudo mysql -u root -p
 ```
@@ -63,9 +64,12 @@ sudo chown -R www-data:www-data /var/www/html/glpi
 ```
 
 # 2. On glpi server
+
+http://"ip glpi server"/glpi/install/install.php
+
 Setup>General>API
 ```
-URL of the API = http://<glpi machine>/glpi/apirest.php/Ticket
+URL of the API = http://<ip glpi server>/glpi/apirest.php/Ticket
 Enable Rest API = yes
 Enable login with credentials = yes
 Enable login with external token = yes
