@@ -110,7 +110,7 @@ Users/Users/Create user/
 - Use if severity: select all if not already done
 
 /Permissions
-- Admin role (because it needs it)
+- SuperAdmin role
 
 ### 3.2.2. Test webhook
 - Alerts/Media types/locate the relevant webhook <matrix>/click on Test/click on Test
@@ -167,8 +167,7 @@ EnableGlobalScripts=1
 
 ## 4.3. Test to stress CPU
 ### 4.3.1. On the client (windows)
-Make a CPU stress with this software:<br>
-https://downloads.jam-software.de/heavyload/HeavyLoad-x64-Setup.exe 
+Make a CPU stress with the same software we used in the èrvious documentation ("mon1-zabbix_04_client-windows-configuration.md")
 
 ### 4.3.2. On matrix room zabbix-notifications
 Output
