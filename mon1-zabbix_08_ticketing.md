@@ -79,8 +79,8 @@ Regenerate: true
   - add glpi login and password
 - 
 ```
-curl -X POST http://[IP_GLPI]/glpi/apirest.php/initSession   -H "Content-Type: application/json"   -H "App-Token: [TOKEN]"   -d '{
-    "login": "[LOGIN]",
+curl -X POST http://<ip glpi server>/glpi/apirest.php/initSession   -H "Content-Type: application/json"   -H "App-Token: <TOKEN>"   -d '{
+    "login": "<LOGIN>",
     "password": "[password]"
   }'
 ```
@@ -94,13 +94,12 @@ sudo nano ticket.sh
 ```
 
 - Paste the following script in this file
+- Modifiy the "ip glpi server"
 - Modify the "app_token" with the previous received
 - Modify the "session token" with the previous received
 ```
-#!/bin/bash
-
 # Variables
-GLPI_URL="http://192.168.153.147/glpi/apirest.php"
+GLPI_URL="http://<ip glpi server>/glpi/apirest.php"
 <APP_TOKEN="020Iz4mpzZKA1Evmi1kEKffUERNCtRzXnqznrmZu">
 <SESSION_TOKEN="583ipdd817jkklq0ctsvesa867">
 SCRIPT_DIR="/usr/lib/zabbix/alertscripts"
@@ -207,6 +206,7 @@ Username = glpi
 Name = glpi
 Last name = glpi
 Groups = Zabbix administrators
+Password = <a beautiful password>
 ```
 
 /Media
@@ -224,17 +224,29 @@ When active =1-7,00:00-24:00
 
 /Permissions
 - Add: Super admin role
+- Add
 
-## 3.3. add trigger action
-on alerts>actions>trigger action
-enable the 	Report problems to Zabbix administrators
-### 3.3.1. operations
+## 3.3. Add trigger action
+
+Alerts>Actions>Trigger actions
+
+Open "Report problems to Zabbix administrators"
+### Action
+```
+Enabled: true
+```
+
+### 3.3.1. Operations
+- Operations: Add
 ```
 Send to users = glpi
 Send to media type = GLPI
 ```
+
+- Operations: Add
 ### 3.3.2. Update operations
 ```
 Send to users = glpi
 Send to media type = GLPI-closeTicket
 ```
+- Update
