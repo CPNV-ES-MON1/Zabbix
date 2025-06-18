@@ -19,10 +19,16 @@ ICT - GGR - RDI
 <br>
 
 # 1. Open Zabbix UI web page
+## LAN
 **Input**
 ```
 http://<ip of the server>:8080
 ```
+## WAN
+```
+https://zabbix.cld.education/
+```
+
 Then select language
 ## 1.1. Check of pre-requisites
 **Output**
