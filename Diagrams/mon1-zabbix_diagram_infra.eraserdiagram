@@ -1,0 +1,53 @@
+//cloud-architecture-diagram
+
+direction right
+
+// Define groups and nodes
+SYS-ADMIN [icon: user]
+ENDUSER [icon: user]
+
+CLOUD [icon: cloud]
+SOCIAL-NETWORK [icon: signal]
+
+CLOUD-PROVIDER {
+  REGION eu-central-1{
+    IGW [icon: aws-internet-gateway]
+    VPC [icon: aws-vpc] {
+      PUBLIC-SUBNET {
+        SSH-SRV [icon: debian]
+        RPROXY-SRV [icon: nginx]
+        NAT-SRV [icon: aws-nat-gateway]
+      }
+      PRIVATE-SUBNET {
+        MON-SRV-LIN [icon: linux]
+        MON-CLI-WIN [icon: windows]
+        MON-CLI-LIN [icon: debian]
+        MON-CLI-LIN-TICKET [label: GLPI, icon: debian]
+      }
+    }
+  }
+}
+
+// Define connections
+// INBOUNDS
+SYS-ADMIN > CLOUD : "22 : SSH"
+SYS-ADMIN > CLOUD : "443 : HTTPS"
+ENDUSER > CLOUD : "443 : HTTPS"
+CLOUD - SOCIAL-NETWORK : "443 : HTTPS"
+
+CLOUD > IGW : "22 : SSH      443 : HTTPS"
+
+IGW > SSH-SRV : "22 : SSH"
+IGW > RPROXY-SRV : "443 : HTTPS"
+SSH-SRV > PRIVATE-SUBNET : "3389 : RDP"
+SSH-SRV > PRIVATE-SUBNET : "22 : SSH"
+RPROXY-SRV > PRIVATE-SUBNET : "8080 : HTTP"
+
+// PRIVATE SUBNET
+MON-SRV-LIN - MON-CLI-LIN : "10050 : TCP"
+MON-SRV-LIN - MON-CLI-WIN : "10050 : TCP"
+MON-SRV-LIN - MON-CLI-LIN-TICKET : "8080 : HTTP"
+
+// OUTBOUNDS
+NAT-SRV <- PRIVATE-SUBNET : "ALL : ALL"
+IGW <- NAT-SRV : "ALL : ALL"
